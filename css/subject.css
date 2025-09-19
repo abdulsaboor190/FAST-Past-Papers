@@ -1,0 +1,617 @@
+/* Subject Page Specific Styles */
+.subject-header {
+    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.95) 100%);
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    border: 1px solid var(--border-light);
+    max-width: 1200px;
+    backdrop-filter: blur(10px);
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+}
+
+.separator {
+    margin: 0 0.5rem;
+    color: var(--text-light);
+}
+
+.current {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.subject-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subject-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subject-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Exam Categories */
+.exam-categories {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(90deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.95) 100%);
+    padding: 0.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    flex-wrap: wrap;
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(10px);
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    min-width: 100px;
+}
+
+.tab-btn:hover {
+    color: var(--secondary-color);
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(52, 211, 153, 0.1) 100%);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Papers Section */
+.papers-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Paper Card */
+/* Enhanced Modern Paper Card Styles - Replace existing paper card styles */
+
+.paper-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 244, 0.9) 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(6, 78, 59, 0.12);
+    border: 1px solid rgba(167, 243, 208, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.paper-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(6, 78, 59, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 253, 244, 1) 100%);
+    border-color: var(--accent-color);
+}
+
+.paper-card:hover::before {
+    opacity: 1;
+}
+
+.paper-card.expanded {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 80px rgba(6, 78, 59, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 253, 244, 1) 100%);
+    border-color: var(--secondary-color);
+}
+
+.paper-card.expanded::before {
+    opacity: 1;
+}
+
+.paper-header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 253, 244, 0.6) 100%);
+}
+
+.paper-info {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.paper-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.paper-year {
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.paper-year::before {
+    content: '📅';
+    font-size: 0.9rem;
+}
+
+.paper-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(6, 78, 59, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: transform 0.6s;
+    transform: translateX(-100%);
+}
+
+.paper-card:hover .paper-icon::before {
+    transform: translateX(100%);
+}
+
+.paper-card:hover .paper-icon {
+    transform: rotate(5deg) scale(1.1);
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+.expand-indicator {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.paper-card:hover .expand-indicator {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.paper-card.expanded .expand-indicator {
+    transform: translateY(-50%) rotate(180deg);
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Enhanced Download Section */
+.paper-download {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    background: linear-gradient(135deg, rgba(240, 253, 244, 0.5) 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+.paper-card.expanded .paper-download {
+    max-height: 300px;
+    opacity: 1;
+    padding: 0 2rem 2rem;
+}
+
+.download-info {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 253, 244, 0.7) 100%);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(167, 243, 208, 0.4);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.download-info::before {
+    content: '📁';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.download-info h4 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.file-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.file-detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(167, 243, 208, 0.3);
+    transition: all 0.3s ease;
+}
+
+.file-detail-item:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.file-detail-icon {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.file-detail-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.file-detail-value {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.file-size {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Enhanced Download Button */
+.download-btn {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.download-btn:hover::before {
+    left: 100%;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 36px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+}
+
+.download-btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.download-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.download-icon {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover .download-icon {
+    transform: translateY(2px);
+}
+
+/* Status Badges */
+.paper-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.8rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: white;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+}
+
+.paper-badge.featured {
+    background: linear-gradient(135deg, #ff6b9d, #ff8e8e);
+}
+
+.paper-badge.new {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Enhanced Paper Categories with better visual hierarchy */
+.paper-card.featured {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 247, 237, 0.9) 100%);
+    border: 2px solid rgba(255, 107, 157, 0.3);
+}
+
+.paper-card.featured::before {
+    background: linear-gradient(90deg, #ff6b9d, #ff8e8e, #ffa726);
+}
+
+.paper-card.recent {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(237, 242, 255, 0.9) 100%);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.paper-card.recent::before {
+    background: linear-gradient(90deg, #667eea, #764ba2, #a29bfe);
+}
+
+/* Loading States */
+.paper-card.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.paper-card.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(16, 185, 129, 0.3);
+    border-top: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Animation keyframes */
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design for Paper Cards */
+@media (max-width: 768px) {
+    .paper-header {
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .paper-info {
+        padding-right: 0;
+    }
+    
+    .paper-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .paper-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        align-self: flex-end;
+    }
+    
+    .expand-indicator {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-left: auto;
+    }
+    
+    .paper-card.expanded .expand-indicator {
+        transform: rotate(180deg);
+    }
+    
+    .paper-card.expanded .paper-download {
+        padding: 0 1.5rem 1.5rem;
+    }
+    
+    .download-info {
+        padding: 1.25rem;
+    }
+    
+    .file-details {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .download-btn {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paper-header {
+        padding: 1.25rem;
+    }
+    
+    .paper-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .paper-year {
+        font-size: 0.9rem;
+    }
+    
+    .paper-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+    
+    .download-info {
+        padding: 1rem;
+    }
+    
+    .file-details {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .download-btn {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
+}

@@ -189,4 +189,199 @@
     font-size: 0.95rem;
     opacity: 0.9;
     line-height: 1.4;
+
+}
+/* PWA Installation Styles */
+.pwa-install-container {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    animation: fadeInUp 0.6s ease;
+}
+
+.pwa-install-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.pwa-install-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 36px rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, #34d399, #10b981);
+}
+
+.pwa-install-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.install-icon {
+    font-size: 1.3rem;
+    animation: bounce 2s infinite;
+}
+
+/* Success message */
+.install-success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    z-index: 10000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    font-family: var(--font-body);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.install-success-message.show {
+    transform: translateX(0);
+}
+
+.success-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.success-icon {
+    font-size: 1.2rem;
+}
+
+.success-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Installation instruction modal */
+.install-instruction-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(6, 78, 59, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.install-instruction-modal.show {
+    opacity: 1;
+}
+
+.instruction-content {
+    background: linear-gradient(135deg, white, #f0fdf4);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem;
+    border: 1px solid #a7f3d0;
+}
+
+.instruction-content h3 {
+    color: var(--text-dark);
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.instruction-content p {
+    color: var(--text-light);
+    font-family: var(--font-body);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.instruction-content button {
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.instruction-content button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-6px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Mobile responsiveness for PWA elements */
+@media (max-width: 768px) {
+    .pwa-install-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .install-success-message {
+        right: 10px;
+        left: 10px;
+        transform: translateY(-100px);
+    }
+    
+    .install-success-message.show {
+        transform: translateY(0);
+    }
+    
+    .instruction-content {
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+    
+    .instruction-content h3 {
+        font-size: 1.2rem;
+    }
 }

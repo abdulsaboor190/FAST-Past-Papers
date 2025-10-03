@@ -1448,6 +1448,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.4 MB',
+              difficulty: 4.3,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1sq5Kzq2Lwy1M40dmXCIya_edPU-LgH3B&export=download&authuser=0&confirm=t&uuid=0182d1e1-500e-4a12-a86c-a82430c8014d&at=AN8xHoo5cR0166qgN1Cfktgnn4TV:1758175000819'
             },
             {
@@ -1455,6 +1456,7 @@ const subjectPapers = {
                 title: 'PF Lab Mid 2024 Paper B',
                 year: '2024',
                 semester: 'Spring',
+              difficulty: 4.6,
                 fileSize: '1.9 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1bbc4juBUmYsGZjdGX1eMneiWwmKtozvH&export=download&authuser=0&confirm=t&uuid=ebf8aa2b-5452-428d-a63c-67ee90363d8b&at=AN8xHooDv2w53CqxINafD-PFyOFJ:1758175004360'
             },
@@ -1463,6 +1465,7 @@ const subjectPapers = {
                 title: 'PF Lab Mid 2023',
                 year: '2023',
                 semester: 'Spring',
+              difficulty: 4.5,
                 fileSize: '1.3 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1wtBn6nWaRdxyyaQZbR2DuJExz_ub5o5d&export=download&authuser=0&confirm=t&uuid=b20ea3ab-9141-44c0-8793-8d9a65c7db79&at=AN8xHorAz86GMwrWcVDzOsGH0XQt:1758174996924'
             },
@@ -1471,6 +1474,7 @@ const subjectPapers = {
                 title: 'PF Lab Mid 2022 Paper A',
                 year: '2022',
                 semester: 'Spring',
+              difficulty: 4.1,
                 fileSize: '1.1 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1oT8Pa6j0BdanIy1D6Ran1Bs6MNSoFb4p&export=download&authuser=0&confirm=t&uuid=96057c31-4b3d-4f29-b8a0-e88b1166dd5f&at=AN8xHopbSfa0OO1MpBCnmqJuaQlU:1758174972131'
             },
@@ -1478,6 +1482,7 @@ const subjectPapers = {
                 id: 'pf-lab-2022-mid1b',
                 title: 'PF Lab Mid 2022 Paper B',
                 year: '2022',
+              difficulty: 3.7,
                 semester: 'Spring',
                 fileSize: '1.5 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1R--DXq2M01JbF_SAZFX1BTro1FsAMbv-&export=download&authuser=0&confirm=t&uuid=bad7d275-36c8-4103-8a50-7a9d76026fd6&at=AN8xHoo0pEpzD7y44PzWFzwcx51m:1758174989063'
@@ -1487,6 +1492,7 @@ const subjectPapers = {
                 title: 'PF Lab Mid 2022 Paper C',
                 year: '2022',
                 semester: 'Spring',
+              difficulty: 4.0,
                 fileSize: '1.7 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1klSRLkKuQQflKm366MAhSDbB6OaCFt3K&export=download&authuser=0&confirm=t&uuid=8ccc956d-0feb-4940-abdb-486e04cdbe1c&at=AN8xHopF-ty9ZfljwAXDM13Y-Ook:1758174992836'
             },
@@ -1495,6 +1501,7 @@ const subjectPapers = {
                 title: 'PF Lab Mid 2021',
                 year: '2021',
                 semester: 'Spring',
+              difficulty: 3.4,
                 fileSize: '1.2 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1QKCA7IwMJOoC2rIHCciC3fFG4K5SglML&export=download&authuser=0&confirm=t&uuid=f0d53015-3997-49b7-b961-f41742afb28b&at=AN8xHoqVMq8i2s55_74BiNHka9bQ:1758174968504'
             }
@@ -1566,6 +1573,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.3 MB',
+              difficulty: 3.8,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1rJzWVNX8gqrkw0AA3ipRSDlPxXp-j5t8&export=download&authuser=0&confirm=t&uuid=6fdc9f22-07c6-4bf5-8a84-6b8c355815b8&at=AN8xHoqpzYwh1mNtGmdixQyEbiYN:1758175290426'
             },
             {
@@ -1574,6 +1582,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.8 MB',
+              difficulty: 4.0,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1nGZqBk7MwoVhgJv9jzobSPxO5wQkNV_G&export=download&authuser=0&confirm=t&uuid=30db94f0-61dc-4b10-80bc-180895508986&at=AN8xHoowHS7F8xjH2k845tRYMYvm:1758175294663'
             },
             {
@@ -1582,6 +1591,7 @@ const subjectPapers = {
                 year: '2023',
                 semester: 'Spring',
                 fileSize: '1.1 MB',
+              difficulty: 4.4,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1bKaOSDHVTMnkaodmlS2T2tITnWuA4nv7&export=download&authuser=0&confirm=t&uuid=5f39a414-3f07-40b5-ab0a-7565d5b56ad1&at=AN8xHoq_bjqsYfaWepZPWjoBrc0s:1758175287017'
             },
             {
@@ -1590,6 +1600,7 @@ const subjectPapers = {
                 year: '2021',
                 semester: 'Spring',
                 fileSize: '1.6 MB',
+              difficulty: 3.2,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=18lP9m6uA7JpK_rvkm9Wjqe-zA6kqhHUF&export=download&authuser=0&confirm=t&uuid=4aeb0b93-c4f9-4cf3-8801-196749f75524&at=AN8xHopLlYukfyMGy6ZCdSJ5qdBy:1758175283319'
             }
         ],
@@ -1645,6 +1656,7 @@ const subjectPapers = {
                 year: '2025',
                 semester: 'Spring',
                 fileSize: '1.2 MB',
+              difficulty: 4.6,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=194xCzZrMdllAKF8PMbaHRk1_9s2cTNQ6&export=download&authuser=0&confirm=t&uuid=78e9e3eb-ede3-4257-8e28-1f06d24956ea&at=AN8xHopnMzYduu-is2v3ra-oXl_I:1758175523825'
             },
             {
@@ -1653,6 +1665,7 @@ const subjectPapers = {
                 year: '2025',
                 semester: 'Spring',
                 fileSize: '1.9 MB',
+              difficulty: 4.7,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1l7R1I5E0P9eZWSNfa5didsmK8XfktpC4&export=download&authuser=0&confirm=t&uuid=53936326-44cf-4c5c-98e3-81c95ee8041c&at=AN8xHopMgbfnTstaGcmf86YH2X6m:1758175527645'
             },
             {
@@ -1661,6 +1674,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.6 MB',
+              difficulty: 4.3,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1ayPh3wUryz8cu8UOynd2woktqzAEz4Io&export=download&authuser=0&confirm=t&uuid=3afd4b94-bc3f-48ac-9c58-fb73e3ff515f&at=AN8xHopuUzVLcdKocpe6BPA0smDc:1758175516528'
             },
             {
@@ -1669,6 +1683,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.3 MB',
+              difficulty: 4.4,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1krgHBXSOor-dhHPPZyqrOddKxTRlJpbF&export=download&authuser=0&confirm=t&uuid=aa6c6f6b-5715-4405-9bfd-3cc143ac110d&at=AN8xHooyK8qINuqjoWJKPjV_emMT:1758175519995'
             },
             {
@@ -1677,6 +1692,7 @@ const subjectPapers = {
                 year: '2022',
                 semester: 'Spring',
                 fileSize: '1.1 MB',
+              difficulty: 3.8,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1DxSdEBh3bPAAkuJM2sdSYTKkmtiuALFH&export=download&authuser=0&confirm=t&uuid=6fb33933-e21f-410e-a353-e6c60aec1959&at=AN8xHorQEmljDniA3ZpOYq22JIhH:1758175512862'
             },
             {
@@ -1685,6 +1701,7 @@ const subjectPapers = {
                 year: '2021',
                 semester: 'Spring',
                 fileSize: '1.5 MB',
+              difficulty: 3.4,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1RR3mJih4rpBRJHCx17_5rUzxkAwe-6qm&export=download&authuser=0&confirm=t&uuid=4b05ca6d-4705-4940-893c-8e5f2585b76a&at=AN8xHor452qkEV25Vss1CvSDwgSS:1758175509112'
             }
         ],
@@ -1739,6 +1756,7 @@ const subjectPapers = {
                 title: 'COAL Lab Mid 2024 Paper A',
                 year: '2024',
                 semester: 'Spring',
+              difficulty: 4.1,
                 fileSize: '1.4 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1eM47TJLGD9o2TzrIqHD6_9aRQF5BaUI1&export=download&authuser=0&confirm=t&uuid=90487762-be8e-42df-bd25-72c3d873f1ee&at=AN8xHopU86mEqViD-4tUTUqFVfa8:1758175766042'
             },
@@ -1747,6 +1765,7 @@ const subjectPapers = {
                 title: 'COAL Lab Mid 2024 Paper B',
                 year: '2024',
                 semester: 'Spring',
+              difficulty: 4.1,
                 fileSize: '1.7 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1sYbII07RFJEtrlJaJPsVFo1sCIt8JVdM&export=download&authuser=0&confirm=t&uuid=d3690245-1ee4-4ae7-b6a2-90f141f7d1e3&at=AN8xHood8vU_VQogPFfldJAbL8dx:1758175799436'
             },
@@ -1756,6 +1775,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.2 MB',
+              difficulty: 4.5,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1lMImgzZu5KKcpOpxkst75ffn7IkryAsu&export=download&authuser=0&confirm=t&uuid=96cbc17d-ddaa-4a4c-88d3-1f646f7c73bd&at=AN8xHor8c7WhbxdKl4CN-fAxqxOl:1758175803109'
             },
             {
@@ -1764,6 +1784,7 @@ const subjectPapers = {
                 year: '2021',
                 semester: 'Spring',
                 fileSize: '1.5 MB',
+              difficulty: 3.9,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1GJEyMFr1OEBsztI7aFtaNSNmv9jrhYfS&export=download&authuser=0&confirm=t&uuid=ee8396aa-25eb-4f67-b175-f29ff2b4ad83&at=AN8xHorSTkggD17JIaHQPEYZutTP:1758175759877'
             },
             {
@@ -1772,6 +1793,7 @@ const subjectPapers = {
                 year: '2020',
                 semester: 'Spring',
                 fileSize: '1.9 MB',
+              difficulty: 3.6,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1KUi3LbnuqhOTF9vdPnfHZOzfoyuxibua&export=download&authuser=0&confirm=t&uuid=08147c8c-b96f-4899-90dd-099c933ebbf1&at=AN8xHoolhe72CtAUtwV1Rql8QdXd:1758175757540'
             }
         ],
@@ -1826,6 +1848,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.8 MB',
+              difficulty: 4.0,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1zWAMspE8lNGalBzvpc_4NkNK42TIS6Pq&export=download&authuser=0&confirm=t&uuid=5114351b-2c89-4031-af25-ab84b5ec11c0&at=AN8xHop3KOzoqDGyOgRfyw54Q5B2:1758176553399'
             },
             {
@@ -1833,6 +1856,7 @@ const subjectPapers = {
                 title: 'DSA Lab Mid 2024 Paper B',
                 year: '2024',
                 semester: 'Spring',
+              difficulty: 4.1,
                 fileSize: '1.2 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1mw1pJXww1agdDNu6pGOlvi0vhQjLCgKl&export=download&authuser=0&confirm=t&uuid=27d75d3e-9b02-4c9a-b81c-cb0257675d68&at=AN8xHop84Jmxc7uRW_eiiB8jGOSY:1758176557746'
             },
@@ -1841,6 +1865,7 @@ const subjectPapers = {
                 title: 'DSA Lab Mid 2024 Paper C',
                 year: '2024',
                 semester: 'Spring',
+              difficulty: 4.3,
                 fileSize: '1.9 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=15ZdJYMu_hj75a7Z8K36em8w0MAgL3EAt&export=download&authuser=0&confirm=t&uuid=1112711c-fafe-4a66-a53d-e6f506e71350&at=AN8xHopsOKtopnN-DcHwwSAeuBdv:1758176561545'
             },
@@ -1850,6 +1875,7 @@ const subjectPapers = {
                 year: '2024',
                 semester: 'Spring',
                 fileSize: '1.3 MB',
+              difficulty: 4.6,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1-S42euKAKw3O5IjqZpK18Codr-27qU9B&export=download&authuser=0&confirm=t&uuid=ceaaddf5-2442-49c5-8705-e51d9384b17b&at=AN8xHopiPc9A-4u8ldIvncohje6r:1758176565664'
             },
             {
@@ -1858,6 +1884,7 @@ const subjectPapers = {
                 year: '2023',
                 semester: 'Spring',
                 fileSize: '1.5 MB',
+              difficulty: 3.6,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=129HLQus0fkAq2We3zoVnrso4n5nsv9nQ&export=download&authuser=0&confirm=t&uuid=afa4215f-90c5-46a9-b3c6-58f2d312672e&at=AN8xHoqZOYQYpjvYS6edL3kyHNq7:1758176549519'
             }
         ],
@@ -2208,4 +2235,5 @@ function getCurrentSubject() {
     const urlParams = new URLSearchParams(window.location.search);
     const subjectId = urlParams.get('subject') || 'programming-fundamentals';
     return subjectPapers[subjectId] || subjectPapers['programming-fundamentals'];
+
 }

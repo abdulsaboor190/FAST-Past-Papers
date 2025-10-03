@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentSubject = getCurrentSubject();
     let currentCategory = 'mid1';
+    let currentDifficultyFilter = 'all';
+
     
     // Initialize the page
     initializePage();
@@ -9,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializePage() {
         updatePageTitle();
         setupTabListeners();
+        setupFilterListeners();
+
         loadPapers(currentCategory);
     }
     
@@ -61,6 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    function setupFilterListeners() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const difficulty = this.getAttribute('data-difficulty');
+                switchDifficultyFilter(difficulty);
+            });
+        });
+    }
     
     function switchCategory(category) {
         currentCategory = category;
@@ -74,7 +88,47 @@ document.addEventListener('DOMContentLoaded', function() {
         // Load papers for the new category
         loadPapers(category);
     }
+        function switchDifficultyFilter(difficulty) {
+        currentDifficultyFilter = difficulty;
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        document.querySelector(`[data-difficulty="${difficulty}"]`).classList.add('active');
+        
+        applyDifficultyFilter();
+    }
     
+    function applyDifficultyFilter() {
+        const paperCards = document.querySelectorAll('.paper-card');
+        let visibleCount = 0;
+        
+        paperCards.forEach(card => {
+            const cardDifficulty = card.getAttribute('data-difficulty');
+            
+            if (currentDifficultyFilter === 'all' || cardDifficulty === currentDifficultyFilter) {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        // Show/hide empty state
+        const papersGrid = document.getElementById('papersGrid');
+        const existingEmptyState = papersGrid.querySelector('.empty-filter-state');
+        
+        if (visibleCount === 0 && !existingEmptyState) {
+            const emptyState = document.createElement('div');
+            emptyState.className = 'empty-filter-state';
+            emptyState.innerHTML = `
+                <h3>No papers found</h3>
+                <p>No papers match the selected difficulty level for this category.</p>
+            `;
+            papersGrid.appendChild(emptyState);
+        } else if (visibleCount > 0 && existingEmptyState) {
+            existingEmptyState.remove();
+        }
+    }
     function loadPapers(category) {
         const papersGrid = document.getElementById('papersGrid');
         const papers = currentSubject.papers[category] || [];
@@ -91,13 +145,39 @@ document.addEventListener('DOMContentLoaded', function() {
         
         papersGrid.innerHTML = papers.map(paper => createPaperCard(paper)).join('');
         
-        // Add event listeners to paper cards
+        updateFilterCounts(papers);
         setupPaperCardListeners();
+        applyDifficultyFilter();
     }
+function updateFilterCounts(papers) {
+    const counts = {
+        all: papers.length,
+        easy: 0,
+        medium: 0,
+        hard: 0
+    };
     
+    papers.forEach(paper => {
+        const diffClass = getDifficultyClass(paper.difficulty);
+        counts[diffClass]++;
+    });
+    
+    document.getElementById('countAll').textContent = counts.all;
+    document.getElementById('countEasy').textContent = counts.easy;
+    document.getElementById('countMedium').textContent = counts.medium;
+    document.getElementById('countHard').textContent = counts.hard;
+}
     function createPaperCard(paper) {
+        const difficultyClass = getDifficultyClass(paper.difficulty);
+        const difficultyLabel = getDifficultyLabel(paper.difficulty);
+        const difficultyIcon = getDifficultyIcon(difficultyClass);
+        
         return `
-            <div class="paper-card" data-paper-id="${paper.id}">
+            <div class="paper-card" data-paper-id="${paper.id}" data-difficulty="${difficultyClass}">
+                <div class="difficulty-badge ${difficultyClass}">
+                    <span class="difficulty-icon">${difficultyIcon}</span>
+                    <span class="difficulty-value">${paper.difficulty || 'N/A'}</span>
+                </div>
                 <div class="paper-header">
                     <div class="paper-info">
                         <h3>${paper.title}</h3>
@@ -108,9 +188,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="paper-download">
                     <div class="download-info">
-                        <p><strong>File Information:</strong></p>
-                        <p>Size: <span class="file-size">${paper.fileSize}</span></p>
-                        <p>Format: PDF</p>
+                        <h4>File Information</h4>
+                        <div class="file-details">
+                            <div class="file-detail-item">
+                                <span class="file-detail-icon">📄</span>
+                                <span class="file-detail-label">Format</span>
+                                <span class="file-detail-value">PDF</span>
+                            </div>
+                            <div class="file-detail-item">
+                                <span class="file-detail-icon">💾</span>
+                                <span class="file-detail-label">Size</span>
+                                <span class="file-detail-value file-size">${paper.fileSize}</span>
+                            </div>
+                            <div class="file-detail-item">
+                                <span class="file-detail-icon">📊</span>
+                                <span class="file-detail-label">Difficulty</span>
+                                <span class="file-detail-value">${difficultyLabel}</span>
+                            </div>
+                        </div>
                     </div>
                     <button class="download-btn" onclick="downloadPaper('${paper.downloadUrl}', '${paper.title}')">
                         <span class="download-icon">⬇</span>
@@ -120,6 +215,32 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
     }
+function getDifficultyClass(difficulty) {
+    if (!difficulty) return 'medium';
+    const diff = parseFloat(difficulty);
+    if (diff >= 3.0 && diff <= 3.8) return 'easy';
+    if (diff >= 3.9 && diff <= 4.2) return 'medium';
+    if (diff >= 4.3 && diff <= 5.0) return 'hard';
+    return 'medium'; // fallback
+}
+
+function getDifficultyLabel(difficulty) {
+    if (!difficulty) return 'Medium';
+    const diff = parseFloat(difficulty);
+    if (diff >= 3.0 && diff <= 3.8) return 'Easy';
+    if (diff >= 3.9 && diff <= 4.2) return 'Medium';
+    if (diff >= 4.3 && diff <= 5.0) return 'Hard';
+    return 'Medium'; // fallback
+}
+
+function getDifficultyIcon(difficultyClass) {
+    const icons = {
+        easy: '✓',
+        medium: '⚡',
+        hard: '🔥'
+    };
+    return icons[difficultyClass] || '⚡';
+}
     
     function setupPaperCardListeners() {
         const paperCards = document.querySelectorAll('.paper-card');
@@ -151,7 +272,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Global function for downloading papers
     window.downloadPaper = function(downloadUrl, paperTitle) {
-        // Show loading state
         const downloadBtns = document.querySelectorAll('.download-btn');
         const clickedBtn = event.target.closest('.download-btn');
         
@@ -160,7 +280,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clickedBtn.innerHTML = '<span class="download-icon">⏳</span> Downloading...';
             clickedBtn.disabled = true;
             
-            // Create invisible link and trigger download
             const link = document.createElement('a');
             link.href = downloadUrl;
             link.download = `${paperTitle}.pdf`;
@@ -170,13 +289,11 @@ document.addEventListener('DOMContentLoaded', function() {
             link.click();
             document.body.removeChild(link);
             
-            // Reset button after a short delay
             setTimeout(() => {
                 clickedBtn.innerHTML = originalText;
                 clickedBtn.disabled = false;
             }, 2000);
             
-            // Track download (you can add analytics here)
             console.log(`Downloaded: ${paperTitle}`);
         }
     };
@@ -201,15 +318,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add keyboard navigation for accessibility
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            // Close all expanded cards
             document.querySelectorAll('.paper-card.expanded').forEach(card => {
                 card.classList.remove('expanded');
             });
         }
     });
+function getCurrentSubject() {
+    // Get subject ID from URL parameter OR from page-specific variable
+    const urlParams = new URLSearchParams(window.location.search);
+    const subjectFromUrl = urlParams.get('subject');
+    
+    // If there's a currentSubjectId defined in the page, use that
+    // Otherwise, extract from filename
+    if (typeof currentSubjectId !== 'undefined') {
+        return subjectPapers[currentSubjectId];
+    }
+    
+    if (subjectFromUrl && subjectPapers[subjectFromUrl]) {
+        return subjectPapers[subjectFromUrl];
+    }
+    
+    // Fallback: extract from current filename
+    const path = window.location.pathname;
+    const filename = path.split('/').pop().replace('.html', '');
+    return subjectPapers[filename] || subjectPapers['programming-fundamentals'];
+}
     
     // Add loading animation for better perceived performance
     function showLoading() {

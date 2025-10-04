@@ -1,6 +1,7 @@
 {
   "name": "FAST Past Papers",
   "short_name": "FAST Papers",
+    "version": "1.1.0",
   "description": "Find and download past papers for FAST University subjects instantly",
   "start_url": "/",
   "display": "standalone",

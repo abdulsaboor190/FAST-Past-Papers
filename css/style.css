@@ -621,4 +621,119 @@ body {
         height: 50px;
         font-size: 1.25rem;
     }
+
+}
+
+/* Update Notification Styles - Add this to your style.css */
+.update-notification {
+    position: fixed;
+    bottom: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #065f46 0%, #10b981 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 500px;
+    width: 90%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.update-notification.show {
+    bottom: 30px;
+}
+
+.update-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.update-icon {
+    font-size: 2rem;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.update-text {
+    flex: 1;
+    min-width: 150px;
+}
+
+.update-text strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.update-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.update-btn, .dismiss-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.update-btn {
+    background: white;
+    color: #065f46;
+}
+
+.update-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.dismiss-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dismiss-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+    .update-notification {
+        padding: 1.25rem 1.5rem;
+    }
+    
+    .update-content {
+        gap: 0.75rem;
+    }
+    
+    .update-icon {
+        font-size: 1.5rem;
+    }
+    
+    .update-text strong {
+        font-size: 1rem;
+    }
+    
+    .update-text p {
+        font-size: 0.85rem;
+    }
+    
+    .update-btn, .dismiss-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        flex: 1;
+    }
 }

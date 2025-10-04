@@ -1,7 +1,8 @@
-// PWA Installation and Service Worker Registration
+// PWA Installation and Service Worker Registration with Update Detection
 class PWAManager {
     constructor() {
         this.deferredPrompt = null;
+        this.registration = null;
         this.init();
     }
 
@@ -9,19 +10,93 @@ class PWAManager {
         this.registerServiceWorker();
         this.setupInstallPrompt();
         this.createInstallButton();
+        this.checkForUpdates();
     }
 
-    // Register service worker
+    // Register service worker with update detection
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
                     .then((registration) => {
+                        this.registration = registration;
                         console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        
+                        // Check for updates every 60 seconds
+                        setInterval(() => {
+                            registration.update();
+                        }, 60000);
+                        
+                        // Listen for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New service worker available
+                                    this.showUpdateNotification(newWorker);
+                                }
+                            });
+                        });
                     })
                     .catch((err) => {
                         console.log('ServiceWorker registration failed: ', err);
                     });
+                    
+                // Handle controller change (when new SW takes over)
+                let refreshing = false;
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (!refreshing) {
+                        refreshing = true;
+                        window.location.reload();
+                    }
+                });
+            });
+        }
+    }
+
+    // Show update notification to user
+    showUpdateNotification(newWorker) {
+        const notification = document.createElement('div');
+        notification.className = 'update-notification';
+        notification.innerHTML = `
+            <div class="update-content">
+                <div class="update-icon">🔄</div>
+                <div class="update-text">
+                    <strong>New Update Available!</strong>
+                    <p>A new version of FAST Past Papers is ready.</p>
+                </div>
+                <button class="update-btn" id="updateBtn">Update Now</button>
+                <button class="dismiss-btn" id="dismissBtn">Later</button>
+            </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Show notification with animation
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 100);
+        
+        // Handle update button click
+        document.getElementById('updateBtn').addEventListener('click', () => {
+            newWorker.postMessage({ type: 'SKIP_WAITING' });
+            notification.remove();
+        });
+        
+        // Handle dismiss button click
+        document.getElementById('dismissBtn').addEventListener('click', () => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        });
+    }
+
+    // Check for updates on page load
+    checkForUpdates() {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.ready.then((registration) => {
+                // Check for updates immediately
+                registration.update();
             });
         }
     }
@@ -29,15 +104,11 @@ class PWAManager {
     // Setup install prompt handling
     setupInstallPrompt() {
         window.addEventListener('beforeinstallprompt', (e) => {
-            // Prevent Chrome 67 and earlier from automatically showing the prompt
             e.preventDefault();
-            // Stash the event so it can be triggered later
             this.deferredPrompt = e;
-            // Show custom install button
             this.showInstallButton();
         });
 
-        // Handle successful app installation
         window.addEventListener('appinstalled', (evt) => {
             console.log('PWA was installed');
             this.hideInstallButton();
@@ -56,14 +127,12 @@ class PWAManager {
             </div>
         `;
         
-        // Add the button after the hero section
         const heroSection = document.querySelector('.hero');
         if (heroSection) {
             heroSection.insertAdjacentHTML('afterend', installButtonHTML);
         }
     }
 
-    // Show install button
     showInstallButton() {
         const installContainer = document.getElementById('pwa-install-container');
         if (installContainer) {
@@ -72,7 +141,6 @@ class PWAManager {
         }
     }
 
-    // Hide install button
     hideInstallButton() {
         const installContainer = document.getElementById('pwa-install-container');
         if (installContainer) {
@@ -80,7 +148,6 @@ class PWAManager {
         }
     }
 
-    // Install the app
     installApp() {
         const installButton = document.getElementById('pwa-install-button');
         
@@ -89,10 +156,8 @@ class PWAManager {
         }
         
         if (this.deferredPrompt) {
-            // Show the prompt
             this.deferredPrompt.prompt();
             
-            // Wait for the user to respond to the prompt
             this.deferredPrompt.userChoice.then((choiceResult) => {
                 if (choiceResult.outcome === 'accepted') {
                     console.log('User accepted the install prompt');
@@ -105,12 +170,10 @@ class PWAManager {
                 this.deferredPrompt = null;
             });
         } else {
-            // Fallback for browsers that don't support installation
             this.showAddToHomeScreenInstructions();
         }
     }
 
-    // Show success message after installation
     showInstallSuccessMessage() {
         const message = document.createElement('div');
         message.className = 'install-success-message';
@@ -132,7 +195,6 @@ class PWAManager {
         }, 3000);
     }
 
-    // Show instructions for manual installation
     showAddToHomeScreenInstructions() {
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
         const isAndroid = /Android/.test(navigator.userAgent);

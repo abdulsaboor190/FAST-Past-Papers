@@ -1,5 +1,6 @@
 // IMPORTANT: Change this version number EVERY time you make changes
-const CACHE_VERSION = 'v1.1.0'; // <-- INCREMENT THIS with each update
+const CACHE_VERSION = 'v1.2.0';  
+
 const CACHE_NAME = `fast-papers-${CACHE_VERSION}`;
 
 const urlsToCache = [

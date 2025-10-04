@@ -1556,8 +1556,7 @@ const subjectPapers = {
                 fileSize: '1.8 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1y-AY1bFjCRuamIFC-SWh0WDnmthRwWxZ&export=download&authuser=0&confirm=t&uuid=3c47915e-7041-46e5-8686-0afb7600cc62&at=AN8xHooIEo_mPHjLrtok-lp_sFQ2:1758175022669'
             }
-        ],
-        quiz: []
+        ]
     }
 },
 
@@ -2237,3 +2236,4 @@ function getCurrentSubject() {
     return subjectPapers[subjectId] || subjectPapers['programming-fundamentals'];
 
 }
+

@@ -196,12 +196,22 @@ const subjectPapers = {
             }
         ],
         quiz: [
-            {
+             {
                 id: 'pf-2024-quiz1',
-                title: 'PF Quiz 1 - 2024',
+                title: 'PF Class Handwritten Notes',
                 year: '2024',
                 semester: 'Spring',
-                fileSize: '0.8 MB',
+                fileSize: '5 MB',
+                difficulty: 4,
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1hwR52-QqWZIa8atuF_S-QeERcm7dN942&export=download&authuser=0&confirm=t&uuid=35d6f7c8-2e37-4b2d-9c80-e9f9569a2cc0&at=AKSUxGMzJusjI4FtPDhzT30G5b8f:1760107785097' // Placeholder - add real URL when available
+            }, 
+            {
+                id: 'pf-Handwritten',
+                title: 'PF Handwritten Notes',
+                year: '2024',
+                semester: 'Spring',
+                fileSize: '30 MB',
+                difficulty: 5,
                 downloadUrl: '#' // Placeholder - add real URL when available
             }
         ]

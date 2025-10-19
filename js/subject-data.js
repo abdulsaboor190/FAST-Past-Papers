@@ -886,6 +886,7 @@ const subjectPapers = {
                 title: 'Cal Mid 2 2022',
                 year: '2022',
                 semester: 'Spring',
+                difficulty: 3.9,
                 fileSize: '1.7 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1kdcUWZP2sAhO66lXijKV2XEnQyXd74Ta&export=download&authuser=0&confirm=t&uuid=38eddaa4-8670-40d2-81b7-9eac53eb7569&at=AN8xHooHR0IZLuUMJ2Uk1biWGQQr:1758101444531'
             },
@@ -894,6 +895,7 @@ const subjectPapers = {
                 title: 'Cal Mid 2 2023',
                 year: '2023',
                 semester: 'Spring',
+                difficulty: 3.5,
                 fileSize: '1.5 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1Ba3XV5C-Hcj__HM_F01BeTalT4PJ5Xz4&export=download&authuser=0&confirm=t&uuid=91060907-40d0-442c-ad3c-20b0c9e2a0c7&at=AN8xHooPW1Lo0m06Dfy89vYrF4Mh:1758101449133'
             },
@@ -902,15 +904,36 @@ const subjectPapers = {
                 title: 'Cal Mid 2 2024',
                 year: '2024',
                 semester: 'Spring',
+                difficulty: 4.8,
                 fileSize: '1.9 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1ojjnuhpb9DrrXhRGZNhYw0h0v3KaqKlQ&export=download&authuser=0&confirm=t&uuid=85fdb342-d2b5-4ba2-adc4-27c181738592&at=AN8xHoru6feyX0dA3uLCwju5kf7I:1758101452757'
+            },
+              {
+                id: 'cal-2024-mid2-ISB',
+                title: 'Cal Mid 2 2023 ISB',
+                year: '2024',
+                semester: 'Spring',
+                difficulty: 4.8,
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1KFsdBL-ubLdzGzan6QyqiKCZIyDL92U0&export=download&authuser=0&confirm=t&uuid=306e371b-2118-4a62-82de-47451bd780c0&at=AKSUxGO3ksbiZsMByzceTDaTWeDh:1760109572563'
+            },
+              {
+                id: 'cal-2023-mid2-LHR',
+                title: 'Cal Mid 2 2023 LHR',
+                year: '2023',
+                semester: 'Spring',
+                difficulty: 4.2,
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1iE4qag5XIIbIaQohAh6g-ElRlNmsU70e&export=download&authuser=0&confirm=t&uuid=ec2bfe47-4bbb-4e97-aae8-ca6bfcf48ed2&at=AKSUxGNqC7MPYqBnZVI4kwoedVhK:1760109696281'
             }
+            
         ],
         final: [
             {
                 id: 'cal-2021-final',
                 title: 'Cal Final 2021',
                 year: '2021',
+                difficulty: 3.9,
                 semester: 'Fall',
                 fileSize: '1.6 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1N6vu1YPBYn8bC4i_quyo7I5Ks6cUDotz&export=download&authuser=0&confirm=t&uuid=e85d2fd4-c4ee-417f-a19b-d25f4665a519&at=AN8xHopX2o5J7ggE9ArNjG8zm0NG:1758101460356'
@@ -919,6 +942,7 @@ const subjectPapers = {
                 id: 'cal-2022-final',
                 title: 'Cal Final 2022',
                 year: '2022',
+                difficulty: 4.3,
                 semester: 'Spring',
                 fileSize: '1.8 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1Uok9nj_4jKT3nN3g2FUxwLkRutVKta1i&export=download&authuser=0&confirm=t&uuid=67edaf11-151a-4921-9e02-0e6b32dd75b0&at=AN8xHor1F0D67npMXcmZTDy-7aXF:1758101464190'
@@ -928,6 +952,7 @@ const subjectPapers = {
                 title: 'Cal Final 2023',
                 year: '2023',
                 semester: 'Spring',
+                difficulty: 4.8,
                 fileSize: '1.4 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1CW8tCQ2TkRX-bgTdHg_RqhzJ2RnJGAPo&export=download&authuser=0&confirm=t&uuid=41d37a28-0290-4380-8a89-6b78740d0dde&at=AN8xHooOP90GL4csayrQzEduyl1A:1758101470112'
             },
@@ -938,12 +963,40 @@ const subjectPapers = {
                 semester: 'Spring',
                 fileSize: '1.9 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1RjbZOULBi65d2TnIzvFJ0TYdz3WI6e-a&export=download&authuser=0&confirm=t&uuid=b6e1a427-fe24-4b00-8894-bf5540bec22a&at=AN8xHoogZ9mAP0laSSzay3sLVh2F:1758101474325'
+            },
+             {
+                id: 'cal-2022-final-ISB',
+                title: 'Cal Final 2022 ISB',
+                year: '2022',
+                semester: 'Spring',
+                difficulty: 4.8,
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=14OEHHaFoZQawjkO6DND5DncVSkwK14me&export=download&authuser=0&confirm=t&uuid=02f71897-3877-4d3b-9ec2-7836b98a30b6&at=AKSUxGMYwjpQr72X_qw_nbHn3CTL:1760109807569'
+            },
+             {
+                id: 'cal-2023-final-LHR',
+                title: 'Cal Final 2023 LHR',
+                year: '2023',
+                semester: 'Spring',
+                difficulty: 3.7,
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1MKC619VY-otftxU2x2y_5smQg_aoW74E&export=download&authuser=0&confirm=t&uuid=74134584-44d6-441f-9430-5227ca2fed95&at=AKSUxGP4qhMNZD_EQBYQtXerfZ57:1760109809046'
             }
         ],
-        quiz: []
+        quiz: [
+            {
+                id: 'cal-NOtes',
+                title: 'Cal Notes',
+                year: '2023',
+                semester: 'Spring',
+                difficulty: 4.3,
+                fileSize: '50 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1k6P81oz6OEHCOM7XDq63etts93aDHT7a&export=download&authuser=0&confirm=t&uuid=3581f3a3-7ae9-4d28-8183-6a91eefd041a&at=AKSUxGNGbOw3ADdZdHwtu-i75LRZ:1760152994102'
+            }
+
+        ]
     }
 },
-
 'discrete-structures': {
     title: 'Discrete Structures',
     description: 'Mathematical structures for computer science including logic and graph theory',
@@ -2246,4 +2299,5 @@ function getCurrentSubject() {
     return subjectPapers[subjectId] || subjectPapers['programming-fundamentals'];
 
 }
+
 

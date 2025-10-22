@@ -58,84 +58,55 @@
                 <button class="tab-btn active" data-category="mid1">Mid 1</button>
                 <button class="tab-btn" data-category="mid2">Mid 2</button>
                 <button class="tab-btn" data-category="final">Final</button>
-                <button class="tab-btn" data-category="quiz">Quiz</button>
+               
             </div>
         </div>
 
+                     <!-- Difficulty Filter -->
+<!-- Difficulty Filter -->
+<div class="difficulty-filter">
+    <div class="filter-container">
+        <div class="filter-label">Filter by Difficulty</div>
+        <div class="filter-buttons">
+            <button class="filter-btn all active" data-difficulty="all">
+                <span class="filter-icon">📚</span>
+                <span>All Levels</span>
+                <span class="filter-count" id="countAll">0</span>
+            </button>
+            <button class="filter-btn easy" data-difficulty="easy">
+                <span class="filter-icon">✓</span>
+                <span>Easy (3.0-3.8)</span>
+                <span class="filter-count" id="countEasy">0</span>
+            </button>
+            <button class="filter-btn medium" data-difficulty="medium">
+                <span class="filter-icon">⚡</span>
+                <span>Medium (3.9-4.2)</span>
+                <span class="filter-count" id="countMedium">0</span>
+            </button>
+            <button class="filter-btn hard" data-difficulty="hard">
+                <span class="filter-icon">🔥</span>
+                <span>Hard (4.3-5.0)</span>
+                <span class="filter-count" id="countHard">0</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+        
+        <!-- Papers Grid -->
         <div class="papers-section">
-            <div class="papers-grid" id="papersGrid"></div>
+            <div class="papers-grid" id="papersGrid">
+                <!-- Papers will be loaded by JavaScript -->
+            </div>
         </div>
     </div>
 
+    <!-- Load JavaScript -->
     <script src="../js/subject-data.js"></script>
-    <script>
-        const currentSubjectId = 'theory-of-automata';
-        document.addEventListener('DOMContentLoaded', () => {
-            let cat = 'mid1';
-            init();
-
-            function init() { setupTabs(); load(cat); }
-
-            function setupTabs() {
-                document.querySelectorAll('.tab-btn').forEach(b => {
-                    b.addEventListener('click', () => switchCat(b.getAttribute('data-category')));
-                });
-            }
-
-            function switchCat(c) {
-                cat = c;
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelector(`[data-category="${c}"]`).classList.add('active');
-                load(c);
-            }
-
-            function load(c) {
-                const grid = document.getElementById('papersGrid');
-                const subj = subjectPapers[currentSubjectId];
-                const papers = subj.papers[c] || [];
-                grid.innerHTML = papers.length === 0 ? `<div class="empty-state"><h3>No papers</h3></div>` : papers.map(card).join('');
-                setupCards();
-            }
-
-            function card(p) {
-                return `
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <div class="paper-info"><h3>${p.title}</h3><div>${p.semester} ${p.year}</div></div>
-                        <div class="paper-icon">TA</div>
-                        <div class="expand-indicator">▼</div>
-                    </div>
-                    <div class="paper-download">
-                        <p><strong>Size:</strong> ${p.fileSize}</p>
-                        <button class="download-btn" onclick="downloadPaper('${p.downloadUrl}','${p.title}')">⬇ Download</button>
-                    </div>
-                </div>`;
-            }
-
-            function setupCards() {
-                document.querySelectorAll('.paper-card .paper-header').forEach(h => {
-                    h.addEventListener('click', () => {
-                        const card = h.parentElement;
-                        document.querySelectorAll('.paper-card.expanded').forEach(c => c.classList.remove('expanded'));
-                        card.classList.toggle('expanded');
-                    });
-                });
-            }
-        });
-
-        function downloadPaper(url, title) {
-            const btn = event.target.closest('.download-btn');
-            const orig = btn.innerHTML;
-            btn.innerHTML = '⏳ Downloading...';
-            btn.disabled = true;
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = `${title}.pdf`;
-            link.click();
-            setTimeout(() => { btn.innerHTML = orig; btn.disabled = false; }, 2000);
-        }
-    </script>
+    <script src="../js/subject.js"></script>
 </body>
-</html>
 
+</html>
 

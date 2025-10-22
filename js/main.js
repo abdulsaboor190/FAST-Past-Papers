@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEngagementItems();
 });
 
-// Updated subject data for main page (with Computer Networks added)
+
 const subjects = [
 {
     id: 'programming-fundamentals',
@@ -133,6 +133,7 @@ const subjects = [
     latest: 2024,
     color: '#00b894'
 },
+
 {
     id: 'coal-lab',
     title: 'Computer Organization and Assembly Language Lab',
@@ -214,7 +215,6 @@ const subjects = [
     latest: 2024,
     color: '#8c7ae6'
 },
-// NEW SUBJECT ADDED - Computer Networks
 {
     id: 'computer-networks',
     title: 'Computer Networks',
@@ -347,28 +347,29 @@ function setupSearch() {
         const filteredSubjects = subjects.filter(subject => 
             subject.title.toLowerCase().includes(query) ||
             // Include some basic keyword matching
-            (subject.id === 'programming-fundamentals' && (query.includes('programming') || query.includes('fundamentals') || query.includes('cpp') || query.includes('c++'))) ||
-            (subject.id === 'programming-fundamentals-lab' && (query.includes('programming') || query.includes('fundamentals') || query.includes('lab') || query.includes('practical'))) ||
+            (subject.id === 'programming-fundamentals' && (query.includes('programming') || query.includes('fundamentals') || query.includes('pf') || query.includes('c++'))) ||
+            (subject.id === 'programming-fundamentals-lab' && (query.includes('programming') || query.includes('fundamentals') || query.includes('lab') || query.includes('pf'))) ||
             (subject.id === 'information-communication-technology' && (query.includes('ict') || query.includes('information') || query.includes('communication') || query.includes('technology'))) ||
-            (subject.id === 'data-structures-algorithms' && (query.includes('data') || query.includes('structure') || query.includes('algorithm') || query.includes('array') || query.includes('tree'))) ||
-            (subject.id === 'data-structures-lab' && (query.includes('data') || query.includes('structures') || query.includes('lab') || query.includes('practical'))) ||
-            (subject.id === 'discrete-structures' && (query.includes('discrete') || query.includes('logic') || query.includes('graph'))) ||
-            (subject.id === 'linear-algebra' && (query.includes('linear') || query.includes('algebra') || query.includes('matrix'))) ||
-            (subject.id === 'theory-of-automata' && (query.includes('automata') || query.includes('theory') || query.includes('finite'))) ||
+            (subject.id === 'data-structures-algorithms' && (query.includes('data') || query.includes('structure') || query.includes('algorithm') || query.includes('dsa') || query.includes('tree'))) ||
+            (subject.id === 'data-structures-lab' && (query.includes('data') || query.includes('structures') || query.includes('lab') || query.includes('dsa'))) ||
+            (subject.id === 'discrete-structures' && (query.includes('discrete') || query.includes('logic') || query.includes('ds'))) ||
+            (subject.id === 'linear-algebra' && (query.includes('linear') || query.includes('algebra') || query.includes('la'))) ||
+            (subject.id === 'theory-of-automata' && (query.includes('automata') || query.includes('theory') || query.includes('toa'))) ||
             (subject.id === 'oop' && (query.includes('oop') || query.includes('object') || query.includes('oriented'))) ||
             (subject.id === 'oop-lab' && (query.includes('oop') || query.includes('object') || query.includes('lab') || query.includes('practical'))) ||
-            (subject.id === 'computer-architecture' && (query.includes('computer') || query.includes('architecture') || query.includes('processor'))) ||
+            (subject.id === 'computer-architecture' && (query.includes('computer') || query.includes('architecture') || query.includes('ca'))) ||
             (subject.id === 'coal-lab' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('lab'))) ||
             (subject.id === 'compiler-construction' && (query.includes('compiler') || query.includes('construction') || query.includes('parsing'))) ||
-            (subject.id === 'digital-logic-design' && (query.includes('digital') || query.includes('logic') || query.includes('design'))) ||
-            (subject.id === 'information-security' && (query.includes('information') || query.includes('security') || query.includes('cybersecurity'))) ||
+            (subject.id === 'digital-logic-design' && (query.includes('digital') || query.includes('logic') || query.includes('dld'))) ||
+            (subject.id === 'information-security' && (query.includes('information') || query.includes('security') || query.includes('ic'))) ||
             (subject.id === 'operating-system' && (query.includes('operating') || query.includes('system') || query.includes('os'))) ||
             (subject.id === 'operation-research' && (query.includes('operation') || query.includes('research') || query.includes('optimization'))) ||
-            (subject.id === 'ideology-constitution-pakistan' && (query.includes('ideology') || query.includes('constitution') || query.includes('pakistan') || query.includes('political'))) ||
-            (subject.id === 'design-analysis-algorithms' && (query.includes('design') || query.includes('analysis') || query.includes('algorithm') || query.includes('complexity'))) ||
+            (subject.id === 'ideology-constitution-pakistan' && (query.includes('ideology') || query.includes('icp') || query.includes('pakistan') || query.includes('political'))) ||
+            (subject.id === 'design-analysis-algorithms' && (query.includes('design') || query.includes('analysis') || query.includes('algorithm') || query.includes('daa'))) ||
             (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('dbms'))) ||
+
             // NEW SUBJECT SEARCH TERMS
-            (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('routing') || query.includes('protocols')))
+            (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols')))
         );
         
         if (filteredSubjects.length > 0) {

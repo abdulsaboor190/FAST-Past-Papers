@@ -242,33 +242,61 @@ function getDifficultyIcon(difficultyClass) {
     return icons[difficultyClass] || '⚡';
 }
     
-    function setupPaperCardListeners() {
-        const paperCards = document.querySelectorAll('.paper-card');
-        paperCards.forEach(card => {
-            const header = card.querySelector('.paper-header');
-            header.addEventListener('click', function() {
+function setupPaperCardListeners() {
+    const paperCards = document.querySelectorAll('.paper-card');
+    
+    paperCards.forEach(card => {
+        // Remove any existing listeners first
+        const newCard = card.cloneNode(true);
+        card.parentNode.replaceChild(newCard, card);
+    });
+    
+    // Re-select after cloning
+    const refreshedCards = document.querySelectorAll('.paper-card');
+    
+    refreshedCards.forEach(card => {
+        const header = card.querySelector('.paper-header');
+        
+        if (header) {
+            header.addEventListener('click', function(e) {
+                // Prevent click if clicking on download button
+                if (e.target.closest('.download-btn')) {
+                    return;
+                }
+                
+                console.log('Card clicked!'); // Debug log
                 togglePaperCard(card);
             });
-        });
-    }
-    
-    function togglePaperCard(card) {
-        const isExpanded = card.classList.contains('expanded');
-        
-        // Close all other expanded cards
-        document.querySelectorAll('.paper-card.expanded').forEach(otherCard => {
-            if (otherCard !== card) {
-                otherCard.classList.remove('expanded');
-            }
-        });
-        
-        // Toggle current card
-        if (isExpanded) {
-            card.classList.remove('expanded');
-        } else {
-            card.classList.add('expanded');
+            
+            // Add pointer cursor to indicate clickability
+            header.style.cursor = 'pointer';
         }
+    });
+}
+
+    
+function togglePaperCard(card) {
+    const isExpanded = card.classList.contains('expanded');
+    
+    console.log('Toggling card. Currently expanded:', isExpanded); // Debug log
+    
+    // Close all other expanded cards
+    document.querySelectorAll('.paper-card.expanded').forEach(otherCard => {
+        if (otherCard !== card) {
+            otherCard.classList.remove('expanded');
+            console.log('Closed another card'); // Debug log
+        }
+    });
+    
+    // Toggle current card
+    if (isExpanded) {
+        card.classList.remove('expanded');
+        console.log('Card collapsed'); // Debug log
+    } else {
+        card.classList.add('expanded');
+        console.log('Card expanded'); // Debug log
     }
+}
     
     // Global function for downloading papers
     window.downloadPaper = function(downloadUrl, paperTitle) {

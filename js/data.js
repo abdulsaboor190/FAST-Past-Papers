@@ -198,6 +198,15 @@ const subjectsData = [
     yearRange: '2020-2024',
     searchTerms: ['design', 'analysis', 'algorithms', 'daa']
 },
+  {
+    id: 'coal-theory',
+    name: 'Computer Organization and Assembly Language',
+    icon: '🔧',
+    description: 'Computer organization fundamentals and assembly language programming theory',
+    paperCount: 12, // Update this with actual count
+    yearRange: '2020-2024',
+    searchTerms: ['coal', 'computer', 'organization', 'assembly', 'language', 'theory']
+},
 {
     id: 'database-system',
     name: 'Database System',
@@ -271,3 +280,4 @@ class DataManager {
 
 // Create global instance
 const dataManager = new DataManager();
+

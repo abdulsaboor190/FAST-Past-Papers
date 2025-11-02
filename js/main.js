@@ -223,6 +223,15 @@ const subjects = [
     papers: 8,
     latest: 2024,
     color: '#ff9ff3'
+},
+    {
+    id: 'coal-theory',
+    title: 'Computer Organization and Assembly Language',
+    description: 'Computer organization fundamentals and assembly language programming theory',
+    icon: '🔧',
+    papers: 12, // Update with actual count
+    latest: 2024,
+    color: '#e84393'
 }
 
 ];
@@ -314,6 +323,8 @@ function navigateToSubject(subjectId, cardElement) {
             'ideology-constitution-pakistan': 'ideology-constitution-pakistan.html',
             'design-analysis-algorithms': 'design-analysis-algorithms.html',
             'database-system': 'database-system.html',
+                            'coal-theory': 'coal-theory.html', // ADD THIS LINE
+
             'computer-networks': 'computer-networks.html'
         };
         
@@ -367,6 +378,7 @@ function setupSearch() {
             (subject.id === 'ideology-constitution-pakistan' && (query.includes('ideology') || query.includes('icp') || query.includes('pakistan') || query.includes('political'))) ||
             (subject.id === 'design-analysis-algorithms' && (query.includes('design') || query.includes('analysis') || query.includes('algorithm') || query.includes('daa'))) ||
             (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('dbms'))) ||
+            (subject.id === 'coal-theory' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('theory'))) ||
 
             // NEW SUBJECT SEARCH TERMS
             (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols')))
@@ -447,3 +459,4 @@ function handleEngagementAction(action) {
     
     // No alerts, no preventDefault() - let the HTML links work naturally
 }
+

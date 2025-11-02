@@ -270,7 +270,7 @@ const subjectPapers = {
         ]
     }
 },
-  'coal-theory': {
+'coal-theory': {
     id: 'coal-theory',
     title: 'Computer Organization and Assembly Language',
     description: 'Computer organization fundamentals and assembly language programming theory',
@@ -291,14 +291,58 @@ const subjectPapers = {
         mid2: [
             {
                 id: 'coal-theory-mid2-2024',
-                title: 'COAL Theory Mid 2',
+                title: 'COAL Theory Mid 2 (2024)',
                 semester: 'Spring',
                 year: '2024',
                 difficulty: '4.2',
                 fileSize: '2.3 MB',
-                downloadUrl: 'path/to/your/paper.pdf'
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1kmZuMPaMurk-V4d-IcsPly5jYHw0h5mI&export=download&authuser=0&confirm=t&uuid=f5097fcf-61ed-4a65-a361-c0d624efe705&at=AKSUxGNHSIeCxr5pyNzY9XkWTNtl:1762057302442'
             },
-            // Add more Mid 2 papers here
+            {
+                id: 'coal-theory-mid2-2022',
+                title: 'COAL Theory Mid 2 (2022)',
+                semester: 'Spring',
+                year: '2022',
+                difficulty: '4.0',
+                fileSize: '2.0 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1HvCxzOFOxHndpu_3HezXms76hesFrlMr&export=download&authuser=0&confirm=t&uuid=f8d794d3-9961-4e5c-841e-676652037bf0&at=AKSUxGPsi0_ZejZFbSSuNWKr9z4-:1762057295573'
+            },
+            {
+                id: 'coal-theory-mid2-2021',
+                title: 'COAL Theory Mid 2 (2021)',
+                semester: 'Spring',
+                year: '2021',
+                difficulty: '3.8',
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1N4bJGDRrKeAw1OT6Tvzwpz-0JK78VXp-&export=download&authuser=0&confirm=t&uuid=303d1cd7-5ef4-459c-8e73-65d74ec9cc7e&at=AKSUxGPMuJVwERuus5O2xTvrZRmM:1762057291311'
+            },
+            {
+                id: 'coal-theory-mid2-2020',
+                title: 'COAL Theory Mid 2 (2020)',
+                semester: 'Spring',
+                year: '2020',
+                difficulty: '3.7',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1SxkqUGJ2qI5MJCXwHZ38xJzVGu5_wY7K&export=download&authuser=0&confirm=t&uuid=62082618-68c0-4ed0-8348-85b30a5319b7&at=AKSUxGOJr4CoueH137pJRth7US3v:1762057286971'
+            },
+            {
+                id: 'coal-theory-mid2-2019-fall',
+                title: 'COAL Theory Mid 2 (2019 Fall)',
+                semester: 'Fall',
+                year: '2019',
+                difficulty: '3.6',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1G18aQ6zUuFpy0cQfZnIV9In2RWwqwiCc&export=download&authuser=0&confirm=t&uuid=c25b5143-b5f3-4c90-83ce-7d6330043c42&at=AKSUxGMR_U-sRme8ZBODuYr3vdUe:1762057273626'
+            },
+            {
+                id: 'coal-theory-mid2-2019-spring',
+                title: 'COAL Theory Mid 2 (2019 Spring)',
+                semester: 'Spring',
+                year: '2019',
+                difficulty: '3.5',
+                fileSize: '1.6 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1TpsecQuBp9YBL7e7MZJYOHL7KKAXOFhB&export=download&authuser=0&confirm=t&uuid=683da082-5730-4fe1-a6a7-4a0f6f1b9f79&at=AKSUxGNkgJ_14-errrFkA2ZwwTOF:1762057283095'
+            }
         ],
         final: [
             {
@@ -314,6 +358,7 @@ const subjectPapers = {
         ]
     }
 },
+
 'oop': {
     name: 'Object Oriented Programming',
     icon : 'OOP',
@@ -2930,5 +2975,6 @@ function getCurrentSubject() {
     return subjectPapers[subjectId] || subjectPapers['programming-fundamentals'];
 
 }
+
 
 

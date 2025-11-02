@@ -270,6 +270,50 @@ const subjectPapers = {
         ]
     }
 },
+  'coal-theory': {
+    id: 'coal-theory',
+    title: 'Computer Organization and Assembly Language',
+    description: 'Computer organization fundamentals and assembly language programming theory',
+    icon: '🔧',
+    papers: {
+        mid1: [
+            {
+                id: 'coal-theory-mid1-2024',
+                title: 'COAL Theory Mid 1',
+                semester: 'Spring',
+                year: '2024',
+                difficulty: '4.0',
+                fileSize: '2.1 MB',
+                downloadUrl: 'path/to/your/paper.pdf'
+            },
+            // Add more Mid 1 papers here
+        ],
+        mid2: [
+            {
+                id: 'coal-theory-mid2-2024',
+                title: 'COAL Theory Mid 2',
+                semester: 'Spring',
+                year: '2024',
+                difficulty: '4.2',
+                fileSize: '2.3 MB',
+                downloadUrl: 'path/to/your/paper.pdf'
+            },
+            // Add more Mid 2 papers here
+        ],
+        final: [
+            {
+                id: 'coal-theory-final-2024',
+                title: 'COAL Theory Final',
+                semester: 'Spring',
+                year: '2024',
+                difficulty: '4.5',
+                fileSize: '3.0 MB',
+                downloadUrl: 'path/to/your/paper.pdf'
+            },
+            // Add more Final papers here
+        ]
+    }
+},
 'oop': {
     name: 'Object Oriented Programming',
     icon : 'OOP',
@@ -2886,4 +2930,5 @@ function getCurrentSubject() {
     return subjectPapers[subjectId] || subjectPapers['programming-fundamentals'];
 
 }
+
 

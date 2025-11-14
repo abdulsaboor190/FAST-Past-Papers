@@ -345,16 +345,62 @@ const subjectPapers = {
             }
         ],
         final: [
-            {
-                id: 'coal-theory-final-2024',
-                title: 'COAL Theory Final',
-                semester: 'Spring',
-                year: '2024',
-                difficulty: '4.5',
-                fileSize: '3.0 MB',
-                downloadUrl: 'path/to/your/paper.pdf'
-            },
-            // Add more Final papers here
+                {
+        "id": "coal-final-2024",
+        "title": "COAL Final 2024",
+        "semester": "Spring",
+        "year": "2024",
+        "difficulty": "4.4",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1oklHXgAFSX4ixfkA7Kcq6mY4J8Xyqgv8&export=download&authuser=0&confirm=t&uuid=5903c314-7d89-4dc9-b27b-d694219430f7&at=ALWLOp7-zZXyp4frzVss06BWFpOA:1763016820811"
+    },
+    {
+        "id": "coal-final-2022",
+        "title": "COAL Final 2022",
+        "semester": "Fall",
+        "year": "2022",
+        "difficulty": "4.0",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1cvOPjWvUFIPK-bWrccu-jvcLUPQycD6n&export=download&authuser=0&confirm=t&uuid=1b1c5ffb-3a07-4671-beba-ac13d99d0863&at=ALWLOp5BPvXK2S8xWS-KWFbRrYjZ:1763016804818"
+    },
+    {
+        "id": "coal-final-2020-spring",
+        "title": "COAL Final 2020 Spring",
+        "semester": "Spring",
+        "year": "2020",
+        "difficulty": "3.5",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1Vwoj8_jycrw3qKY-pVQKH4rO1T9iCrA6&export=download&authuser=0&confirm=t&uuid=fa0cbcc2-3504-4b08-a3b2-52b79ba17029&at=ALWLOp4MiFaipQhzxQudwsgdVdaw:1763016798173"
+    },
+    {
+        "id": "coal-final-2020-fall",
+        "title": "COAL Final 2020 Fall",
+        "semester": "Fall",
+        "year": "2020",
+        "difficulty": "3.8",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1SvM9TKiGg22ZFpi4m2yCfxLALkD5WAi4&export=download&authuser=0&confirm=t&uuid=80e26364-31e5-4846-ac20-ddb5cc5b94d1&at=ALWLOp7uUsi3UtoKS_QFIxhuQvyi:1763016793154"
+    },
+    {
+        "id": "coal-final-2024-lhr",
+        "title": "COAL Final 2024 LHR",
+        "semester": "Spring",
+        "year": "2024",
+        "difficulty": "4.5",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1DDGUgG1HR2PZdxFwryNiCClrQW_aHQKm&export=download&authuser=0&confirm=t&uuid=0327a03c-90a2-4363-a52d-3446486e8a1d&at=ALWLOp4K1ZkVJ7hHWFgCBNDR_8PV:1763016817971"
+    },
+    {
+        "id": "coal-final-2023-lhr",
+        "title": "COAL Final 2023 LHR",
+        "semester": "Fall",
+        "year": "2023",
+        "difficulty": "4.3",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1rb9Gh_0v8QHHVNMHArzh7hdsAE5MLAFd&export=download&authuser=0&confirm=t&uuid=d8c679a2-7b9a-4db8-b2ea-eca1d292e7be&at=ALWLOp4kO2M5B15n3kyUD-gkGAUC:1763016815345"
+    },
+    {
+        "id": "coal-final-2023-isb",
+        "title": "COAL Final 2023 ISB",
+        "semester": "Fall",
+        "year": "2023",
+        "difficulty": "4.1",
+        "downloadUrl": "https://drive.usercontent.google.com/download?id=1lIQEbqlWYWzD5G_IiyGNBFVhnibp2nKy&export=download&authuser=0&confirm=t&uuid=4dfe3ef8-c69a-4f3a-9f02-542deeaaf81f&at=ALWLOp5F4xdN6MRchGeR7ALnfrDp:1763016810481"
+    }
         ]
     }
 },

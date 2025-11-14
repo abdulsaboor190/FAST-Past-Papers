@@ -191,57 +191,80 @@ class AIGenerateLab {
         }
     }
 
-    // Create enhanced prompt for Gemini API
-    createPrompt(topic, sampleQuestions) {
+createPrompt(topic, sampleQuestions) {
         const samplesText = sampleQuestions.map((q, i) => `${i + 1}. ${q}`).join('\n\n');
         
-        return `You are an expert Programming Fundamentals Lab instructor specializing in C++ programming and hands-on practical exercises.
+        return `You are an expert Programming Fundamentals instructor specializing in C++ programming.
 
-**Task:** Analyze the following sample questions for the topic "${topic}" and generate 5 NEW practice questions suitable for lab exercises.
+**Task:** Analyze the following sample questions for the topic "${topic}" and generate 5 NEW practice questions.
 
 **Sample Questions for ${topic}:**
 ${samplesText}
 
 **CRITICAL INSTRUCTIONS - READ CAREFULLY:**
 
-1. **FOR QUESTIONS THAT REQUIRE CODE OUTPUT/DRY-RUN:**
+1. **DIFFICULTY LEVEL MATCHING (HIGHEST PRIORITY):**
+   - CAREFULLY analyze the complexity and difficulty of the sample questions above
+   - Your new questions MUST match the EXACT same difficulty level as the samples
+   - If samples use simple variables and basic operations, DO NOT create complex nested loops or advanced logic
+   - If samples have short code (5-10 lines), keep your code similarly short
+   - If samples test basic concepts, DO NOT test advanced concepts
+   - Match the cognitive load: simple samples = simple questions, complex samples = complex questions
+
+2. **FOR QUESTIONS THAT REQUIRE CODE OUTPUT/DRY-RUN:**
    - If you write a question like "Write the output for this code:" or "Find the output:" or "Dry run the following:"
    - YOU MUST IMMEDIATELY INCLUDE THE COMPLETE C++ CODE RIGHT AFTER THE QUESTION TEXT
    - DO NOT write "Output the following:" and then leave it blank
    - DO NOT write "Find the output:" without showing the code
    - The code MUST be complete with #include statements, main function, and all necessary parts
    - Format the code clearly with proper indentation
+   - Keep code length similar to the sample questions
 
-2. **LAB-SPECIFIC REQUIREMENTS:**
-   - Questions should be practical and hands-on, suitable for lab environment
-   - Focus on implementation, debugging, and code completion tasks
-   - Include questions that test practical programming skills
-   - Questions should be executable and testable in a lab setting
+3. **EXAMPLE OF CORRECT FORMAT:**
+   Question: "Write the output for this code or error if any:
+   
+   #include <iostream>
+   using namespace std;
+   int main() {
+       int x = 5;
+       cout << x << endl;
+       return 0;
+   }"
+   
+   This is CORRECT because the code is included and matches sample difficulty.
 
-3. **CODE INCLUSION RULES:**
+4. **EXAMPLE OF INCORRECT FORMAT:**
+   Question: "Write the output for this code:
+   [code would be here]"
+   
+   This is WRONG - the code is missing!
+
+5. **CODE INCLUSION RULES:**
    - ALWAYS include complete, compilable C++ code when the question asks for output/tracing
    - Include ALL necessary headers (#include <iostream>, etc.)
    - Include the complete main() function
    - Include all variable declarations and logic
    - Do NOT use placeholders like "[code here]" or "[...]"
+   - Keep code complexity aligned with sample questions
 
-4. **INPUT/OUTPUT EXAMPLES:**
+6. **INPUT/OUTPUT EXAMPLES:**
    - For implementation questions, provide ONE sample input and ONE sample output
    - Format as: "Sample Input: [input]" and "Sample Output: [output]"
    - For code output questions, the output should be shown after the code
 
 **Generation Requirements:**
-- Generate exactly 5 new questions
-- Match the difficulty level and style of the sample questions
+- Generate exactly 4 new questions
+- **MATCH THE EXACT DIFFICULTY LEVEL** of the sample questions (most important!)
+- Match the style, format, and complexity of the samples
 - Each question must be COMPLETE and SELF-CONTAINED
 - If a question needs code, the code MUST be included in the question text
 - Never leave code sections empty or incomplete
-- Questions should be practical and suitable for lab exercises
+- Use similar variable names, logic patterns, and problem structures as the samples
 
 **Output Format:**
-Provide ONLY the 5 questions, numbered 1-5. Each question should include ALL necessary code, examples, and details within the question text itself. Do not add explanations or answers.
+Provide ONLY the 4 questions, numbered 1-4. Each question should include ALL necessary code, examples, and details within the question text itself. Do not add explanations or answers.
 
-Generate 5 new practice questions for ${topic}:`;
+Generate 4 new practice questions for ${topic}:`;
     }
 
     // Call Gemini API with multiple endpoint attempts

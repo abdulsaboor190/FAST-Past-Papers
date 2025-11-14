@@ -13,6 +13,54 @@ document.addEventListener('DOMContentLoaded', function() {
         setupTabListeners();
         setupFilterListeners();
 
+        // Initialize AI Generate feature if this is Programming Fundamentals
+        if (currentSubject && (currentSubject.title === 'Programming Fundamentals' || 
+            window.location.pathname.includes('programming-fundamentals'))) {
+            if (window.aiGenerate) {
+                window.aiGenerate.init();
+            }
+        }
+
+        // Initialize AI Generate feature if this is Data Structures & Algorithms
+        if (currentSubject && (currentSubject.title === 'Data Structures & Algorithms' || 
+            window.location.pathname.includes('data-structures-algorithms'))) {
+            if (window.aiGenerateDSA) {
+                window.aiGenerateDSA.init();
+            }
+        }
+
+        // Initialize AI Generate feature if this is Programming Fundamentals Lab
+        if (currentSubject && (currentSubject.title === 'Programming Fundamentals Lab' || 
+            window.location.pathname.includes('programming-fundamentals-lab'))) {
+            if (window.aiGenerateLab) {
+                window.aiGenerateLab.init();
+            }
+        }
+
+        // Initialize AI Generate feature if this is Applied Physics
+        if (currentSubject && (currentSubject.title === 'Applied Physics' || 
+            window.location.pathname.includes('applied-physics'))) {
+            if (window.aiGenerateAppliedPhysics) {
+                window.aiGenerateAppliedPhysics.init();
+            }
+        }
+
+        // Initialize AI Generate feature if this is COAL Theory
+        if (currentSubject && (currentSubject.title === 'Computer Organization and Assembly Language' || 
+            window.location.pathname.includes('coal-theory'))) {
+            if (window.aiGenerateCOALTheory) {
+                window.aiGenerateCOALTheory.init();
+            }
+        }
+
+        // Initialize AI Generate feature if this is COAL Lab
+        if (currentSubject && (currentSubject.title === 'Computer Organization and Assembly Language Lab' || 
+            window.location.pathname.includes('coal-lab'))) {
+            if (window.aiGenerateCOALLab) {
+                window.aiGenerateCOALLab.init();
+            }
+        }
+
         loadPapers(currentCategory);
     }
     
@@ -84,6 +132,61 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.classList.remove('active');
         });
         document.querySelector(`[data-category="${category}"]`).classList.add('active');
+        
+        // Handle AI Generate category specially
+        if (category === 'ai-generate') {
+            // Hide difficulty filter for AI Generate
+            const difficultyFilter = document.querySelector('.difficulty-filter');
+            if (difficultyFilter) {
+                difficultyFilter.style.display = 'none';
+            }
+            
+            // Clear papers grid and show AI Generate UI
+            const papersGrid = document.getElementById('papersGrid');
+            papersGrid.innerHTML = '';
+            
+            // Show topic selection modal - check for all AI Generate implementations
+            if (window.aiGenerate && (currentSubject.title === 'Programming Fundamentals' || 
+                window.location.pathname.includes('programming-fundamentals')) &&
+                !window.location.pathname.includes('programming-fundamentals-lab')) {
+                window.aiGenerate.showTopicSelection();
+            } else if (window.aiGenerateLab && (currentSubject.title === 'Programming Fundamentals Lab' || 
+                window.location.pathname.includes('programming-fundamentals-lab'))) {
+                window.aiGenerateLab.showTopicSelection();
+            } else if (window.aiGenerateDSA && (currentSubject.title === 'Data Structures & Algorithms' || 
+                window.location.pathname.includes('data-structures-algorithms'))) {
+                window.aiGenerateDSA.showTopicSelection();
+            } else if (window.aiGenerateAppliedPhysics && (currentSubject.title === 'Applied Physics' || 
+                window.location.pathname.includes('applied-physics'))) {
+                window.aiGenerateAppliedPhysics.showTopicSelection();
+            } else if (window.aiGenerateCOALTheory && (currentSubject.title === 'Computer Organization and Assembly Language' || 
+                window.location.pathname.includes('coal-theory'))) {
+                window.aiGenerateCOALTheory.showTopicSelection();
+            } else if (window.aiGenerateCOALLab && (currentSubject.title === 'Computer Organization and Assembly Language Lab' || 
+                window.location.pathname.includes('coal-lab'))) {
+                window.aiGenerateCOALLab.showTopicSelection();
+            } else {
+                papersGrid.innerHTML = `
+                    <div class="empty-state">
+                        <h3>AI Generate Feature</h3>
+                        <p>Please refresh the page to load the AI Generate feature.</p>
+                    </div>
+                `;
+            }
+            return;
+        }
+        
+        // Close any open AI modal when switching to other categories
+        const existingModal = document.querySelector('.ai-modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+        
+        // Show difficulty filter for other categories
+        const difficultyFilter = document.querySelector('.difficulty-filter');
+        if (difficultyFilter) {
+            difficultyFilter.style.display = '';
+        }
         
         // Load papers for the new category
         loadPapers(category);

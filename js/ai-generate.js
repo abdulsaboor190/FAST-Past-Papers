@@ -1,8 +1,7 @@
 // Enhanced AI Generate functionality for Programming Fundamentals
 class AIGenerate {
     constructor() {
-        // Hardcoded API key - no need for students to enter it
-        this.apiKey = 'AIzaSyCBdWAJPer7XwKE89aIe2YF8PR-4ai9PhQ';
+        // Using ephemeral token system - no hardcoded API keys
         this.sampleQuestions = null;
         this.currentTopic = null;
         this.availableModels = null;
@@ -14,6 +13,7 @@ class AIGenerate {
         this.setupUI();
     }
 
+    
     // Load sample questions from JSON file
     async loadSampleQuestions() {
         try {
@@ -27,7 +27,8 @@ class AIGenerate {
             console.error('Error loading sample questions:', error);
             // Fallback sample questions
             this.sampleQuestions = {
-"Arrays": [
+
+  "Arrays": [
         "(a) A black and white image is stored in a matrix data of dimensions m x n. That is, it has m rows, n columns and n <= 1000. Matrix data contains only 0s and 1s. 0 represents a black pixel and 1 represents white pixel. We are interested in counting the number of k x k blocks (sub-matrices) in data that have at least k^2 / 2 white pixels in them. We call such blocks 'mostly white blocks'. Write a C++ function that returns the count of 'mostly white blocks' in data. You may use the function header: int countMostlyWhite(int data[][1000], int m, int n, int k). For further clarity consider the following example: Here matrix data has dimensions m = 5, n = 4, and let’s take k = 3. Take each 3 x 3 sub-matrix (this example has a total of 6 such matrices), and count its white pixels. Each 'mostly white block' must have at least 9 / 2 = 4 white pixels for k = 3. In the example there are 4 'mostly white blocks' of size 3x3 with their top-left corners at (0,1), (1,1), (2,0), and (2,1) respectively.\nMatrix:\n0 0 1 0\n0 1 0 1\n0 0 0 1\n1 0 1 0\n0 1 1 1",
           "Q7. Write a 'C' program and consider the following two 2D arrays named as CellNameData and CellExpData. The CellNameData array with 4×2 dimension contains the cell no. and cell names, whereas CellExpData array with 5×6 dimension contains the 4 types of gene expression values against each cell name. The first row in both arrays and the first column in CellExpData array are just row and column headers. Out of the 5 different columns in CellExpData array, select only those columns that match with the cell names given in CellNameData array. Store these data into a new 2D array named MergeData. After getting selected columns, expected data in MergeData array are shown below. [Marks 15, 25 minutes]\n[Hint: You can assume numeric values to represent the row and column names. No points will be given for hard-coding except declaration and initialization statements]\nCellNameData:\nCellNo. CellName\n0.1 LiverCell\n0.2 KidneyCell\n0.3 LungCell\nCellExpData:\nGnames LungCell SkinCell IntestineCell LiverCell KidneyCell\nGene1 2.3 1.7 4.3 3.4 4.5\nGene2 1.5 3.6 8.1 5.5 2.9\nGene3 4.1 6.6 5.3 3.9 8.1\nGene4 9.9 2.7 6.2 5.8 3.3\nMergeData:\nLiverCell KidneyCell LungCell\nGene1 3.4 4.5 2.3\nGene2 5.5 2.9 1.5\nGene3 3.9 8.1 4.1\nGene4 5.8 3.3 9.9",
     "During Covid-19 spread, a civil hospital has to manage budget for its 6 departments. Its account manager has to track expense reports department-wise and month-wise from January to May. Write a program using 2D arrays to hold the expense month-wise and department-wise. Requirements:\n(a) Department and month names should be stored and displayed using an array of string pointers.\n(b) Modular programming should be used (input-data, output-data, department-wise-total, month-wise-total) to generate the report.\n(c) The 2D array holding expenses should be passed from main to all functions by reference.\n(d) Calculate and display which department will need federal support (expenses higher than 50,000).\n(e) Display which month was stable in terms of expenses (lowest monthly expense).",
@@ -85,17 +86,24 @@ class AIGenerate {
     "Implement a function that counts the number of set bits (1s) in a 32-bit integer using bitwise operations only (no loops, no library functions).",
     "Implement a simple bitwise encryption algorithm that:\n- Takes a character array (string) as input\n- For each character, performs the following operations:\n  • Swaps the upper and lower nibbles (4-bit groups)\n  • XORs the result with a key byte 0x3C\n  • Rotates the bits left by 2 positions."
   ]
+
+
+
             };
         }
     }
 
-    // Check available models
+    // Check available models (using ephemeral token)
     async checkAvailableModels() {
         try {
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${this.apiKey}`);
-            if (response.ok) {
-                const data = await response.json();
-                this.availableModels = data.models || [];
+            if (!window.aiTokenManager) {
+                console.error('AI Token Manager not loaded. Please include ai-token-manager.js');
+                return null;
+            }
+            
+            const models = await window.aiTokenManager.checkAvailableModels();
+            if (models) {
+                this.availableModels = models;
                 console.log('Available models:', this.availableModels.map(m => m.name));
                 return this.availableModels;
             }
@@ -314,100 +322,40 @@ Generate 4 new practice questions for ${topic}:`;
     }
 
 
-    // Call Gemini API with multiple endpoint attempts
+    // Call Gemini API using ephemeral token system
     async callGeminiAPI(prompt) {
-        // First, try to check available models
-        const models = await this.checkAvailableModels();
-        console.log('Checking models returned:', models);
-
-        // Try different API endpoints - using models that are actually available
-        const attempts = [
-            {
-                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${this.apiKey}`,
-                name: 'gemini-2.5-flash'
-            },
-            {
-                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${this.apiKey}`,
-                name: 'gemini-2.0-flash'
-            },
-            {
-                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${this.apiKey}`,
-                name: 'gemini-2.5-pro'
-            },
-            {
-                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${this.apiKey}`,
-                name: 'gemini-flash-latest'
-            },
-            {
-                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-latest:generateContent?key=${this.apiKey}`,
-                name: 'gemini-pro-latest'
-            }
-        ];
-
-        let lastError = null;
-
-        for (const attempt of attempts) {
-            try {
-                console.log(`🔄 Trying: ${attempt.name}`);
-
-                const response = await fetch(attempt.url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        contents: [{
-                            parts: [{
-                                text: prompt
-                            }]
-                        }],
-                        generationConfig: {
-                            temperature: 0.7,
-                            topK: 40,
-                            topP: 0.95,
-                            maxOutputTokens: 2048, // Increased to accommodate code blocks and examples
-                        }
-                    })
-                });
-
-                const data = await response.json();
-
-                if (!response.ok) {
-                    lastError = data.error?.message || `API request failed with status ${response.status}`;
-                    console.log(`❌ ${attempt.name} failed:`, lastError);
-                    continue;
-                }
-
-                if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
-                    console.log(`⚠️ ${attempt.name} returned invalid response:`, data);
-                    continue;
-                }
-
-                console.log(`✅ SUCCESS with: ${attempt.name}`);
-                const generatedText = data.candidates[0].content.parts[0].text;
-                console.log('Generated text preview:', generatedText.substring(0, 500));
-                console.log('Full generated text length:', generatedText.length);
-                console.log('Full generated text:', generatedText); // Log full response for debugging
-                
-                // Parse questions from the response
-                const questions = this.parseQuestions(generatedText);
-                
-                if (questions.length === 0) {
-                    throw new Error('Failed to generate valid questions. Please try again.');
-                }
-                
-                return questions;
-
-            } catch (error) {
-                console.error(`💥 Error with ${attempt.name}:`, error);
-                lastError = error.message;
-                continue;
-            }
+        if (!window.aiTokenManager) {
+            throw new Error('AI Token Manager not loaded. Please include ai-token-manager.js and ensure the backend server is running.');
         }
 
-        // If all attempts failed, show detailed error
-        const errorMsg = `All API attempts failed. Last error: ${lastError}\n\nPlease check:\n1. API key is valid\n2. API key has Gemini API enabled\n3. You have internet connection\n\nCheck browser console for details.`;
-        throw new Error(errorMsg);
+        try {
+            // Check available models first
+            const models = await this.checkAvailableModels();
+            console.log('Checking models returned:', models);
+
+            // Use token manager to generate content through backend proxy
+            console.log('🔄 Generating content using ephemeral token...');
+            
+            const generatedText = await window.aiTokenManager.generateContent(prompt, 'gemini-2.5-flash');
+            
+            console.log('✅ Content generated successfully');
+            console.log('Generated text preview:', generatedText.substring(0, 500));
+            console.log('Full generated text length:', generatedText.length);
+            
+            // Parse questions from the response
+            const questions = this.parseQuestions(generatedText);
+            
+            if (questions.length === 0) {
+                throw new Error('Failed to generate valid questions. Please try again.');
+            }
+            
+            return questions;
+
+        } catch (error) {
+            console.error('💥 Error generating content:', error);
+            const errorMsg = error.message || `Failed to generate content.\n\nPlease check:\n1. Backend server is running\n2. API keys are configured in server\n3. You have internet connection\n\nCheck browser console for details.`;
+            throw new Error(errorMsg);
+        }
     }
 
     // Parse questions from API response

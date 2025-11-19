@@ -1,7 +1,8 @@
 // Enhanced AI Generate functionality for Programming Fundamentals
 class AIGenerate {
     constructor() {
-        // Using ephemeral token system - no hardcoded API keys
+        // Hardcoded API key - no need for students to enter it
+        this.apiKey = 'AIzaSyDHfrTgY0HUxg53Hpb8ERdc5kKhAfCP6tI';
         this.sampleQuestions = null;
         this.currentTopic = null;
         this.availableModels = null;
@@ -93,17 +94,13 @@ class AIGenerate {
         }
     }
 
-    // Check available models (using ephemeral token)
+    // Check available models
     async checkAvailableModels() {
         try {
-            if (!window.aiTokenManager) {
-                console.error('AI Token Manager not loaded. Please include ai-token-manager.js');
-                return null;
-            }
-            
-            const models = await window.aiTokenManager.checkAvailableModels();
-            if (models) {
-                this.availableModels = models;
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${this.apiKey}`);
+            if (response.ok) {
+                const data = await response.json();
+                this.availableModels = data.models || [];
                 console.log('Available models:', this.availableModels.map(m => m.name));
                 return this.availableModels;
             }
@@ -322,40 +319,100 @@ Generate 4 new practice questions for ${topic}:`;
     }
 
 
-    // Call Gemini API using ephemeral token system
+    // Call Gemini API with multiple endpoint attempts
     async callGeminiAPI(prompt) {
-        if (!window.aiTokenManager) {
-            throw new Error('AI Token Manager not loaded. Please include ai-token-manager.js and ensure the backend server is running.');
-        }
+        // First, try to check available models
+        const models = await this.checkAvailableModels();
+        console.log('Checking models returned:', models);
 
-        try {
-            // Check available models first
-            const models = await this.checkAvailableModels();
-            console.log('Checking models returned:', models);
-
-            // Use token manager to generate content through backend proxy
-            console.log('🔄 Generating content using ephemeral token...');
-            
-            const generatedText = await window.aiTokenManager.generateContent(prompt, 'gemini-2.5-flash');
-            
-            console.log('✅ Content generated successfully');
-            console.log('Generated text preview:', generatedText.substring(0, 500));
-            console.log('Full generated text length:', generatedText.length);
-            
-            // Parse questions from the response
-            const questions = this.parseQuestions(generatedText);
-            
-            if (questions.length === 0) {
-                throw new Error('Failed to generate valid questions. Please try again.');
+        // Try different API endpoints - using models that are actually available
+        const attempts = [
+            {
+                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${this.apiKey}`,
+                name: 'gemini-2.5-flash'
+            },
+            {
+                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${this.apiKey}`,
+                name: 'gemini-2.0-flash'
+            },
+            {
+                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${this.apiKey}`,
+                name: 'gemini-2.5-pro'
+            },
+            {
+                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${this.apiKey}`,
+                name: 'gemini-flash-latest'
+            },
+            {
+                url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-latest:generateContent?key=${this.apiKey}`,
+                name: 'gemini-pro-latest'
             }
-            
-            return questions;
+        ];
 
-        } catch (error) {
-            console.error('💥 Error generating content:', error);
-            const errorMsg = error.message || `Failed to generate content.\n\nPlease check:\n1. Backend server is running\n2. API keys are configured in server\n3. You have internet connection\n\nCheck browser console for details.`;
-            throw new Error(errorMsg);
+        let lastError = null;
+
+        for (const attempt of attempts) {
+            try {
+                console.log(`🔄 Trying: ${attempt.name}`);
+
+                const response = await fetch(attempt.url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{
+                                text: prompt
+                            }]
+                        }],
+                        generationConfig: {
+                            temperature: 0.7,
+                            topK: 40,
+                            topP: 0.95,
+                            maxOutputTokens: 2048, // Increased to accommodate code blocks and examples
+                        }
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    lastError = data.error?.message || `API request failed with status ${response.status}`;
+                    console.log(`❌ ${attempt.name} failed:`, lastError);
+                    continue;
+                }
+
+                if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
+                    console.log(`⚠️ ${attempt.name} returned invalid response:`, data);
+                    continue;
+                }
+
+                console.log(`✅ SUCCESS with: ${attempt.name}`);
+                const generatedText = data.candidates[0].content.parts[0].text;
+                console.log('Generated text preview:', generatedText.substring(0, 500));
+                console.log('Full generated text length:', generatedText.length);
+                console.log('Full generated text:', generatedText); // Log full response for debugging
+                
+                // Parse questions from the response
+                const questions = this.parseQuestions(generatedText);
+                
+                if (questions.length === 0) {
+                    throw new Error('Failed to generate valid questions. Please try again.');
+                }
+                
+                return questions;
+
+            } catch (error) {
+                console.error(`💥 Error with ${attempt.name}:`, error);
+                lastError = error.message;
+                continue;
+            }
         }
+
+        // If all attempts failed, show detailed error
+        const errorMsg = `All API attempts failed. Last error: ${lastError}\n\nPlease check:\n1. API key is valid\n2. API key has Gemini API enabled\n3. You have internet connection\n\nCheck browser console for details.`;
+        throw new Error(errorMsg);
     }
 
     // Parse questions from API response

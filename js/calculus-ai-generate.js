@@ -2,7 +2,7 @@
 class CalculusAIGenerate {
     constructor() {
         // Hardcoded API key - no need for students to enter it
-        this.apiKey = 'AIzaSyCBdWAJPer7XwKE89aIe2YF8PR-4ai9PhQ';
+        this.apiKey = 'AIzaSyDHfrTgY0HUxg53Hpb8ERdc5kKhAfCP6tI';
         this.sampleQuestions = null;
         this.currentTopic = null;
         this.availableModels = null;
@@ -600,4 +600,5 @@ Generate 3 new challenging practice questions for ${topic}:`;
 }
 
 // Initialize global instance for Calculus
+
 window.calculusAIGenerate = new CalculusAIGenerate();

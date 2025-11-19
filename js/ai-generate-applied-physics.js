@@ -2,7 +2,7 @@
 class AIGenerateAppliedPhysics {
     constructor() {
         // Hardcoded API key - no need for students to enter it
-        this.apiKey = 'AIzaSyCBdWAJPer7XwKE89aIe2YF8PR-4ai9PhQ';
+        this.apiKey = 'AIzaSyBjH1Wq8_FHE7mn1VAlD9-4f8efl3siBk8';
         this.sampleQuestions = null;
         this.currentTopic = null;
         this.availableModels = null;
@@ -572,4 +572,5 @@ parseQuestions(text) {
 
 // Initialize global instance for Applied Physics
 window.aiGenerateAppliedPhysics = new AIGenerateAppliedPhysics();
+
 

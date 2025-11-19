@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #5568d3;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Backend Server Test Page</h1>
+    <p>Use this page to test if your backend server is working correctly.</p>
+
+    <div class="test-section">
+        <h2>1. Test Server Health</h2>
+        <p>Check if the backend server is running and accessible.</p>
+        <button onclick="testHealth()">Test Health Endpoint</button>
+        <div id="healthResult" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>2. Test Token Generation</h2>
+        <p>Generate an ephemeral token from the backend.</p>
+        <button onclick="testTokenGeneration()">Generate Token</button>
+        <div id="tokenResult" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>3. Test AI Token Manager</h2>
+        <p>Check if the AI Token Manager script loads correctly.</p>
+        <button onclick="testTokenManager()">Test Token Manager</button>
+        <div id="managerResult" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>4. Test Model Fetching</h2>
+        <p>Test fetching available models using a token.</p>
+        <button onclick="testModels()">Fetch Models</button>
+        <div id="modelsResult" class="result" style="display:none;"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:3000/api';
+
+        async function testHealth() {
+            const resultDiv = document.getElementById('healthResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.textContent = 'Testing...';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/health`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    resultDiv.className = 'result success';
+                    resultDiv.textContent = '✅ SUCCESS!\n\n' + JSON.stringify(data, null, 2);
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = '❌ ERROR!\n\nStatus: ' + response.status + '\n' + JSON.stringify(data, null, 2);
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ FAILED!\n\nError: ' + error.message + '\n\nMake sure the backend server is running on port 3000.';
+            }
+        }
+
+        async function testTokenGeneration() {
+            const resultDiv = document.getElementById('tokenResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.textContent = 'Testing...';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/token/generate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    resultDiv.className = 'result success';
+                    resultDiv.textContent = '✅ SUCCESS!\n\nToken: ' + data.token.substring(0, 20) + '...\nExpires in: ' + data.expiresIn + ' seconds\n\n' + JSON.stringify(data, null, 2);
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = '❌ ERROR!\n\nStatus: ' + response.status + '\n' + JSON.stringify(data, null, 2);
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ FAILED!\n\nError: ' + error.message + '\n\nMake sure the backend server is running.';
+            }
+        }
+
+        function testTokenManager() {
+            const resultDiv = document.getElementById('managerResult');
+            resultDiv.style.display = 'block';
+
+            if (typeof window.aiTokenManager !== 'undefined') {
+                resultDiv.className = 'result success';
+                resultDiv.textContent = '✅ SUCCESS!\n\nAI Token Manager is loaded!\n\nAPI Base URL: ' + window.aiTokenManager.apiBaseUrl;
+            } else {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ FAILED!\n\nAI Token Manager is NOT loaded!\n\nMake sure:\n1. ai-token-manager.js script is included\n2. Script path is correct\n3. No JavaScript errors in console';
+            }
+        }
+
+        async function testModels() {
+            const resultDiv = document.getElementById('modelsResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result';
+            resultDiv.textContent = 'Testing...';
+
+            try {
+                // First get a token
+                const tokenResponse = await fetch(`${API_BASE_URL}/token/generate`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const tokenData = await tokenResponse.json();
+
+                if (!tokenData.success) {
+                    throw new Error('Failed to get token');
+                }
+
+                // Then use token to get models
+                const modelsResponse = await fetch(`${API_BASE_URL}/gemini/models`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-API-Token': tokenData.token
+                    }
+                });
+                const modelsData = await modelsResponse.json();
+
+                if (modelsResponse.ok && modelsData.success) {
+                    resultDiv.className = 'result success';
+                    resultDiv.textContent = '✅ SUCCESS!\n\nFound ' + modelsData.models.length + ' models\n\nFirst 3 models:\n' + 
+                        modelsData.models.slice(0, 3).map(m => '  - ' + m.name).join('\n');
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = '❌ ERROR!\n\nStatus: ' + modelsResponse.status + '\n' + JSON.stringify(modelsData, null, 2);
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ FAILED!\n\nError: ' + error.message;
+            }
+        }
+
+        // Auto-test on page load
+        window.addEventListener('load', () => {
+            console.log('🔧 Backend Test Page Loaded');
+            console.log('API Base URL:', API_BASE_URL);
+            console.log('AI Token Manager loaded:', typeof window.aiTokenManager !== 'undefined');
+        });
+    </script>
+
+    <!-- Load AI Token Manager for testing -->
+    <script src="../js/ai-token-manager.js"></script>
+</body>
+</html>
+

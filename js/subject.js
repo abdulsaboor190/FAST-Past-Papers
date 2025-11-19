@@ -28,6 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.aiGenerateDSA.init();
             }
         }
+        // Initialize AI Generate feature if this is ICT
+if (currentSubject && (currentSubject.title === 'Information & Communication Technology' || 
+    currentSubject.title === 'Information and Communication Technology' ||
+    window.location.pathname.includes('information-communication-technology'))) {
+    if (window.aiGenerateICT) {
+        window.aiGenerateICT.init();
+    }
+}
 
         // Initialize AI Generate feature if this is Programming Fundamentals Lab
         if (currentSubject && (currentSubject.title === 'Programming Fundamentals Lab' || 
@@ -36,6 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.aiGenerateLab.init();
             }
         }
+        // Initialize AI Generate feature if this is Functional English
+if (currentSubject && (currentSubject.title === 'Functional English' || 
+    window.location.pathname.includes('functional-english'))) {
+    if (window.aiGenerateFunctionalEnglish) {
+        window.aiGenerateFunctionalEnglish.init();
+    }
+}
 
         // Initialize AI Generate feature if this is Applied Physics
         if (currentSubject && (currentSubject.title === 'Applied Physics' || 
@@ -52,12 +67,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.aiGenerateCOALTheory.init();
             }
         }
+        // Initialize AI Generate feature if this is Theory of Automata
+if (currentSubject && (currentSubject.title === 'Theory of Automata' || 
+    window.location.pathname.includes('theory-of-automata'))) {
+    if (window.aiGenerateTOA) {
+        window.aiGenerateTOA.init();
+    }
+}
 
         // Initialize AI Generate feature if this is COAL Lab
         if (currentSubject && (currentSubject.title === 'Computer Organization and Assembly Language Lab' || 
             window.location.pathname.includes('coal-lab'))) {
             if (window.aiGenerateCOALLab) {
                 window.aiGenerateCOALLab.init();
+            }
+        }
+            if (currentSubject && (currentSubject.title === 'Calculus' || 
+                window.location.pathname.includes('calculus'))) {
+         if (window.calculusAIGenerate) {
+                window.calculusAIGenerate.init();
             }
         }
 
@@ -153,15 +181,29 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (window.aiGenerateLab && (currentSubject.title === 'Programming Fundamentals Lab' || 
                 window.location.pathname.includes('programming-fundamentals-lab'))) {
                 window.aiGenerateLab.showTopicSelection();
+                } else if (window.aiGenerateICT && (currentSubject.title === 'Information & Communication Technology' || 
+    currentSubject.title === 'Information and Communication Technology' ||
+    window.location.pathname.includes('information-communication-technology'))) {
+    window.aiGenerateICT.showTopicSelection();
             } else if (window.aiGenerateDSA && (currentSubject.title === 'Data Structures & Algorithms' || 
                 window.location.pathname.includes('data-structures-algorithms'))) {
                 window.aiGenerateDSA.showTopicSelection();
+                } else if (window.aiGenerateTOA && (currentSubject.title === 'Theory of Automata' || 
+    window.location.pathname.includes('theory-of-automata'))) {
+    window.aiGenerateTOA.showTopicSelection();
             } else if (window.aiGenerateAppliedPhysics && (currentSubject.title === 'Applied Physics' || 
                 window.location.pathname.includes('applied-physics'))) {
                 window.aiGenerateAppliedPhysics.showTopicSelection();
             } else if (window.aiGenerateCOALTheory && (currentSubject.title === 'Computer Organization and Assembly Language' || 
                 window.location.pathname.includes('coal-theory'))) {
                 window.aiGenerateCOALTheory.showTopicSelection();
+                } else if (window.aiGenerateFunctionalEnglish && (currentSubject.title === 'Functional English' || 
+    window.location.pathname.includes('functional-english'))) {
+    window.aiGenerateFunctionalEnglish.showTopicSelection();
+        } else if (window.calculusAIGenerate && (currentSubject.title === 'Calculus' || 
+            window.location.pathname.includes('calculus'))) {
+            window.calculusAIGenerate.showTopicSelection();
+
             } else if (window.aiGenerateCOALLab && (currentSubject.title === 'Computer Organization and Assembly Language Lab' || 
                 window.location.pathname.includes('coal-lab'))) {
                 window.aiGenerateCOALLab.showTopicSelection();

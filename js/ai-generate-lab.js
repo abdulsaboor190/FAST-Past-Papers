@@ -2,7 +2,7 @@
 class AIGenerateLab {
     constructor() {
         // Hardcoded API key - no need for students to enter it
-        this.apiKey = 'AIzaSyBjH1Wq8_FHE7mn1VAlD9-4f8efl3siBk8';
+        this.apiKey = 'AIzaSyCAyoOn5G2BD9-x__mhOHPNFpQHxZ36YCg';
         this.sampleQuestions = null;
         this.currentTopic = null;
         this.availableModels = null;

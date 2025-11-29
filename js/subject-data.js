@@ -2070,7 +2070,44 @@ const subjectPapers = {
                 fileSize: '1.8 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1y-AY1bFjCRuamIFC-SWh0WDnmthRwWxZ&export=download&authuser=0&confirm=t&uuid=3c47915e-7041-46e5-8686-0afb7600cc62&at=AN8xHooIEo_mPHjLrtok-lp_sFQ2:1758175022669'
             }
-        ]
+        ],
+         quiz: [
+              {
+                id: 'pf-lab-2020-final',
+                title: 'Arrays and Loop',
+                year: '2025',
+                difficulty: 4.2,
+                semester: 'Spring',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1Z5viOgpVERgCRCyV34ie01-60FyADrgG&export=download&authuser=0&confirm=t&uuid=cf3865d7-15db-4dbb-8464-5b158d6ae51f&at=ALWLOp5bXcNzVDpg4IXcZj1JXda_:1764433558090'
+            },
+             {
+                id: 'pf-lab-2020-final',
+                title: 'Bitwise',
+                year: '2025',
+                difficulty: 4.2,
+                semester: 'Spring',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1LHEHQHovfN_Q4aCq6VX9hLRmnxPiDjD4&export=download&authuser=0&confirm=t&uuid=e044a295-be59-42d0-9c10-e5a83b75e945&at=ALWLOp7VI1KhQOLB2oAReMRxOEWp:1764433564848'
+            }, {
+                id: 'pf-lab-2020-final',
+                title: 'Structure and Function',
+                year: '2025',
+                difficulty: 4.2,
+                semester: 'Spring',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1-YN5xkm8qZf5S9AypvklS7YO99zkM34K&export=download&authuser=0&confirm=t&uuid=f0698815-79a6-434d-aa17-fef542087118&at=ALWLOp787tmKTDJDi2qKHn4fy55e:1764433576039'
+            }, {
+                id: 'pf-lab-2020-final',
+                title: 'DMA',
+                year: '2025',
+                difficulty: 4.2,
+                semester: 'Spring',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1OclrIEPbXaGzk3eYvuwv1NYBq0iGLHSc&export=download&authuser=0&confirm=t&uuid=8f9c515e-2a59-43b0-a359-667f6755c52a&at=ALWLOp4QYHOCDx8piBikdUch6Enr:1764433570763'
+            }
+
+         ]
     }
 },
 
@@ -3021,6 +3058,7 @@ function getCurrentSubject() {
     return subjectPapers[subjectId] || subjectPapers['programming-fundamentals'];
 
 }
+
 
 
 

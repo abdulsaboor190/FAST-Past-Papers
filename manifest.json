@@ -1,8 +1,6 @@
 {
   "name": "FAST Past Papers",
   "short_name": "FAST Papers",
-    "version": "1.2.0",
-
   "description": "Find and download past papers for FAST University subjects instantly",
   "start_url": "/",
   "display": "standalone",
@@ -17,13 +15,25 @@
       "src": "/logo/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/logo/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/logo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

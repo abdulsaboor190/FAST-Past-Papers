@@ -6,6 +6,7 @@ const CACHE_NAME = `fast-papers-${CACHE_VERSION}`;
 const urlsToCache = [
   '/',
   '/index.html',
+  '/manifest.json',
   '/css/style.css',
   '/css/components.css',
   '/css/responsive.css',

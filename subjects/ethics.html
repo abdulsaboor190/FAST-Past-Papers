@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethics - CS Past Papers Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/subject.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+       <div class="logo">
+    <img src="logo/logo2.png" alt="CS Past Papers Hub Logo" class="logo-img">
+    <span>CS Past Papers Hub</span>
+</div>
+        <div class="nav-links">
+            <a href="../index.html" title="Home">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">LinkedIn</a>
+            <span class="nav-name">Your Name</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Subject Header -->
+        <div class="subject-header">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> 
+                <span class="separator">></span> 
+                <span class="current">Ethics</span>
+            </div>
+            <h1>Ethics</h1>
+            <p>Study of moral principles, professional responsibilities, and ethical decision making</p>
+            <div class="subject-stats">
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Papers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">—</span>
+                    <span class="stat-label">Latest</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exam Categories -->
+        <div class="exam-categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="mid1">Mid 1</button>
+                <button class="tab-btn" data-category="mid2">Mid 2</button>
+                <button class="tab-btn" data-category="final">Final</button>
+                <button class="tab-btn" data-category="quiz">Quiz</button>
+            </div>
+        </div>
+
+        <!-- Papers Grid -->
+        <div class="papers-section">
+            <div class="papers-grid" id="papersGrid">
+                <!-- Papers will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/subject-data.js"></script>
+    <script>
+        // Subject ID
+        const currentSubjectId = 'ethics';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentCategory = 'mid1';
+            initializePage();
+
+            function initializePage() {
+                setupTabListeners();
+                loadPapers(currentCategory);
+            }
+
+            function setupTabListeners() {
+                const tabButtons = document.querySelectorAll('.tab-btn');
+                tabButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const category = this.getAttribute('data-category');
+                        switchCategory(category);
+                    });
+                });
+            }
+
+            function switchCategory(category) {
+                currentCategory = category;
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`[data-category="${category}"]`).classList.add('active');
+                loadPapers(category);
+            }
+
+            function loadPapers(category) {
+                const papersGrid = document.getElementById('papersGrid');
+                const currentSubject = subjectPapers[currentSubjectId];
+                const papers = currentSubject?.papers[category] || [];
+
+                if (papers.length === 0) {
+                    papersGrid.innerHTML = `
+                        <div class="empty-state">
+                            <h3>No papers available</h3>
+                            <p>Papers for this category will be added soon.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                papersGrid.innerHTML = papers.map(paper => createPaperCard(paper)).join('');
+                setupPaperCardListeners();
+            }
+
+            function createPaperCard(paper) {
+                return `
+                    <div class="paper-card" data-paper-id="${paper.id}">
+                        <div class="paper-header">
+                            <div class="paper-info">
+                                <h3>${paper.title}</h3>
+                                <div class="paper-year">${paper.semester} ${paper.year}</div>
+                            </div>
+                            <div class="paper-icon">ETH</div>
+                            <div class="expand-indicator">▼</div>
+                        </div>
+                        <div class="paper-download">
+                            <div class="download-info">
+                                <p><strong>File Information:</strong></p>
+                                <p>Size: <span class="file-size">${paper.fileSize}</span></p>
+                                <p>Format: PDF</p>
+                            </div>
+                            <button class="download-btn" onclick="downloadPaper('${paper.downloadUrl}', '${paper.title}')">
+                                <span class="download-icon">⬇</span>
+                                Download Paper
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            function setupPaperCardListeners() {
+                const paperCards = document.querySelectorAll('.paper-card');
+                paperCards.forEach(card => {
+                    const header = card.querySelector('.paper-header');
+                    header.addEventListener('click', function() {
+                        togglePaperCard(card);
+                    });
+                });
+            }
+
+            function togglePaperCard(card) {
+                const isExpanded = card.classList.contains('expanded');
+                document.querySelectorAll('.paper-card.expanded').forEach(other => other.classList.remove('expanded'));
+                if (!isExpanded) card.classList.add('expanded');
+            }
+        });
+
+        // Global download function
+        function downloadPaper(downloadUrl, paperTitle) {
+            const clickedBtn = event.target.closest('.download-btn');
+            if (clickedBtn) {
+                const originalText = clickedBtn.innerHTML;
+                clickedBtn.innerHTML = '<span class="download-icon">⏳</span> Downloading...';
+                clickedBtn.disabled = true;
+
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = `${paperTitle}.pdf`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                setTimeout(() => {
+                    clickedBtn.innerHTML = originalText;
+                    clickedBtn.disabled = false;
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>

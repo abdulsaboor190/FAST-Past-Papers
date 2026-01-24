@@ -1,0 +1,29 @@
+{
+  "name": "FAST Past Papers",
+  "short_name": "FAST Papers",
+    "version": "1.2.0",
+
+  "description": "Find and download past papers for FAST University subjects instantly",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0fdf4",
+  "theme_color": "#065f46",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["education", "productivity", "reference"],
+  "icons": [
+    {
+      "src": "/logo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

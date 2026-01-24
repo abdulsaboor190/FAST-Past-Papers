@@ -406,8 +406,9 @@ const subjectPapers = {
 },
 
 'oop': {
-    name: 'Object Oriented Programming',
-    icon : 'OOP',
+    title: 'Object Oriented Programming',
+    description: 'Object-oriented programming concepts, inheritance, polymorphism, and design patterns',
+    icon: 'OOP',
     papers: {
         mid1: [
             {
@@ -503,7 +504,9 @@ const subjectPapers = {
 },
 
 'operating-system': {
-    name: 'Operating System',
+    title: 'Operating System',
+    description: 'OS concepts, process management, memory management, and file systems',
+    icon: 'OS',
     papers: {
         mid1: [
             {
@@ -562,6 +565,139 @@ const subjectPapers = {
                 fileSize: '1.7 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1QU8aximxXnyIJpV_a2UmryhlgquqgrQL&export=download&authuser=0&confirm=t&uuid=d7168149-69de-44c6-a353-753f8d36e17a&at=AN8xHoqUP7_Wyzfr0NlbAFKhucSQ:1758104113509'
             }
+        ], 
+        mid2: [
+            {
+                id: 'os-mid2-2017-fall',
+                title: 'OS Mid 2 2017',
+                year: '2017',
+                semester: 'Fall',
+                fileSize: '1.5 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1Fggm2q4c2p-sBCMxGQaqw-Iz41sAoKYK&export=download&authuser=0&confirm=t&uuid=6edf322e-ca30-47b4-a8e4-9ddffebc948d&at=APcXIO19MppgFT2bXv8tJF8fyO9Z:1769161589338'
+            },
+            {
+                id: 'os-mid2-2019-fall',
+                title: 'OS Mid 2 2019',
+                year: '2019',
+                semester: 'Fall',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1lfbrigo-QdovCnGVUYEpANV5b94HGQLc&export=download&authuser=0&confirm=t&uuid=3181b278-d383-4cbe-b6a8-5880f91aa2d5&at=APcXIO2NYMnu6pMx4DPpm548fkKx:1769161584836'
+            },
+            {
+                id: 'os-mid2-2021-fall',
+                title: 'OS Mid 2 2021',
+                year: '2021',
+                semester: 'Fall',
+                fileSize: '1.4 MB',
+                downloadUrl: ''
+            },
+            {
+                id: 'os-mid2-2022-fall',
+                title: 'OS Mid 2 2022',
+                year: '2022',
+                semester: 'Fall',
+                fileSize: '1.6 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1J3hr6cPjDvI7KtvyR9rAmAu3oAZ-gqYG&export=download&authuser=0&confirm=t&uuid=41592ab0-6e66-4904-a40f-2afcaa722d98&at=APcXIO0Tbc2GM-oyKaFJwqmARnSZ:1769161580667'
+            },
+            {
+                id: 'os-mid2-2023-fall',
+                title: 'OS Mid 2 2023',
+                year: '2023',
+                semester: 'Fall',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1MFhlxmDa9iIzj41I0qNjyfYKTS-7I61a&export=download&authuser=0&confirm=t&uuid=76b8cb06-18d9-4b73-8753-b60474b3704b&at=APcXIO2a2HsM__6tIJ-s7m-bN4jF:1769161576165'
+            },
+            {
+                id: 'os-mid2-2024-fall',
+                title: 'OS Mid 2 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1GanEJcsBpcP8FqZ_Y6I33Vm3UagOCs3i&export=download&authuser=0&confirm=t&uuid=6fbc57ad-715d-42ac-b6fb-25f1da6e19ca&at=APcXIO0ZQ6itpDZCbW0s62gcvdv9:1769161568536'
+            },
+            {
+                id: 'os-mid2-2024-fall-solution',
+                title: 'OS Mid 2 2024 Solution',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.3 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1rcc279jwa0fYud4vt62toNdLIQwlA3Of&export=download&authuser=0&confirm=t&uuid=c5210243-2817-4107-a99b-a83ccf631fa3&at=APcXIO1gT0ft1r5zt7TAmearMchv:1769161572419'
+            },
+            {
+                id: 'os-mid2-2025-fall',
+                title: 'OS Mid 2 2025',
+                year: '2025',
+                semester: 'Fall',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=11TYeYcGU_fIoJ_Ppg2ncxKopZKJ-pLBA&export=download&authuser=0&confirm=t&uuid=c0f7dcd9-8451-4a4d-ba6e-1652e97c27d4&at=APcXIO1rNE6OWcmJY9Pzjlmj-ANG:1769161561057'
+            }
+        ],
+    
+        final: [
+            {
+                id: 'os-final-2017-fall',
+                title: 'OS Final 2017',
+                year: '2017',
+                semester: 'Fall',
+                fileSize: '1.6 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1ymsGZUuK220ftL-52VHKzm-FUammuKvL&export=download&authuser=0&confirm=t&uuid=e14d708c-6516-495b-9d1f-bebbcbb4d78b&at=APcXIO0FHxZXx4yTgD0y-t82OTgm:1769161647560'
+            },
+            {
+                id: 'os-final-2020-fall',
+                title: 'OS Final 2020',
+                year: '2020',
+                semester: 'Fall',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1trkNvCSxi3yKwXb19PARGWi8azgCDFWP&export=download&authuser=0&confirm=t&uuid=9cae547d-abc6-49dc-8053-4bb1a3767877&at=APcXIO3ZQgXshrYpIk9SFwPUqevF:1769161639857'
+            },
+            {
+                id: 'os-final-2020-fall-solution',
+                title: 'OS Final 2020 Solution',
+                year: '2020',
+                semester: 'Fall',
+                fileSize: '1.4 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1VtEpZhE6sSwKh8wQG4i4iScE9SELs9uk&export=download&authuser=0&confirm=t&uuid=978a452e-4b50-4c21-8a73-3b9d4ce5f99e&at=APcXIO0JHvJgpMEWj-R1EbQ5dVsX:1769161643885'
+            },
+            {
+                id: 'os-final-2022-fall',
+                title: 'OS Final 2022',
+                year: '2022',
+                semester: 'Fall',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1w6G9VrEYb_M_0CbK5_Lipe7HAdnhtEk1&export=download&authuser=0&confirm=t&uuid=2df9ad15-9538-46de-82dc-03cbf633cb87&at=APcXIO2eLlnEJtS17uUG1J3XGzx2:1769161635865'
+            },
+            {
+                id: 'os-final-2024-fall',
+                title: 'OS Final 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1XMgE0lSD3BT-iLt_Br-rQ4kbtsI3AL2X&export=download&authuser=0&confirm=t&uuid=19042fef-f6d5-4e08-9744-c2dae8be1ab8&at=APcXIO2_RZ4Kwiej_ZkYXZf67wye:1769161627932'
+            },
+            {
+                id: 'os-final-2024-fall-solution',
+                title: 'OS Final 2024 Solution',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.3 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1KmkIXtLq-EUTa46i4Mu5sOi1D9LQKD0j&export=download&authuser=0&confirm=t&uuid=1a6f621d-fb58-4391-bec1-9c822c058973&at=APcXIO0iU_efrYlmjJby6XK3crAj:1769161631912'
+            },
+            {
+                id: 'os-final-2025-fall-part-a',
+                title: 'OS Final 2025 Part A',
+                year: '2025',
+                semester: 'Fall',
+                fileSize: '1.5 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1lyw-JeBSGP0kx69G3FNkIwiuc55uO2SP&export=download&authuser=0&confirm=t&uuid=22f9775a-f3dc-47b1-aa00-5b69548b951a&at=APcXIO15yil7xjW1ywydhqI_3fHs:1769161618295'
+            },
+            {
+                id: 'os-final-2025-fall-part-b',
+                title: 'OS Final 2025 Part B',
+                year: '2025',
+                semester: 'Fall',
+                fileSize: '1.5 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1e_9YalfQhP8Q_hFIEwVS9vYcu6SGvG0e&export=download&authuser=0&confirm=t&uuid=f0100edc-c31d-4f51-a48a-f5cca94ef672&at=APcXIO1EAqmmLA31Er9Nq8F4lvUf:1769161606855'
+            }
         ]
     }
 },
@@ -607,7 +743,9 @@ const subjectPapers = {
 },
 
 'digital-logic-design': {
-    name: 'Digital and Logic Design',
+    title: 'Digital and Logic Design',
+    description: 'Digital circuits, boolean algebra, combinational and sequential logic systems',
+    icon: '🔌',
     papers: {
         mid1: [
             {
@@ -642,7 +780,68 @@ const subjectPapers = {
                 fileSize: '1.9 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1mdnEE3BDeO1rGjirZwgdK5mCIdTN6WKf&export=download&authuser=0&confirm=t&uuid=c88033bc-9255-4dae-a745-8f7c5f501a2d&at=AN8xHop2vg_PAJxt-GbB-sqOsHeT:1758103915420'
             }
-        ]
+        ],
+        mid2: [
+            {
+                id: 'dld-mid2-2022-fall',
+                title: 'DLD Mid 2 2022',
+                year: '2022',
+                semester: 'Fall',
+                fileSize: '1.4 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1ndHoZXMq4TnYAxt3H_jzdewrmN5-V-a0&export=download&authuser=0&confirm=t&uuid=48d2b628-2547-4136-87f0-ac5023299e1a&at=ANTm3cx6sH9Jjvjem-4uWaHaU6t0:1769005748837'
+            },
+            {
+                id: 'dld-mid2-2024-fall',
+                title: 'DLD Mid 2 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1Yfcacber_4LkPIzd97c_nI3XGXt3oks9&export=download&authuser=0&confirm=t&uuid=7b0eb012-e635-4372-bae5-f7fbc81fd930&at=ANTm3cxN-UULo1OEVzrbStBsVhD3:1769005753002'
+            },
+            {
+                id: 'dld-mid2-2024-fall-solution',
+                title: 'DLD Mid 2 2024 Solution',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.3 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1-IUv2vGiqHhuZZyoGxl48G8b1aiqmKTy&export=download&authuser=0&confirm=t&uuid=bf130978-f9c1-4ebe-af88-4ee1db31966b&at=ANTm3cyL93dBr80mFPWHg8FYAIac:1769005743830'
+            }
+
+        ],
+        final: [    {
+        id: 'dld-final-2020-fall',
+        title: 'DLD Final 2020',
+        year: '2020',
+        semester: 'Fall',
+        difficulty: 4.2,
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=13Yxm9yRMLbNCQkwPa0Py5ydvbUCXG89J&export=download&authuser=0&confirm=t&uuid=4a4f1ff8-322d-4497-b73f-55f1c7c25ae0&at=ANTm3cxEDtkt3rHuBjrUp82I5UzY:1769005672124'
+    },
+    {
+        id: 'dld-final-2021-fall',
+        title: 'DLD Final 2021',
+        year: '2021',
+        semester: 'Fall',
+        fileSize: '1.8 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1g562HgKnUI2f6ImM2-znenDgQIeYHqP3&export=download&authuser=0&confirm=t&uuid=539f66f8-962c-463c-928f-fe64165d6481&at=ANTm3czjBXt_kQjYCMIDSKLgSFim:1769005694544'
+    },
+    {
+        id: 'dld-final-2022-fall',
+        title: 'DLD Final 2022',
+        year: '2022',
+        semester: 'Fall',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1U2xlPnLJ4pA5T0dQo0GhoOvXRCGCBIZH&export=download&authuser=0&confirm=t&uuid=e38543e1-d930-477f-be88-1b1165efef16&at=ANTm3cyDjVrJOjWf8WV5R8ITnhGN:1769005687202'
+    },
+    {
+        id: 'dld-final-2024-fall',
+        title: 'DLD Final 2024',
+        year: '2024',
+        semester: 'Fall',
+        fileSize: '1.9 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1qBzO2hygzvxNTTMMkadPBpI8bTLsX13i&export=download&authuser=0&confirm=t&uuid=4d2145f9-2e78-4a77-aa8b-d313a4225fa8&at=ANTm3cxc90hPGnD1JBwNjJ44GnZj:1769005681912'
+    }
+]
     }
 },
 'computer-architecture': {
@@ -3046,8 +3245,500 @@ const subjectPapers = {
         final: [],
         quiz: []
     }
+},
+'multivariable-calculus': {
+    title: 'Multivariable Calculus',
+    description: 'Advanced calculus with multiple variables, partial derivatives, multiple integrals, and vector calculus',
+    icon: '📐',
+    papers: {
+        mid1: [
+            {
+                id: 'mvc-mid1-2016-fall',
+                title: 'MVC Mid 1 2016',
+                year: '2016',
+                semester: 'Fall',
+                fileSize: '1.5 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1CRMol8OSafbQgIL6KQl_vBDjyLPEClvw&export=download&authuser=0&confirm=t&uuid=403c6b1c-47c1-476c-8bcf-4326c1b6ea01&at=ANTm3cwVjotewBrCmLuoGyKdtvYW:1769006198927'
+            },
+            {
+                id: 'mvc-mid1-2024-fall',
+                title: 'MVC Mid 1 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.6 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1SFJVKT_vAZESFmeFNIsvrGOEkEGv6RVH&export=download&authuser=0&confirm=t&uuid=12878b94-3402-4322-a27d-21b335050f1f&at=ANTm3cwvIWc6txU1D934e_sx6Zne:1769006180675'
+            },
+            {
+                id: 'mvc-mid1-2024-fall-solution',
+                title: 'MVC Mid 1 2024 Solution',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.4 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1KGnad1GdobTw7HbaFCpAs-xND9hOHMU3&export=download&authuser=0&confirm=t&uuid=f158f133-98c2-4c76-8403-86f51259cbba&at=ANTm3cww_ZdYHO7polpeMPaF_Vg4:1769006175363'
+            }
+        ],
+    
+        mid2: [
+            {
+                id: 'mvc-mid2-2016-fall',
+                title: 'MVC Mid 2 2016',
+                year: '2016',
+                semester: 'Fall',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1-eAVaCTknRzLcc1bQqCQ-Nhm8DU49Rpr&export=download&authuser=0&confirm=t&uuid=c6406088-68aa-4c5c-b71a-6a4962c5f7b1&at=ANTm3cylsP4WkZCtbmeWEzSkIl1G:1769005998531'
+            },
+            {
+                id: 'mvc-mid2-2024-fall',
+                title: 'MVC Mid 2 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1MQFqn-pAt4VzpV4RJZAWvzmKjx2oOC3p&export=download&authuser=0&confirm=t&uuid=8225ec6a-e8b5-4fe9-9479-8c665d338da3&at=ANTm3czNd1CD3R_qo5ggjcAetbkU:1769006191558'
+            },
+            {
+                id: 'mvc-mid2-2024-fall-solution',
+                title: 'MVC Mid 2 2024 Solution',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.3 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1ps_p6gKVJUgyHsU1HUOPWptzBcy4b9v1&export=download&authuser=0&confirm=t&uuid=b53e1a99-9a2d-4188-98ba-a840a14a73ed&at=ANTm3cyM-_S-77EVC0cafqtVjo4Y:1769006186162'
+            }
+        ],
+    
+        final: [
+            {
+                id: 'mvc-final-2016-fall',
+                title: 'MVC Final 2016',
+                year: '2016',
+                semester: 'Fall',
+                fileSize: '1.9 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1dcHBz99uBLRr2cSVCrCbl27SI64NNXAh&export=download&authuser=0&confirm=t&uuid=b103794f-c0f2-42ad-8cab-39b6f7668aef&at=ANTm3czm9C0lVg_0_aGREfT9QWds:1769005994321'
+            },
+            {
+                id: 'mvc-final-2024-fall',
+                title: 'MVC Final 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '2.0 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1st4jyQNN7yQUl8rSFXOPAa4-3sbf-pBb&export=download&authuser=0&confirm=t&uuid=bdae515f-8798-429a-bc1b-58afaf67735b&at=ANTm3cwCMeftlO6DVaBRfVge7lVG:1769005988852'
+            }
+        ]
+    }
+},
+'expository-writing': {
+    title: 'Expository Writing',
+    description: 'Learn to write clear, informative, and well-structured expository essays and academic papers',
+    icon: '✍️',
+    papers: {
+        mid2: [],
+        mid1: [
+            {
+                id: 'ew-mid1-2021-fall',
+                title: 'EW Mid 1 2021',
+                year: '2021',
+                semester: 'Fall',
+                fileSize: '1.4 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1irqAd8ck6UhDyFgAUbPwVo-gPV1MMLZb&export=download&authuser=0&confirm=t&uuid=6520cc3c-1257-460d-a6e7-e8d23cb4b5cc&at=ANTm3cxo2qYUcDwGA75aidALjFL0:1769006547467'
+            },
+            {
+                id: 'ew-mid1-2023-fall',
+                title: 'EW Mid 1 2023',
+                year: '2023',
+                semester: 'Fall',
+                fileSize: '1.6 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1QiCk8NN3RP8ka9Kqdzx2n3kHATEyWwll&export=download&authuser=0&confirm=t&uuid=f64d6523-8b27-4bfc-a2e6-fdd3f8fef36d&at=ANTm3cxGI2dDXLKEH4MKWPAq-9t_:1769006554550'
+            }
+        ],
+    
+        final: [
+            {
+                id: 'ew-final-2020-fall',
+                title: 'EW Final 2020',
+                year: '2020',
+                semester: 'Fall',
+                fileSize: '1.7 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1VrnLCxU3UgunpZJu0dxnZehyMtL5cU7q&export=download&authuser=0&confirm=t&uuid=88fbf50e-9d01-4338-b0ef-a41ee5631b9f&at=ANTm3czMrZGQUC2bZYDMqhaF3IWZ:1769006561393'
+            },
+            {
+                id: 'ew-final-2023-fall',
+                title: 'EW Final 2023',
+                year: '2023',
+                semester: 'Fall',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1aQuW1mK6UQx49oEix0bH-AQioPW792Nz&export=download&authuser=0&confirm=t&uuid=dcd45ac5-d342-4401-8c3b-b17a7a15cc7f&at=ANTm3cx2Ix4u-43RtDY50gRWbpay:1769006566339'
+            },
+            {
+                id: 'ew-final-2023-fall-solution',
+                title: 'EW Final 2023 Solution',
+                year: '2023',
+                semester: 'Fall',
+                fileSize: '1.3 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1OP0ZhCCYTg_yYKi_cCDcPDpaBwlTK15H&export=download&authuser=0&confirm=t&uuid=2722d1c5-9f0a-4d2d-bbd5-0655fc2b78aa&at=ANTm3cyQ_ipjnlIoXR0f6SsUxW2d:1769006572425'
+            }
+        ]
+    }
+},
+'probability-statistics': {
+    title: 'Probability and Statistics',
+    description: 'Statistical analysis, probability distributions, hypothesis testing, and data interpretation',
+    icon: '📊',
+    papers: {
+        mid1: [{
+            id: 'prob-mid1-2017',
+            title: 'PROB Mid 1 2017',
+            year: '2017',
+            semester: 'Fall',
+            fileSize: '1.3 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1p_zuS6bEEW6OHtw2mK9T0kwhJ_LMmWf6'
+          },
+          {
+            id: 'prob-mid1-2018',
+            title: 'PROB Mid 1 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1dSbkIeIbUvjRMm6T-Hv-6SCs5H6LgZE2'
+          },
+          {
+            id: 'prob-mid1-2019',
+            title: 'PROB Mid 1 2019',
+            year: '2019',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1jO2fJdhnsWNLFwGCAq_JYwWeZU7Rpp25'
+          },
+          {
+            id: 'prob-mid1-2024',
+            title: 'PROB Mid 1 2024',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1y50knXl0a3_6liQI0blMlDxP4sqOXM8E'
+          },
+          {
+            id: 'prob-mid1-2024-solution',
+            title: 'PROB Mid 1 2024 Solution',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.2 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1ngOgyK5q6kv16XefTHgAbvUvnL545vLz'
+          },
+          {
+            id: 'prob-mid1-2025',
+            title: 'PROB Mid 1 2025',
+            year: '2025',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1Hg20-pSywsaObHF61JkCxDnvxndQbzdr'
+          }],
+        mid2: [{
+            id: 'prob-mid2-2017',
+            title: 'PROB Mid 2 2017',
+            year: '2017',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1GO93duiVoGGpauRiJG2sg-qlbEK8uA-t'
+          },
+          {
+            id: 'prob-mid2-2021',
+            title: 'PROB Mid 2 2021',
+            year: '2021',
+            semester: 'Fall',
+            fileSize: '1.9 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1-0SjESJ02ef6Oh6BNit-Jz-gBDVTbVd2'
+          },
+          {
+            id: 'prob-mid2-2023',
+            title: 'PROB Mid 2 2023',
+            year: '2023',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=10y-i_sjh5-XMgIisi4sKsTeQfST3lUrk'
+          },
+          {
+            id: 'prob-mid2-2024',
+            title: 'PROB Mid 2 2024',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1aLcUqf3UVxKmwsVyKFPBLQ0QJHsA2sag'
+          },
+          {
+            id: 'prob-mid2-2024-solution',
+            title: 'PROB Mid 2 2024 Solution',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.3 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=13bPbOpwDcYx-HkwsYug3mty1UqzPV3Au'
+          },
+          {
+            id: 'prob-mid2-2025-part-a-solution',
+            title: 'PROB Mid 2 2025 Part A Solution',
+            year: '2025',
+            semester: 'Fall',
+            fileSize: '1.1 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1vuRGwr7Ma5AKpIdvuo9TUcjcI44nutpH'
+          },
+          {
+            id: 'prob-mid2-2025-part-b-solution',
+            title: 'PROB Mid 2 2025 Part B Solution',
+            year: '2025',
+            semester: 'Fall',
+            fileSize: '1.2 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=14tas2Xb3_Z9hLEK9XVGU6o1sd5bftJ1c'
+          }],
+        final: [{
+            id: 'prob-final-2020',
+            title: 'PROB Final 2020',
+            year: '2020',
+            semester: 'Fall',
+            fileSize: '1.9 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1KR0bQshFfancO5rWIU8Z4ys2bBFLeRTT'
+          },
+          {
+            id: 'prob-final-2021',
+            title: 'PROB Final 2021',
+            year: '2021',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1KHVwOySVZHvSC1pN7TnohdjNqZVGetwL'
+          },
+          {
+            id: 'prob-final-2022',
+            title: 'PROB Final 2022',
+            year: '2022',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1ro3NJj7fCdcTID-GUsHD0VYRBIxw5LDB'
+          },
+          {
+            id: 'prob-final-2022-solution',
+            title: 'PROB Final 2022 Solution',
+            year: '2022',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1VdQhZqxi4ZoFYzzOLob-cNN1AFMEfW4t'
+          },
+          {
+            id: 'prob-final-2023',
+            title: 'PROB Final 2023',
+            year: '2023',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1g_KbBy9tgSKLsxwTl-XQZsnyZZBsI60T'
+          },
+          {
+            id: 'prob-final-2023-solution',
+            title: 'PROB Final 2023 Solution',
+            year: '2023',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1tAyLLSz1ngODAifSNZyslCLD2ZNsi1_F'
+          },
+          {
+            id: 'prob-final-2024',
+            title: 'PROB Final 2024',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.9 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1SSdRRR4Z4xEPcivOqrmI6YkeNON_M41R'
+          },
+          {
+            id: 'prob-final-2025-solution',
+            title: 'PROB Final 2025 Solution',
+            year: '2025',
+            semester: 'Fall',
+            fileSize: '1.3 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1EiTO9q5shQkDasU2VnMbiE-PzsML5m3p'
+          }],
+        quiz: []
+    }
+},
+'artificial-intelligence': {
+    title: 'Artificial Intelligence',
+    description: 'Introduction to artificial intelligence concepts including search, knowledge representation, and reasoning',
+    icon: '🤖',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'artificial-intelligence-lab': {
+    title: 'Artificial Intelligence Lab',
+    description: 'Practical lab work for artificial intelligence including implementations and experiments',
+    icon: '🧪',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'software-engineering': {
+    title: 'Software Engineering',
+    description: 'Software development life cycle, requirements engineering, design, testing, and project management',
+    icon: '🛠️',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'technical-business-writing': {
+    title: 'Technical and Business Writing',
+    description: 'Technical documentation, reports, and business communication skills for professionals',
+    icon: '📝',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'applied-human-computer-interaction': {
+    title: 'Applied Human Computer Interaction',
+    description: 'Principles of human-computer interaction, usability, and user-centered design applied to real systems',
+    icon: '🧑‍💻',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'data-science': {
+    title: 'Data Science',
+    description: 'Data analysis, visualization, and machine learning techniques for extracting insights',
+    icon: '📈',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'numerical-computing': {
+    title: 'Numerical Computing',
+    description: 'Numerical methods and computing techniques for solving mathematical problems',
+    icon: '🔢',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'computer-networks-lab': {
+    title: 'Computer Networks Lab',
+    description: 'Practical lab work for computer networks including simulations and configurations',
+    icon: '🧪',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'parallel-distributed-computing': {
+    title: 'Parallel and Distributed Computing',
+    description: 'Concepts and practices of parallel and distributed computing architectures and algorithms',
+    icon: '⚡',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'software-design-analysis': {
+    title: 'Software Design and Analysis',
+    description: 'Software design principles, analysis techniques, and design patterns for building robust software systems',
+    icon: '📐',
+    papers: {
+        mid1: [{
+  id: 'sda-mid1-2019',
+  title: 'SDA Mid 1 2019',
+  year: '2019',
+  semester: 'Fall',
+  fileSize: '1.5 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1zSDpJeSJBuOTKjBLX-LfH7I6Rwcg3HDC'
+},
+{
+  id: 'sda-mid1-2020',
+  title: 'SDA Mid 1 2020',
+  year: '2020',
+  semester: 'Fall',
+  fileSize: '1.7 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1W6bfW5axeBzPW1p7j_u4UwarLNBgU92e'
+},
+{
+  id: 'sda-mid1-2024',
+  title: 'SDA Mid 1 2024',
+  year: '2024',
+  semester: 'Fall',
+  fileSize: '1.4 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1b7lxn0JY-3jVKIDsojZ6XV8w6u3K9lLq'
+}],
+        mid2: [{
+  id: 'sda-mid2-2023-fall',
+  title: 'SDA Mid 2 2023 Fall',
+  year: '2023',
+  semester: 'Fall',
+  fileSize: '1.8 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=11ZVJ26n-5mJg6zvVvF1yuZyVvhiI_Ki_'
+},
+{
+  id: 'sda-mid2-2023-spring',
+  title: 'SDA Mid 2 2023 Spring',
+  year: '2023',
+  semester: 'Spring',
+  fileSize: '1.6 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1sIC2_qXj78QUROP2oGKSevgKI54wyVX9'
+},
+{
+  id: 'sda-mid2-2024',
+  title: 'SDA Mid 2 2024',
+  year: '2024',
+  semester: 'Fall',
+  fileSize: '1.9 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1CrnBs-m0-Ts4KkRBkSoLfDc_szmU6hZy'
+}],
+        final: [{
+  id: 'sda-final-2018',
+  title: 'SDA Final 2018',
+  year: '2018',
+  semester: 'Fall',
+  fileSize: '1.3 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1G-cq7Ie8rPOVdl-DrU9TpnMY0n77OqhG'
+}],
+        quiz: []
+    }
+},
+'operating-system-lab': {
+    title: 'Operating System Lab',
+    description: 'Practical lab work for operating systems including process management, memory management, and system programming',
+    icon: '🧪',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
+},
+'database-lab': {
+    title: 'Database Lab',
+    description: 'Practical lab work for database systems including SQL queries, database design, and implementation',
+    icon: '🧪',
+    papers: {
+        mid1: [],
+        mid2: [],
+        final: [],
+        quiz: []
+    }
 }
-
 
 };
 

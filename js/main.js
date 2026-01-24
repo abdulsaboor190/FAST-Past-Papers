@@ -232,6 +232,141 @@ const subjects = [
     papers: 12, // Update with actual count
     latest: 2024,
     color: '#e84393'
+},
+{
+    id: 'multivariable-calculus',
+    title: 'Multivariable Calculus',
+    description: 'Advanced calculus with multiple variables, partial derivatives, multiple integrals, and vector calculus',
+    icon: '📐',
+    papers: 0,
+    latest: 2024,
+    color: '#a29bfe'
+},
+{
+    id: 'expository-writing',
+    title: 'Expository Writing',
+    description: 'Learn to write clear, informative, and well-structured expository essays and academic papers',
+    icon: '✍️',
+    papers: 0,
+    latest: 2024,
+    color: '#fd79a8'
+},
+{
+    id: 'probability-statistics',
+    title: 'Probability and Statistics',
+    description: 'Statistical analysis, probability distributions, hypothesis testing, and data interpretation',
+    icon: '📊',
+    papers: 0,
+    latest: 2024,
+    color: '#6c5ce7'
+},
+{
+    id: 'artificial-intelligence',
+    title: 'Artificial Intelligence',
+    description: 'Introduction to artificial intelligence concepts including search, knowledge representation, and reasoning',
+    icon: '🤖',
+    papers: 0,
+    latest: 2024,
+    color: '#ffbe76'
+},
+{
+    id: 'artificial-intelligence-lab',
+    title: 'Artificial Intelligence Lab',
+    description: 'Practical lab work for artificial intelligence including implementations and experiments',
+    icon: '🧪',
+    papers: 0,
+    latest: 2024,
+    color: '#7ed6df'
+},
+{
+    id: 'software-engineering',
+    title: 'Software Engineering',
+    description: 'Software development life cycle, requirements engineering, design, testing, and project management',
+    icon: '🛠️',
+    papers: 0,
+    latest: 2024,
+    color: '#fab1a0'
+},
+{
+    id: 'technical-business-writing',
+    title: 'Technical and Business Writing',
+    description: 'Technical documentation, reports, and business communication skills for professionals',
+    icon: '📝',
+    papers: 0,
+    latest: 2024,
+    color: '#fd79a8'
+},
+{
+    id: 'applied-human-computer-interaction',
+    title: 'Applied Human Computer Interaction',
+    description: 'Principles of human-computer interaction, usability, and user-centered design applied to real systems',
+    icon: '🧑‍💻',
+    papers: 0,
+    latest: 2024,
+    color: '#81ecec'
+},
+{
+    id: 'data-science',
+    title: 'Data Science',
+    description: 'Data analysis, visualization, and machine learning techniques for extracting insights',
+    icon: '📈',
+    papers: 0,
+    latest: 2024,
+    color: '#ffeaa7'
+},
+{
+    id: 'numerical-computing',
+    title: 'Numerical Computing',
+    description: 'Numerical methods and computing techniques for solving mathematical problems',
+    icon: '🔢',
+    papers: 0,
+    latest: 2024,
+    color: '#fab1a0'
+},
+{
+    id: 'computer-networks-lab',
+    title: 'Computer Networks Lab',
+    description: 'Practical lab work for computer networks including simulations and configurations',
+    icon: '🧪',
+    papers: 0,
+    latest: 2024,
+    color: '#74b9ff'
+},
+{
+    id: 'parallel-distributed-computing',
+    title: 'Parallel and Distributed Computing',
+    description: 'Concepts and practices of parallel and distributed computing architectures and algorithms',
+    icon: '⚡',
+    papers: 0,
+    latest: 2024,
+    color: '#fd79a8'
+},
+{
+    id: 'software-design-analysis',
+    title: 'Software Design and Analysis',
+    description: 'Software design principles, analysis techniques, and design patterns for building robust software systems',
+    icon: '📐',
+    papers: 0,
+    latest: 2024,
+    color: '#00b894'
+},
+{
+    id: 'operating-system-lab',
+    title: 'Operating System Lab',
+    description: 'Practical lab work for operating systems including process management, memory management, and system programming',
+    icon: '🧪',
+    papers: 0,
+    latest: 2024,
+    color: '#74b9ff'
+},
+{
+    id: 'database-lab',
+    title: 'Database Lab',
+    description: 'Practical lab work for database systems including SQL queries, database design, and implementation',
+    icon: '🧪',
+    papers: 0,
+    latest: 2024,
+    color: '#8c7ae6'
 }
 
 ];
@@ -323,9 +458,23 @@ function navigateToSubject(subjectId, cardElement) {
             'ideology-constitution-pakistan': 'ideology-constitution-pakistan.html',
             'design-analysis-algorithms': 'design-analysis-algorithms.html',
             'database-system': 'database-system.html',
-                            'coal-theory': 'coal-theory.html', // ADD THIS LINE
-
-            'computer-networks': 'computer-networks.html'
+            'coal-theory': 'coal-theory.html',
+            'computer-networks': 'computer-networks.html',
+            'multivariable-calculus': 'multivariable-calculus.html',
+            'expository-writing': 'expository-writing.html',
+            'probability-statistics': 'probability-statistics.html',
+            'artificial-intelligence': 'artificial-intelligence.html',
+            'artificial-intelligence-lab': 'artificial-intelligence-lab.html',
+            'software-engineering': 'software-engineering.html',
+            'technical-business-writing': 'technical-business-writing.html',
+            'applied-human-computer-interaction': 'applied-human-computer-interaction.html',
+            'data-science': 'data-science.html',
+            'numerical-computing': 'numerical-computing.html',
+            'computer-networks-lab': 'computer-networks-lab.html',
+            'parallel-distributed-computing': 'parallel-distributed-computing.html',
+            'software-design-analysis': 'software-design-analysis.html',
+            'operating-system-lab': 'operating-system-lab.html',
+            'database-lab': 'database-lab.html'
         };
         
         const pageName = subjectPages[subjectId] || 'programming-fundamentals.html';
@@ -379,9 +528,22 @@ function setupSearch() {
             (subject.id === 'design-analysis-algorithms' && (query.includes('design') || query.includes('analysis') || query.includes('algorithm') || query.includes('daa'))) ||
             (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('dbms'))) ||
             (subject.id === 'coal-theory' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('theory'))) ||
-
-            // NEW SUBJECT SEARCH TERMS
-            (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols')))
+            (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols'))) ||
+            (subject.id === 'multivariable-calculus' && (query.includes('multivariable') || query.includes('mvc') || query.includes('vector') || query.includes('calculus') || query.includes('partial'))) ||
+            (subject.id === 'expository-writing' && (query.includes('expository') || query.includes('writing') || query.includes('essay') || query.includes('academic'))) ||
+            (subject.id === 'probability-statistics' && (query.includes('probability') || query.includes('statistics') || query.includes('stats') || query.includes('statistical') || query.includes('analysis'))) ||
+            (subject.id === 'artificial-intelligence' && (query.includes('artificial') || query.includes('intelligence') || query.includes('ai'))) ||
+            (subject.id === 'artificial-intelligence-lab' && (query.includes('artificial') || query.includes('intelligence') || query.includes('lab') || query.includes('ai lab'))) ||
+            (subject.id === 'software-engineering' && (query.includes('software') || query.includes('engineering') || query.includes('se'))) ||
+            (subject.id === 'technical-business-writing' && (query.includes('technical') || query.includes('business') || query.includes('writing') || query.includes('tbw'))) ||
+            (subject.id === 'applied-human-computer-interaction' && (query.includes('applied') || query.includes('human') || query.includes('computer') || query.includes('interaction') || query.includes('hci') || query.includes('ahci'))) ||
+            (subject.id === 'data-science' && (query.includes('data') || query.includes('science') || query.includes('ds'))) ||
+            (subject.id === 'numerical-computing' && (query.includes('numerical') || query.includes('computing') || query.includes('nc'))) ||
+            (subject.id === 'computer-networks-lab' && (query.includes('computer') || query.includes('networks') || query.includes('lab') || query.includes('cn lab'))) ||
+            (subject.id === 'parallel-distributed-computing' && (query.includes('parallel') || query.includes('distributed') || query.includes('computing') || query.includes('pdc'))) ||
+            (subject.id === 'software-design-analysis' && (query.includes('software') || query.includes('design') || query.includes('analysis') || query.includes('sda') || query.includes('design patterns'))) ||
+            (subject.id === 'operating-system-lab' && (query.includes('operating') || query.includes('system') || query.includes('os lab') || query.includes('os practical'))) ||
+            (subject.id === 'database-lab' && (query.includes('database') || query.includes('db lab') || query.includes('database practical') || query.includes('sql lab')))
         );
         
         if (filteredSubjects.length > 0) {

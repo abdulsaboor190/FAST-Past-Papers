@@ -225,6 +225,141 @@ const subjectsData = [
     paperCount: 8,
     yearRange: '2020-2024',
     searchTerms: ['computer', 'networks', 'cn']
+},
+{
+    id: 'multivariable-calculus',
+    name: 'Multivariable Calculus',
+    icon: '📐',
+    description: 'Advanced calculus with multiple variables, partial derivatives, multiple integrals, and vector calculus',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['multivariable', 'calculus', 'mvc', 'vector', 'calculus']
+},
+{
+    id: 'expository-writing',
+    name: 'Expository Writing',
+    icon: '✍️',
+    description: 'Learn to write clear, informative, and well-structured expository essays and academic papers',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['ew', 'expo', 'essay', 'academic', 'writing', 'expository']
+},
+{
+    id: 'probability-statistics',
+    name: 'Probability and Statistics',
+    icon: '📊',
+    description: 'Statistical analysis, probability distributions, hypothesis testing, and data interpretation',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['probability', 'statistics', 'stats', 'statistical', 'analysis']
+},
+{
+    id: 'artificial-intelligence',
+    name: 'Artificial Intelligence',
+    icon: '🤖',
+    description: 'Introduction to artificial intelligence concepts including search, knowledge representation, and reasoning',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['artificial', 'intelligence', 'ai']
+},
+{
+    id: 'artificial-intelligence-lab',
+    name: 'Artificial Intelligence Lab',
+    icon: '🧪',
+    description: 'Practical lab work for artificial intelligence including implementations and experiments',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['artificial', 'intelligence', 'lab', 'ai lab']
+},
+{
+    id: 'software-engineering',
+    name: 'Software Engineering',
+    icon: '🛠️',
+    description: 'Software development life cycle, requirements engineering, design, testing, and project management',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['software', 'engineering', 'se']
+},
+{
+    id: 'technical-business-writing',
+    name: 'Technical and Business Writing',
+    icon: '📝',
+    description: 'Technical documentation, reports, and business communication skills for professionals',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['technical', 'business', 'writing', 'tbw']
+},
+{
+    id: 'applied-human-computer-interaction',
+    name: 'Applied Human Computer Interaction',
+    icon: '🧑‍💻',
+    description: 'Principles of human-computer interaction, usability, and user-centered design applied to real systems',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['applied', 'human', 'computer', 'interaction', 'hci', 'ahci']
+},
+{
+    id: 'data-science',
+    name: 'Data Science',
+    icon: '📈',
+    description: 'Data analysis, visualization, and machine learning techniques for extracting insights',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['data', 'science', 'ds']
+},
+{
+    id: 'numerical-computing',
+    name: 'Numerical Computing',
+    icon: '🔢',
+    description: 'Numerical methods and computing techniques for solving mathematical problems',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['numerical', 'computing', 'nc']
+},
+{
+    id: 'computer-networks-lab',
+    name: 'Computer Networks Lab',
+    icon: '🧪',
+    description: 'Practical lab work for computer networks including simulations and configurations',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['computer', 'networks', 'lab', 'cn lab']
+},
+{
+    id: 'parallel-distributed-computing',
+    name: 'Parallel and Distributed Computing',
+    icon: '⚡',
+    description: 'Concepts and practices of parallel and distributed computing architectures and algorithms',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['parallel', 'distributed', 'computing', 'pdc']
+},
+{
+    id: 'software-design-analysis',
+    name: 'Software Design and Analysis',
+    icon: '📐',
+    description: 'Software design principles, analysis techniques, and design patterns for building robust software systems',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['software', 'design', 'analysis', 'sda', 'design patterns']
+},
+{
+    id: 'operating-system-lab',
+    name: 'Operating System Lab',
+    icon: '🧪',
+    description: 'Practical lab work for operating systems including process management, memory management, and system programming',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['operating', 'system', 'lab', 'os lab', 'os practical']
+},
+{
+    id: 'database-lab',
+    name: 'Database Lab',
+    icon: '🧪',
+    description: 'Practical lab work for database systems including SQL queries, database design, and implementation',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['database', 'lab', 'db lab', 'sql', 'dbms', 'database practical']
 }
 
 ];

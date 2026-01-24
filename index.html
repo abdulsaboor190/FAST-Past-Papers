@@ -20,17 +20,17 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fast-past-papers.vercel.app/">
+    <meta property="og:url" content="https://your-domain.vercel.app/">
     <meta property="og:title" content="FAST Past Papers - NUCES">
     <meta property="og:description" content="Find and download past papers for FAST NUCES subjects instantly">
-    <meta property="og:image" content="https://fast-past-papers.vercel.app/logo/icon-512.png">
+    <meta property="og:image" content="https://your-domain.vercel.app/logo/icon-512.png">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://fast-past-papers.vercel.app/">
+    <meta name="twitter:url" content="https://your-domain.vercel.app/">
     <meta name="twitter:title" content="FAST Past Papers - NUCES">
     <meta name="twitter:description" content="Find and download past papers for FAST NUCES subjects instantly">
-    <meta name="twitter:image" content="https://fast-past-papers.vercel.app/logo/icon-512.png">
+    <meta name="twitter:image" content="https://your-domain.vercel.app/logo/icon-512.png">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -158,25 +158,23 @@
 </div>
 
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <div class="loading-text">Loading Subject...</div>
-            <div class="loading-subtext">Please wait while we prepare your content</div>
-        </div>
-    </div>
-
     <!-- Load JavaScript -->
     <script src="/js/data.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/analytics.js"></script>
-<!--    <script src="/js/pwa.js"></script> -->
+        <script src="/js/analytics.js"></script>
+      
 </body>
+<!-- ADD THIS RIGHT AFTER <body> TAG in index.html -->
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Subject...</div>
+        <div class="loading-subtext">Please wait while we prepare your content</div>
+    </div>
+</div>
+
 </html>
-
-
 
 
 

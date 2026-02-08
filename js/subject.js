@@ -72,8 +72,8 @@ const SUBJECT_GITHUB_CONFIG = {
         shortCode: 'OS Lab'
     },
     'Database Lab': {
-        basePath: 'DB Lab',
-        shortCode: 'DB Lab'
+        basePath: 'DB LAB',
+        shortCode: 'DB LAB'
     },
     'Artificial Intelligence': {
         basePath: 'AI',

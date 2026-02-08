@@ -526,11 +526,11 @@ function setupSearch() {
             (subject.id === 'operation-research' && (query.includes('operation') || query.includes('research') || query.includes('optimization'))) ||
             (subject.id === 'ideology-constitution-pakistan' && (query.includes('ideology') || query.includes('icp') || query.includes('pakistan') || query.includes('political'))) ||
             (subject.id === 'design-analysis-algorithms' && (query.includes('design') || query.includes('analysis') || query.includes('algorithm') || query.includes('daa'))) ||
-            (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('dbms'))) ||
+            (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('db'))) ||
             (subject.id === 'coal-theory' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('theory'))) ||
             (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols'))) ||
             (subject.id === 'multivariable-calculus' && (query.includes('multivariable') || query.includes('mvc') || query.includes('vector') || query.includes('calculus') || query.includes('partial'))) ||
-            (subject.id === 'expository-writing' && (query.includes('expository') || query.includes('writing') || query.includes('essay') || query.includes('academic'))) ||
+            (subject.id === 'expository-writing' && (query.includes('expository') || query.includes('writing') || query.includes('ew') || query.includes('academic'))) ||
             (subject.id === 'probability-statistics' && (query.includes('probability') || query.includes('statistics') || query.includes('stats') || query.includes('statistical') || query.includes('analysis'))) ||
             (subject.id === 'artificial-intelligence' && (query.includes('artificial') || query.includes('intelligence') || query.includes('ai'))) ||
             (subject.id === 'artificial-intelligence-lab' && (query.includes('artificial') || query.includes('intelligence') || query.includes('lab') || query.includes('ai lab'))) ||
@@ -543,7 +543,7 @@ function setupSearch() {
             (subject.id === 'parallel-distributed-computing' && (query.includes('parallel') || query.includes('distributed') || query.includes('computing') || query.includes('pdc'))) ||
             (subject.id === 'software-design-analysis' && (query.includes('software') || query.includes('design') || query.includes('analysis') || query.includes('sda') || query.includes('design patterns'))) ||
             (subject.id === 'operating-system-lab' && (query.includes('operating') || query.includes('system') || query.includes('os lab') || query.includes('os practical'))) ||
-            (subject.id === 'database-lab' && (query.includes('database') || query.includes('db lab') || query.includes('database practical') || query.includes('sql lab')))
+            (subject.id === 'database-lab' && (query.includes('database') || query.includes('db') || query.includes('db lab') || query.includes('sql lab')))
         );
         
         if (filteredSubjects.length > 0) {

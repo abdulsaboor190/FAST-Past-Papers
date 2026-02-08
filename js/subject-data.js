@@ -467,7 +467,123 @@ const subjectPapers = {
                 fileSize: '1.9 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1df_vbv7qXVY--5qnS_b6tXjUE071Cs-_&export=download&authuser=0&confirm=t&uuid=d617ed6e-b438-40ca-94dd-9dd558f2a820&at=AN8xHoos-QgwjmAU5Rb2r27y07-o:1758103385733'
             }
-        ]
+        ],
+        mid2: [
+    {
+        id: 'oop-mid2-2024-spring',
+        title: 'OOP Mid 2 2024',
+        year: '2024',
+        semester: 'Spring',
+        fileSize: '1.3 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1O2fUDCwvCdaFlmkgmMLbaECO1_mjclz_&export=download'
+    },
+    {
+        id: 'oop-mid2-2024-fall',
+        title: 'OOP Mid 2 2024',
+        year: '2024',
+        semester: 'Fall',
+        fileSize: '1.9 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1JpJ3VsE3ugzfkPcBkKCoGhSU6XUwJtzn&export=download'
+    },
+    {
+        id: 'oop-mid2-2023-spring',
+        title: 'OOP Mid 2 2023',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1-brQjgEWCRjyMdMygkn75McKmgzB1NEX&export=download'
+    },
+    {
+        id: 'oop-mid2-2022-spring',
+        title: 'OOP Mid 2 2022',
+        year: '2022',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1FW8kmYVGgu9ZDDbs4qbJ6Aa_JT_zQnCA&export=download'
+    },
+    {
+        id: 'oop-mid2-2021-fall',
+        title: 'OOP Mid 2 2021',
+        year: '2021',
+        semester: 'Fall',
+        fileSize: '1.8 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1Xo79R5eeaQR6vrnMbQ63MGdYYtl6VISw&export=download'
+    },
+    {
+        id: 'oop-mid2-2021-spring',
+        title: 'OOP Mid 2 2021',
+        year: '2021',
+        semester: 'Spring',
+        fileSize: '1.2 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=17Uif1LaXUzRS7DkCJms-GKSVibu6ytpa&export=download'
+    },
+    {
+        id: 'oop-mid2-2019-fall',
+        title: 'OOP Mid 2 2019',
+        year: '2019',
+        semester: 'Fall',
+        fileSize: '1.7 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1jXA86136QABNZ-h331X2CjISVEDVUQ0n&export=download'
+    },
+    {
+        id: 'oop-mid2-2019-spring',
+        title: 'OOP Mid 2 2019',
+        year: '2019',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1np09jrS9jwAH-85B7ZlAEaa_PfMZabzX&export=download'
+    }
+],
+final: [
+    {
+        id: 'oop-final-2024-spring',
+        title: 'OOP Final 2024',
+        year: '2024',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1XlFKTp-4kGsyA01Wdjp2AJgSlz6YZYDe&export=download'
+    },
+    {
+        id: 'oop-final-2023-spring',
+        title: 'OOP Final 2023',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1CL194mN3yN-PJp7Oj5CUN2A_k86qcJZb&export=download'
+    },
+    {
+        id: 'oop-final-2022-spring',
+        title: 'OOP Final 2022',
+        year: '2022',
+        semester: 'Spring',
+        fileSize: '1.7 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1W7e2ULzv_kZz69FsA1gblqm9JOAfUoA2&export=download'
+    },
+    {
+        id: 'oop-final-2022-spring-solution',
+        title: 'OOP Final 2022 Solution',
+        year: '2022',
+        semester: 'Spring',
+        fileSize: '1.2 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1YMXhGWlaoAjuEkD9f8fVeKeb-T2_JZYd&export=download'
+    },
+    {
+        id: 'oop-final-2022-fall',
+        title: 'OOP Final 2022',
+        year: '2022',
+        semester: 'Fall',
+        fileSize: '1.8 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1RQfEKuPkYUq3fxCoRKHFShlCp_U-KW5_&export=download'
+    },
+    {
+        id: 'oop-final-2020-spring',
+        title: 'OOP Final 2020',
+        year: '2020',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1Bl5YkIOP4Pc0eW95gzpzJJGSYzskVQHh&export=download'
+    }
+]
     }
 },
 
@@ -3733,10 +3849,76 @@ const subjectPapers = {
     description: 'Practical lab work for database systems including SQL queries, database design, and implementation',
     icon: '🧪',
     papers: {
-        mid1: [],
-        mid2: [],
-        final: [],
-        quiz: []
+       mid1: [
+    {
+        id: 'db-lab-mid-2023-a-spring',
+        title: 'DB Lab Mid 2023 (A)',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=18cpcxT8k526NrjgRv0kRV-C40gRoheqc&export=download'
+    },
+    {
+        id: 'db-lab-mid-2023-b-spring',
+        title: 'DB Lab Mid 2023 (B)',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1-D22Cydnp3SYPnHC1h3WQJ8KYv3Egwsv&export=download'
+    },
+    {
+        id: 'db-lab-mid-2023-c-spring',
+        title: 'DB Lab Mid 2023 (C)',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.3 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=16gQudmWx3luu6fENb9pCi0StYsz0Yd8t&export=download'
+    },
+    {
+        id: 'db-lab-mid-2023-d-spring',
+        title: 'DB Lab Mid 2023 (D)',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.8 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1GABKhQr7TJ2n4-BbxXSFLIJh22JldNbp&export=download'
+    },
+    {
+        id: 'db-lab-mid-2021-spring',
+        title: 'DB Lab Mid 2021',
+        year: '2021',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=12ET6MEfVZNJiQ3WY65eNW1VG-G6n86cj&export=download'
+    },
+    {
+        id: 'db-lab-mid-2017-spring',
+        title: 'DB Lab Mid 2017',
+        year: '2017',
+        semester: 'Spring',
+        fileSize: '1.7 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1UL9vZ4zxbRYu7W8ZkcvEiOE0wm3NXXKJ&export=download'
+    }
+],
+    
+      final: [
+    {
+        id: 'db-lab-final-2024-spring',
+        title: 'DB Lab Final 2024',
+        year: '2024',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1MlZleWaePZcleEUpvnN40nbX_1oIk3gl&export=download'
+    },
+    {
+        id: 'db-lab-final-2021-spring',
+        title: 'DB Lab Final 2021',
+        year: '2021',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1eUCRLiMPU6SwwoRgpdh2DwhxqyzHjiEJ&export=download'
+    }
+]
+
     }
 }
 

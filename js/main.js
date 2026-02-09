@@ -542,7 +542,7 @@ function setupSearch() {
             (subject.id === 'computer-networks-lab' && (query.includes('computer') || query.includes('networks') || query.includes('lab') || query.includes('cn lab'))) ||
             (subject.id === 'parallel-distributed-computing' && (query.includes('parallel') || query.includes('distributed') || query.includes('computing') || query.includes('pdc'))) ||
             (subject.id === 'software-design-analysis' && (query.includes('software') || query.includes('design') || query.includes('analysis') || query.includes('sda') || query.includes('design patterns'))) ||
-            (subject.id === 'operating-system-lab' && (query.includes('operating') || query.includes('system') || query.includes('os lab') || query.includes('os practical'))) ||
+            (subject.id === 'operating-system-lab' && (query.includes('operating') || query.includes('os') || query.includes('os lab') || query.includes('os practical'))) ||
             (subject.id === 'database-lab' && (query.includes('database') || query.includes('db') || query.includes('db lab') || query.includes('sql lab')))
         );
         

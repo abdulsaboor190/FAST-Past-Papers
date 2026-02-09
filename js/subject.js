@@ -68,8 +68,8 @@ const SUBJECT_GITHUB_CONFIG = {
         shortCode: 'PROB'
     },
     'Operating System Lab': {
-        basePath: 'OS Lab',
-        shortCode: 'OS Lab'
+        basePath: 'OS LAB',
+        shortCode: 'OS LAB'
     },
     'Database Lab': {
         basePath: 'DB LAB',

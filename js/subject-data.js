@@ -3829,6 +3829,14 @@ final: [
   semester: 'Fall',
   fileSize: '1.3 MB',
   downloadUrl: 'https://drive.usercontent.google.com/download?id=1G-cq7Ie8rPOVdl-DrU9TpnMY0n77OqhG'
+},
+{
+  id: 'sda-final-2025',
+  title: 'SDA Final 2025 Fall',
+  year: '2025',
+  semester: 'Fall',
+  fileSize: '1.3 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=14ySxgMxBM5aCy0_lzBm8g-lD2RTfPqHv&export=download&authuser=0&confirm=t&uuid=0c5db125-ce5c-4e89-944f-d0c149ce2146&at=APcXIO1hLNe2dB5CKKrVwBh7AL9m:1770649674421'
 }],
         quiz: []
     }
@@ -3838,10 +3846,187 @@ final: [
     description: 'Practical lab work for operating systems including process management, memory management, and system programming',
     icon: '🧪',
     papers: {
-        mid1: [],
-        mid2: [],
-        final: [],
-        quiz: []
+       mid1: [
+    {
+        id: 'oop-lab-mid-2025-spring-a',
+        title: 'OOP Lab Mid 2025 (A)',
+        year: '2025',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1v-C1NEwmRMyUiupRn2xX5P4zUzm9oNhC&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2025-spring-b',
+        title: 'OOP Lab Mid 2025 (B)',
+        year: '2025',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1zdLMljnnZPDNvj1pNcawvJOG8tN865u5&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2025-spring-c',
+        title: 'OOP Lab Mid 2025 (C)',
+        year: '2025',
+        semester: 'Spring',
+        fileSize: '1.3 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=14WvkD_YwCRM5UlrPtX9vzSgW7BDiYL-3&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2024-spring-a',
+        title: 'OOP Lab Mid 2024 (A)',
+        year: '2024',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1MIFIwupvrCy24W1SNCJDRnWoZjNO6lB2&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2024-spring-b',
+        title: 'OOP Lab Mid 2024 (B)',
+        year: '2024',
+        semester: 'Spring',
+        fileSize: '1.7 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1mlHeZQgOaVKvNjfjUubv23_NF5rr-3Yd&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2024-spring-c',
+        title: 'OOP Lab Mid 2024 (C)',
+        year: '2024',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1aLhZvozRJu9yjHHWO-cswwtDDK7tE541&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-spring-a',
+        title: 'OOP Lab Mid 2018 (A)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1t7GnU2R2_nPdVV4esFlenvbfReIHXFnl&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-spring-b',
+        title: 'OOP Lab Mid 2018 (B)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=150pdd75AIyd-MOaNf-RUfeceTZC_Oky0&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-spring-c',
+        title: 'OOP Lab Mid 2018 (C)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.8 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1aHFlmV7IXSm4teJ2V09OBSL-A08QFtXX&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-fall-a',
+        title: 'OOP Lab Mid 2018 (A)',
+        year: '2018',
+        semester: 'Fall',
+        fileSize: '1.3 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1mv2bMWq-QBXTMMFuejVD69MmJs6bcns2&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-fall-b',
+        title: 'OOP Lab Mid 2018 (B)',
+        year: '2018',
+        semester: 'Fall',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1ZjX4vNVU8tZMHsHUpMEe31kdLcXgPH9i&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-fall-c',
+        title: 'OOP Lab Mid 2018 (C)',
+        year: '2018',
+        semester: 'Fall',
+        fileSize: '1.7 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1lNO_lXxCgAx4YuVoMDpXj-GOHlwwOtMZ&export=download'
+    },
+    {
+        id: 'oop-lab-mid-2018-fall-d',
+        title: 'OOP Lab Mid 2018 (D)',
+        year: '2018',
+        semester: 'Fall',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1E9Tlcwp2KHxEcHM41fGBiBcrDKKwroQ0&export=download'
+    }
+],
+        final: [
+    {
+        id: 'os-lab-final-2025-spring',
+        title: 'OS Lab Final 2025',
+        year: '2025',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1dKv_TYhwvOCbpbW-2WZDcq_K0gRJ8z-d&export=download'
+    },
+    {
+        id: 'os-lab-final-2023-spring-a',
+        title: 'OS Lab Final 2023 (A)',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1UNxTETD7EQVMU8tcXxbJUsv165D6qwev&export=download'
+    },
+    {
+        id: 'os-lab-final-2023-spring-b',
+        title: 'OS Lab Final 2023 (B)',
+        year: '2023',
+        semester: 'Spring',
+        fileSize: '1.7 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1alEjgde87AL4PF9FhkuN7yWJL9-0QgXC&export=download'
+    },
+    {
+        id: 'os-lab-final-2020-spring',
+        title: 'OS Lab Final 2020',
+        year: '2020',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1iSFVyyt10GjXsXVweltECwP5FkBWKt7a&export=download'
+    },
+    {
+        id: 'os-lab-final-2018-spring-a',
+        title: 'OS Lab Final 2018 (A)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1FvpdEXnfoHTZgjmvz4J0lEacPO0z_cPC&export=download'
+    },
+    {
+        id: 'os-lab-final-2018-spring-a-solution',
+        title: 'OS Lab Final 2018 (A) Solution',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.4 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=15eLDJ5ufSwA2zZTvHwOaiUwtY-fBvEL-&export=download'
+    },
+    {
+        id: 'os-lab-final-2018-spring-b',
+        title: 'OS Lab Final 2018 (B)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.8 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1lJ6qy_GX7c9s5v8PEjbEfqx4sZcqgzmY&export=download'
+    },
+    {
+        id: 'os-lab-final-2018-spring-c',
+        title: 'OS Lab Final 2018 (C)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.5 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1J6P0LNYUtSUKW4jyo7Zykq1qVHluX-DI&export=download'
+    },
+    {
+        id: 'os-lab-final-2018-spring-d',
+        title: 'OS Lab Final 2018 (D)',
+        year: '2018',
+        semester: 'Spring',
+        fileSize: '1.6 MB',
+        downloadUrl: 'https://drive.usercontent.google.com/download?id=1mzN-3I28d4qqXPg1iQK-kduSpLociu26&export=download'
+    }
+]
+
     }
 },
 'database-lab': {

@@ -993,50 +993,65 @@ final: [
 },
 
 'compiler-construction': {
-    name: 'Compiler Construction',
+    title: 'Compiler Construction',
+    description: 'Compiler design, lexical analysis, parsing, code generation, and optimization',
+    icon: '⚙️',
     papers: {
         mid1: [
             {
-                id: 'cc-2018-spring-mid1-lhr',
-                title: 'CC Mid 1 2018 Spring LHR',
-                year: '2018',
-                semester: 'Spring',
-                fileSize: '—',
-                downloadUrl: 'https://drive.usercontent.google.com/download?id=1xjahak80HW9oA8RzjSsyXtEUHf_qNuDQ&export=download&authuser=0&confirm=t&uuid=35795d1f-d04e-42a3-b9f3-0a5c85329385&at=AN8xHorHz4CW0cfogxJs76JoRUKB:1758103780525'
-            },
+  id: 'cc-mid1-unknown-fall',
+  title: 'CC Mid 1',
+  year: 'Unknown',
+  semester: 'Fall',
+  fileSize: '1.6 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1KbaBvbG9kZi6wWVYEVYJPuzMJj6Vk4mu'
+},
+{
+  id: 'cc-mid1-2018-spring',
+  title: 'CC Mid 1 2018',
+  year: '2018',
+  semester: 'Spring',
+  fileSize: '1.4 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1uNw4msLwqmyD1gO7pT5r9Riphdi_pL8S'
+}
+        ],
+        mid2: [
             {
-                id: 'cc-2018-fall-mid1-lhr',
-                title: 'CC Mid 1 2018 LHR',
-                year: '2018',
-                semester: 'Fall',
-                fileSize: '—',
-                downloadUrl: 'https://drive.usercontent.google.com/download?id=1KpBWTgZ1FM-6WC6PABsdRPu8FhuRXx0L&export=download&authuser=0&confirm=t&uuid=72b08dfe-6991-41d7-8959-a208bf3cff9f&at=AN8xHoqKpdqlhSW_DQ71lTDdXMZJ:1758103776106'
-            },
+  id: 'cc-mid2-unknown-fall-part-a',
+  title: 'CC Mid 2 Part A',
+  year: 'Unknown',
+  semester: 'Fall',
+  fileSize: '1.8 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1vedwOcbqULMkeJDiK_gNegTUCEiL1KO7'
+},
+{
+  id: 'cc-mid2-unknown-fall-part-b',
+  title: 'CC Mid 2 Part B',
+  year: 'Unknown',
+  semester: 'Fall',
+  fileSize: '1.5 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1T7mfy-1a1-oO5bkbUnsNEyPF_ELzmP_q'
+},
+{
+  id: 'cc-mid2-2018-spring',
+  title: 'CC Mid 2 2018',
+  year: '2018',
+  semester: 'Spring',
+  fileSize: '1.7 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1ktdL9oroKfLRJ-iWlOdRgqA0xD5oJCNF'
+}
+        ],
+        final: [
             {
-                id: 'cc-2020-spring-mid1-lhr',
-                title: 'CC Mid 1 2020 LHR',
-                year: '2020',
-                semester: 'Spring',
-                fileSize: '—',
-                downloadUrl: 'https://drive.usercontent.google.com/download?id=1EIqtCebfkJqBB6gWuVe_lDUNsUfhcaWu&export=download&authuser=0&confirm=t&uuid=609283c4-2c21-4511-b673-ad91b95b195f&at=AN8xHopB3FgCnA1unLoblTX6wmxY:1758103784609'
-            },
-            {
-                id: 'cc-2023-spring-mid1-lhr',
-                title: 'CC Mid 1 2023 LHR',
-                year: '2023',
-                semester: 'Spring',
-                fileSize: '—',
-                downloadUrl: 'https://drive.usercontent.google.com/download?id=12DF3DxRBA-YpP4VaiLK40mof35zOMtET&export=download&authuser=0&confirm=t&uuid=0be2431d-213e-4c6f-8455-77ba3b2e68c1&at=AN8xHooD7bQPoLRNOSUAlY5kDrRr:1758103787740'
-            },
-            {
-                id: 'cc-2024-spring-mid1-lhr',
-                title: 'CC Mid 1 2024 LHR',
-                year: '2024',
-                semester: 'Spring',
-                fileSize: '—',
-                downloadUrl: 'https://drive.usercontent.google.com/download?id=1oq2xIBORULHIMTE_ZZNi-66-q6OuqIMD&export=download&authuser=0&confirm=t&uuid=6dc182f4-f6ab-432d-97ce-c7603da71dba&at=AN8xHoqgrOCz4hPWCAa1xdQ7QfFv:1758103791278'
-            }
-        ]
+  id: 'cc-final-unknown-fall',
+  title: 'CC Final',
+  year: 'Unknown',
+  semester: 'Fall',
+  fileSize: '1.9 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=15NpOxZyzuGZ_W9B6vapjX0vGiJh-lwO4'
+}
+            ],
+        quiz: []
     }
 },
 'applied-physics': {
@@ -3675,11 +3690,175 @@ final: [
     description: 'Introduction to artificial intelligence concepts including search, knowledge representation, and reasoning',
     icon: '🤖',
     papers: {
-        mid1: [],
-        mid2: [],
-        final: [],
-        quiz: []
-    }
+    mid1: [
+        {
+            id: 'ai-mid1-2014-spring',
+            title: 'AI Mid 1 2014',
+            year: '2014',
+            semester: 'Spring',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1SbZnr0JXyeu-PLQkbzZMbaXxgE9Qvrv5&export=download'
+        },
+        {
+            id: 'ai-mid1-2016-spring',
+            title: 'AI Mid 1 2016',
+            year: '2016',
+            semester: 'Spring',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1EGzyo7T6hRo_jFICpPSrswSCW479vpXg&export=download'
+        },
+        {
+            id: 'ai-mid1-2019-spring',
+            title: 'AI Mid 1 2019',
+            year: '2019',
+            semester: 'Spring',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=16Z5--tJ_lGKMuZdQ6q-by5LqzU03-tTQ&export=download'
+        },
+        {
+            id: 'ai-mid1-2021-spring',
+            title: 'AI Mid 1 2021',
+            year: '2021',
+            semester: 'Spring',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1vHwyWfKbTEpRhkO-yvYgyHUgczd97UIO&export=download'
+        },
+        {
+            id: 'ai-mid1-2022-spring',
+            title: 'AI Mid 1 2022',
+            year: '2022',
+            semester: 'Spring',
+            fileSize: '1.3 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1nUPujWZu2yhmYgSb8lz87-6lNgLyuRuq&export=download'
+        }
+    ],
+
+    mid2: [
+        {
+            id: 'ai-mid2-2010-spring',
+            title: 'AI Mid 2 2010',
+            year: '2010',
+            semester: 'Spring',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1wr2wwttKMLW0kt9dOZJdRr1gbwz8X7F9&export=download'
+        },
+        {
+            id: 'ai-mid2-2015-spring',
+            title: 'AI Mid 2 2015',
+            year: '2015',
+            semester: 'Spring',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1wi6zhmS3vISSoKJ_yL6N_I8LP5Hy-5mT&export=download'
+        },
+        {
+            id: 'ai-mid2-2016-spring',
+            title: 'AI Mid 2 2016',
+            year: '2016',
+            semester: 'Spring',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1MlkGjMRHmTUtq-mqMBccDFOFMAR530Xz&export=download'
+        },
+        {
+            id: 'ai-mid2-2017-spring',
+            title: 'AI Mid 2 2017',
+            year: '2017',
+            semester: 'Spring',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1AUgNB-omP3Lsv_bKsvSdis_csXteKM1C&export=download'
+        },
+        {
+            id: 'ai-mid2-2018-spring',
+            title: 'AI Mid 2 2018',
+            year: '2018',
+            semester: 'Spring',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1iDgL-Aah74TnhJrM4wydBgxMR4cWjEbv&export=download'
+        },
+        {
+            id: 'ai-mid2-2022-spring',
+            title: 'AI Mid 2 2022',
+            year: '2022',
+            semester: 'Spring',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1NPh790l0DbUwOgCFX93BFXhAjJW0V9SZ&export=download'
+        },
+        {
+            id: 'ai-mid2-2022-spring-solution',
+            title: 'AI Mid 2 2022 Solution',
+            year: '2022',
+            semester: 'Spring',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=18scTQb5HvZIU6qldj0ZaZGniFS1Kq4a6&export=download'
+        },
+        {
+            id: 'ai-mid2-2023-spring-solution',
+            title: 'AI Mid 2 2023 Solution',
+            year: '2023',
+            semester: 'Spring',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1_l89c3VA_dlSjv1SKUbH4TIASaOAOjXk&export=download'
+        }
+    ],
+
+    final: [
+        {
+            id: 'ai-final-2015-spring',
+            title: 'AI Final 2015',
+            year: '2015',
+            semester: 'Spring',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1I-s5481mJirGjxXXsXfcshOFt0_buWFs&export=download'
+        },
+        {
+            id: 'ai-final-2020-spring',
+            title: 'AI Final 2020',
+            year: '2020',
+            semester: 'Spring',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=185tX-9fJrVSfjdLTOCZ8dnIoiLFHTAX7&export=download'
+        },
+        {
+            id: 'ai-final-2021-spring',
+            title: 'AI Final 2021',
+            year: '2021',
+            semester: 'Spring',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1-CpkryfO7ps8kh_42z1_Ir2RzCtmSwFz&export=download'
+        },
+        {
+            id: 'ai-final-2021-spring-solution',
+            title: 'AI Final 2021 Solution',
+            year: '2021',
+            semester: 'Spring',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1EC4-yQIcJ7SgGEbfyie0rk0AnWSL85jn&export=download'
+        },
+        {
+            id: 'ai-final-2022-spring',
+            title: 'AI Final 2022',
+            year: '2022',
+            semester: 'Spring',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=14wX-m4bEbxe6sNkL8Uut--LjuMN0Ya7a&export=download'
+        },
+        {
+            id: 'ai-final-2022-spring-solution',
+            title: 'AI Final 2022 Solution',
+            year: '2022',
+            semester: 'Spring',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1WVBAadwW80KrF8FncKzu_Djooz7d947u&export=download'
+        },
+        {
+            id: 'ai-final-2024-spring',
+            title: 'AI Final 2024',
+            year: '2024',
+            semester: 'Spring',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1Iqvwj9Cu1mpYyBmMyYbDYn9V32sKc8ZQ&export=download'
+        }
+    ]
+}
 },
 'artificial-intelligence-lab': {
     title: 'Artificial Intelligence Lab',
@@ -3697,16 +3876,163 @@ final: [
     description: 'Software development life cycle, requirements engineering, design, testing, and project management',
     icon: '🛠️',
     papers: {
-        mid1: [],
-        mid2: [],
-        final: [],
-        quiz: []
+        mid1: [{
+  id: 'se-mid1-2018-fall',
+  title: 'SE Mid 1 2018',
+  year: '2018',
+  semester: 'Fall',
+  fileSize: '1.3 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1sFghQWwx-tmXGTKX1Tpkmag2rnGfsHGF'
+},
+{
+  id: 'se-mid1-2019-fall',
+  title: 'SE Mid 1 2019',
+  year: '2019',
+  semester: 'Fall',
+  fileSize: '1.6 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1wbeB3HybE5Pg2sZqWsKZ032I1fPhPurB'
+},
+{
+  id: 'se-mid1-2021-fall',
+  title: 'SE Mid 1 2021',
+  year: '2021',
+  semester: 'Fall',
+  fileSize: '1.4 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1gT0Nnw93TxIzGAUq3TgMOSx5cIcHUu89'
+},
+{
+  id: 'se-mid1-2023-fall',
+  title: 'SE Mid 1 2023',
+  year: '2023',
+  semester: 'Fall',
+  fileSize: '1.8 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1Aaz7ZM6cVL_lZ3czuG0KHzT1_V97eIQz'
+}],
+        mid2: [{
+  id: 'se-mid2-2018-fall',
+  title: 'SE Mid 2 2018',
+  year: '2018',
+  semester: 'Fall',
+  fileSize: '1.5 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1vBkVxEdJHuW7LaPh9ZQ2ahOXS4Giya6Z'
+},
+{
+  id: 'se-mid2-2023-fall',
+  title: 'SE Mid 2 2023',
+  year: '2023',
+  semester: 'Fall',
+  fileSize: '1.9 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1VDDrRXDdiuUCzLhNIyDmXSh0m7jYhpqS'
+}],
+        final: [{
+  id: 'se-final-2020-fall',
+  title: 'SE Final 2020',
+  year: '2020',
+  semester: 'Fall',
+  fileSize: '1.7 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1UF4_ZBm0zujfRwcXB6ejAijLIYHBcNeI'
+},
+{
+  id: 'se-final-2020-fall-solution',
+  title: 'SE Final 2020 Solution',
+  year: '2020',
+  semester: 'Fall',
+  fileSize: '1.2 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1pZZ7wwU6baOMZhEG9puOyH0nJQXOFm6W'
+}]
     }
 },
 'technical-business-writing': {
     title: 'Technical and Business Writing',
     description: 'Technical documentation, reports, and business communication skills for professionals',
     icon: '📝',
+    papers: {
+        mid1: [{
+  id: 'tbw-mid1-2021-fall',
+  title: 'TBW Mid 1 2021',
+  year: '2021',
+  semester: 'Fall',
+  fileSize: '1.6 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1KZ0-rXET0iButDZrR6Oc0wLd8mgOAy1U'
+},
+{
+  id: 'tbw-mid1-2017-fall',
+  title: 'TBW Mid 1 2017',
+  year: '2017',
+  semester: 'Fall',
+  fileSize: '1.4 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1tCtCnjUNwNOcSg7W0Cg6mRKiCfUpKWb3'
+}],
+        mid2: [{
+  id: 'tbw-mid2-2021-fall',
+  title: 'TBW Mid 2 2021',
+  year: '2021',
+  semester: 'Fall',
+  fileSize: '1.8 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1I2Gs6CHEJ30T0lupXTm7u-CCfbBwbBJ9'
+},
+{
+  id: 'tbw-mid2-2019-fall',
+  title: 'TBW Mid 2 2019',
+  year: '2019',
+  semester: 'Fall',
+  fileSize: '1.5 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1dpmMfA9RhFUgVMtb9qGpc2Mba6XXnVqV'
+},
+{
+  id: 'tbw-mid2-2017-fall',
+  title: 'TBW Mid 2 2017',
+  year: '2017',
+  semester: 'Fall',
+  fileSize: '1.7 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1RRVgsYs5Us4a4R4FYscjsjIy8_qPh1R-'
+}],
+        final: [{
+  id: 'tbw-final-2025-fall',
+  title: 'TBW Final 2025',
+  year: '2025',
+  semester: 'Fall',
+  fileSize: '1.9 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1qBgddy0vteZbRpys7ff7yu0ZNH1hBs62'
+},
+{
+  id: 'tbw-final-2021-fall',
+  title: 'TBW Final 2021',
+  year: '2021',
+  semester: 'Fall',
+  fileSize: '1.6 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1IbjqvBQ0WeSbpuG1jicnoHXuLN3cX9Jo'
+},
+{
+  id: 'tbw-final-2020-fall',
+  title: 'TBW Final 2020',
+  year: '2020',
+  semester: 'Fall',
+  fileSize: '1.5 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1L2U9qx6km3i2KwsmC-T3oLj6nMGFLrJT'
+},
+{
+  id: 'tbw-final-2019-fall',
+  title: 'TBW Final 2019',
+  year: '2019',
+  semester: 'Fall',
+  fileSize: '1.7 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1t_uIbyddJ_2lvn1ZQqkTMxekgWixRufS'
+},
+{
+  id: 'tbw-final-2017-fall',
+  title: 'TBW Final 2017',
+  year: '2017',
+  semester: 'Fall',
+  fileSize: '1.4 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=135btyCf7Vy30fdhHKa7FvrSLMWWqniqE'
+}]
+    }
+},
+'fundamentals-software-project-management': {
+    title: 'Fundamentals of Software Project Management',
+    description: 'Core concepts of software project planning, estimation, scheduling, and risk management',
+    icon: '📋',
     papers: {
         mid1: [],
         mid2: [],
@@ -3730,10 +4056,78 @@ final: [
     description: 'Data analysis, visualization, and machine learning techniques for extracting insights',
     icon: '📈',
     papers: {
-        mid1: [],
-        mid2: [],
-        final: [],
-        quiz: []
+        mid1: [{
+            id: 'ds-mid1-2021-fall',
+            title: 'DS Mid 1 2021',
+            year: '2021',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1rcuratj2VCimbw354h1bP5kQryOkpaUj'
+          },
+          {
+            id: 'ds-mid1-2020-fall',
+            title: 'DS Mid 1 2020',
+            year: '2020',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1E8Cfc2oKii10BnVYoXh4b__0FC2uuUej'
+          },
+          {
+            id: 'ds-mid1-2019-fall',
+            title: 'DS Mid 1 2019',
+            year: '2019',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1yisFoHRqmBT7114_nr0MoTdZ3lj_arF9'
+          },
+          {
+            id: 'ds-mid1-2018-fall',
+            title: 'DS Mid 1 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1JP5Xow607vMeF70C7yxCMENoWaOgil1P'
+          },
+          {
+            id: 'ds-mid1-2018-fall-solution',
+            title: 'DS Mid 1 2018 Solution',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1t7lzhn-k_A5lR-MVycYN1e6k7hzx3nIY'
+          },
+          {
+            id: 'ds-mid1-2016-fall',
+            title: 'DS Mid 1 2016',
+            year: '2016',
+            semester: 'Fall',
+            fileSize: '1.9 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1yH9RB_ILDyhXEm8hPb9LaEojBNlkoZPP'
+          }],
+        mid2: [{
+            id: 'ds-mid2-2018-fall',
+            title: 'DS Mid 2 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=12GYq-2b8GidzkkHQ4f6zITdTVscjI7PB'
+          },
+          {
+            id: 'ds-mid2-2017-fall',
+            title: 'DS Mid 2 2017',
+            year: '2017',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=115l0d_wEGMIVzauqh8yTNHXCOplguTmR'
+          }],
+        final: [{
+            id: 'ds-final-2020-fall',
+            title: 'DS Final 2020',
+            year: '2020',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=16Ru_y30htwnULbObDiazCWnJFh_qu0hp'
+          }]
     }
 },
 'numerical-computing': {

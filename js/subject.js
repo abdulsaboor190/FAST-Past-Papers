@@ -102,6 +102,18 @@ const SUBJECT_GITHUB_CONFIG = {
     'Applied Human Computer Interaction': {
         basePath: 'AHCI',
         shortCode: 'AHCI'
+    },
+    'Compiler Construction': {
+        basePath: 'CC',
+        shortCode: 'CC'
+    },
+    'Data Science': {
+        basePath: 'DSS',
+        shortCode: 'DSS'
+    },
+    'Fundamentals of Software Project Management': {
+        basePath: 'FSPM',
+        shortCode: 'FSPM'
     }
 };
 

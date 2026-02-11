@@ -297,6 +297,15 @@ const subjects = [
     color: '#fd79a8'
 },
 {
+    id: 'fundamentals-software-project-management',
+    title: 'Fundamentals of Software Project Management',
+    description: 'Core concepts of software project planning, estimation, scheduling, and risk management',
+    icon: '📋',
+    papers: 0,
+    latest: 2024,
+    color: '#55efc4'
+},
+{
     id: 'applied-human-computer-interaction',
     title: 'Applied Human Computer Interaction',
     description: 'Principles of human-computer interaction, usability, and user-centered design applied to real systems',
@@ -468,6 +477,7 @@ function navigateToSubject(subjectId, cardElement) {
             'software-engineering': 'software-engineering.html',
             'technical-business-writing': 'technical-business-writing.html',
             'applied-human-computer-interaction': 'applied-human-computer-interaction.html',
+            'fundamentals-software-project-management': 'fundamentals-software-project-management.html',
             'data-science': 'data-science.html',
             'numerical-computing': 'numerical-computing.html',
             'computer-networks-lab': 'computer-networks-lab.html',
@@ -509,7 +519,7 @@ function setupSearch() {
             // Include some basic keyword matching
             (subject.id === 'programming-fundamentals' && (query.includes('programming') || query.includes('fundamentals') || query.includes('pf') || query.includes('c++'))) ||
             (subject.id === 'programming-fundamentals-lab' && (query.includes('programming') || query.includes('fundamentals') || query.includes('lab') || query.includes('pf'))) ||
-            (subject.id === 'information-communication-technology' && (query.includes('ict') || query.includes('information') || query.includes('communication') || query.includes('technology'))) ||
+            (subject.id === 'information-communication-technology' && (query.includes('ict') || query.includes('ic') || query.includes('communication') || query.includes('technology'))) ||
             (subject.id === 'data-structures-algorithms' && (query.includes('data') || query.includes('structure') || query.includes('algorithm') || query.includes('dsa') || query.includes('tree'))) ||
             (subject.id === 'data-structures-lab' && (query.includes('data') || query.includes('structures') || query.includes('lab') || query.includes('dsa'))) ||
             (subject.id === 'discrete-structures' && (query.includes('discrete') || query.includes('logic') || query.includes('ds'))) ||
@@ -519,8 +529,8 @@ function setupSearch() {
             (subject.id === 'oop-lab' && (query.includes('oop') || query.includes('object') || query.includes('lab') || query.includes('practical'))) ||
             (subject.id === 'computer-architecture' && (query.includes('computer') || query.includes('architecture') || query.includes('ca'))) ||
             (subject.id === 'coal-lab' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('lab'))) ||
-            (subject.id === 'compiler-construction' && (query.includes('compiler') || query.includes('construction') || query.includes('parsing'))) ||
-            (subject.id === 'digital-logic-design' && (query.includes('digital') || query.includes('logic') || query.includes('dld'))) ||
+            (subject.id === 'compiler-construction' && (query.includes('compiler') || query.includes('construction') || query.includes('cc'))) ||
+            (subject.id === 'digital-logic-design' && (query.includes('digital') || query.includes('dl') || query.includes('dld'))) ||
             (subject.id === 'information-security' && (query.includes('information') || query.includes('security') || query.includes('ic'))) ||
             (subject.id === 'operating-system' && (query.includes('operating') || query.includes('system') || query.includes('os'))) ||
             (subject.id === 'operation-research' && (query.includes('operation') || query.includes('research') || query.includes('optimization'))) ||
@@ -529,14 +539,15 @@ function setupSearch() {
             (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('db'))) ||
             (subject.id === 'coal-theory' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('theory'))) ||
             (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols'))) ||
-            (subject.id === 'multivariable-calculus' && (query.includes('multivariable') || query.includes('mvc') || query.includes('vector') || query.includes('calculus') || query.includes('partial'))) ||
+            (subject.id === 'multivariable-calculus' && (query.includes('multivariable') || query.includes('mvc') || query.includes('mv') || query.includes('calculus') || query.includes('partial'))) ||
             (subject.id === 'expository-writing' && (query.includes('expository') || query.includes('writing') || query.includes('ew') || query.includes('academic'))) ||
             (subject.id === 'probability-statistics' && (query.includes('probability') || query.includes('statistics') || query.includes('stats') || query.includes('statistical') || query.includes('analysis'))) ||
             (subject.id === 'artificial-intelligence' && (query.includes('artificial') || query.includes('intelligence') || query.includes('ai'))) ||
             (subject.id === 'artificial-intelligence-lab' && (query.includes('artificial') || query.includes('intelligence') || query.includes('lab') || query.includes('ai lab'))) ||
             (subject.id === 'software-engineering' && (query.includes('software') || query.includes('engineering') || query.includes('se'))) ||
-            (subject.id === 'technical-business-writing' && (query.includes('technical') || query.includes('business') || query.includes('writing') || query.includes('tbw'))) ||
-            (subject.id === 'applied-human-computer-interaction' && (query.includes('applied') || query.includes('human') || query.includes('computer') || query.includes('interaction') || query.includes('hci') || query.includes('ahci'))) ||
+            (subject.id === 'technical-business-writing' && (query.includes('technical') || query.includes('tb') || query.includes('writing') || query.includes('tbw'))) ||
+            (subject.id === 'applied-human-computer-interaction' && (query.includes('applied') || query.includes('human') || query.includes('ah') || query.includes('ahc') || query.includes('hci') || query.includes('ahci'))) ||
+            (subject.id === 'fundamentals-software-project-management' && (query.includes('fsp') || query.includes('fs') || query.includes('management') || query.includes('fspm') || query.includes('spm'))) ||
             (subject.id === 'data-science' && (query.includes('data') || query.includes('science') || query.includes('ds'))) ||
             (subject.id === 'numerical-computing' && (query.includes('numerical') || query.includes('computing') || query.includes('nc'))) ||
             (subject.id === 'computer-networks-lab' && (query.includes('computer') || query.includes('networks') || query.includes('lab') || query.includes('cn lab'))) ||

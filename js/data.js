@@ -299,6 +299,15 @@ const subjectsData = [
     searchTerms: ['applied', 'human', 'computer', 'interaction', 'hci', 'ahci']
 },
 {
+    id: 'fundamentals-software-project-management',
+    name: 'Fundamentals of Software Project Management',
+    icon: '📋',
+    description: 'Core concepts of software project planning, estimation, scheduling, and risk management',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['fundamentals', 'software', 'project', 'management', 'fspm', 'spm']
+},
+{
     id: 'data-science',
     name: 'Data Science',
     icon: '📈',

@@ -3377,6 +3377,61 @@ final: [
         quiz: []
     }
 },
+'deep-learning-with-perception': {
+    title: 'Deep Learning with Perception',
+    description: 'Neural networks, deep learning architectures, and perception-based models for vision and language',
+    icon: '🧠',
+    papers: {
+        mid1: [{
+            id: 'dlp-mid1-2024-fall',
+            title: 'DLP Mid 1 2024',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1qz4PeI7s7HDyqGtz_IfjTSGflogDlSZJ'
+          },
+          {
+            id: 'dlp-mid1-2022-fall',
+            title: 'DLP Mid 1 2022',
+            year: '2022',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1iMni39KJvWfsVqipwIMIR49obhy5LEL9'
+          },
+          {
+            id: 'dlp-mid1-2018-fall',
+            title: 'DLP Mid 1 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1rSP1GINJ2610e5Z9chB3GkuF9gptjWds'
+          },
+          {
+            id: 'dlp-mid1-2018-fall-solution',
+            title: 'DLP Mid 1 2018 Solution',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=19cuxDHyAuP8_dCsPagNg2BtpnhUKb_VQ'
+          }],
+        mid2: [{
+            id: 'dlp-mid2-2024-fall',
+            title: 'DLP Mid 2 2024',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1qz4PeI7s7HDyqGtz_IfjTSGflogDlSZJ'
+          }],
+        final: [{
+            id: 'dlp-final-2024-fall',
+            title: 'DLP Final 2024',
+            year: '2024',
+            semester: 'Fall',
+            fileSize: '1.9 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1qz4PeI7s7HDyqGtz_IfjTSGflogDlSZJ'
+          }]
+    }
+},
 'multivariable-calculus': {
     title: 'Multivariable Calculus',
     description: 'Advanced calculus with multiple variables, partial derivatives, multiple integrals, and vector calculus',
@@ -3454,6 +3509,125 @@ final: [
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1st4jyQNN7yQUl8rSFXOPAa4-3sbf-pBb&export=download&authuser=0&confirm=t&uuid=bdae515f-8798-429a-bc1b-58afaf67735b&at=ANTm3cwCMeftlO6DVaBRfVge7lVG:1769005988852'
             }
         ]
+    }
+},
+'information-retrieval': {
+    title: 'Information Retrieval',
+    description: 'Search engines, indexing, ranking models, and evaluation of information retrieval systems',
+    icon: '🔎',
+    papers: {
+        mid1: [{
+            id: 'ir-mid1-2023-fall',
+            title: 'IR Mid 1 2023',
+            year: '2023',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1RyzYSiJA3UE8tDTreONRGUHVGxCqRfUB'
+          },
+          {
+            id: 'ir-mid1-2022-fall',
+            title: 'IR Mid 1 2022',
+            year: '2022',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1Q_iP2TK17K5J6OvUsaUtwJAbC6CJtQmR'
+          },
+          {
+            id: 'ir-mid1-2018-fall',
+            title: 'IR Mid 1 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1RXlvSHJakyFz2Br99hIWlzAZgtWoLqo2'
+          },
+          {
+            id: 'ir-mid1-2017-fall',
+            title: 'IR Mid 1 2017',
+            year: '2017',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1Ami2vye2iUiWWm8xjQbhu_qQQbfDQ_pV'
+          },
+          {
+            id: 'ir-mid1-2016-fall',
+            title: 'IR Mid 1 2016',
+            year: '2016',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1KxpLNF_rXWwijk3w0P4YITx1uk30hCWV'
+          },
+          {
+            id: 'ir-mid1-2014-fall',
+            title: 'IR Mid 1 2014',
+            year: '2014',
+            semester: 'Fall',
+            fileSize: '1.9 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1DiGzxLTNy5NmJGfqTBkCQzBMM3g0ei-4'
+          }],
+        mid2: [{
+            id: 'ir-mid2-2018-fall',
+            title: 'IR Mid 2 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1nZlmfkfFaXfhjXBT4NCn0MkklYWHTDwW'
+          },
+          {
+            id: 'ir-mid2-2017-fall',
+            title: 'IR Mid 2 2017',
+            year: '2017',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1f2_rdYLV7Ur39Q0evnjRrZpX81U4nRXa'
+          },
+          {
+            id: 'ir-mid2-2016-fall',
+            title: 'IR Mid 2 2016',
+            year: '2016',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1JYsnArJbY7fxn-AWRjPTonQ_RzzsH_Rl'
+          }],
+        final: [{
+            id: 'ir-final-2020-fall',
+            title: 'IR Final 2020',
+            year: '2020',
+            semester: 'Fall',
+            fileSize: '1.8 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1VQ2XBW-LA6fJ0X4ZS9k5T_04DaCYsWgF'
+          },
+          {
+            id: 'ir-final-2020-fall-solution',
+            title: 'IR Final 2020 Solution',
+            year: '2020',
+            semester: 'Fall',
+            fileSize: '1.6 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1UE8Y9XIXU_O1vsOO8_FvSu4QVh5YQczw'
+          },
+          {
+            id: 'ir-final-2018-fall',
+            title: 'IR Final 2018',
+            year: '2018',
+            semester: 'Fall',
+            fileSize: '1.5 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1SqvRbyusU3MnEgXtZeW_q-kVffeeQ621'
+          },
+          {
+            id: 'ir-final-2016-fall',
+            title: 'IR Final 2016',
+            year: '2016',
+            semester: 'Fall',
+            fileSize: '1.7 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=1CEFmrNuHeeXWfeL3T7h5-LJiKdab7BC1'
+          },
+          {
+            id: 'ir-final-2015-fall',
+            title: 'IR Final 2015',
+            year: '2015',
+            semester: 'Fall',
+            fileSize: '1.4 MB',
+            downloadUrl: 'https://drive.usercontent.google.com/download?id=16J19d_Ne-3I5rBEVs_m5zOiMc8KGrPha'
+          }]
     }
 },
 'expository-writing': {

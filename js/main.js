@@ -216,6 +216,15 @@ const subjects = [
     color: '#8c7ae6'
 },
 {
+    id: 'deep-learning-with-perception',
+    title: 'Deep Learning with Perception',
+    description: 'Neural networks, deep learning architectures, and perception-based models for vision and language',
+    icon: '🧠',
+    papers: 0,
+    latest: 2024,
+    color: '#fd79a8'
+},
+{
     id: 'computer-networks',
     title: 'Computer Networks',
     description: 'Network protocols, TCP/IP, routing, switching, and network security fundamentals',
@@ -241,6 +250,15 @@ const subjects = [
     papers: 0,
     latest: 2024,
     color: '#a29bfe'
+},
+{
+    id: 'information-retrieval',
+    title: 'Information Retrieval',
+    description: 'Search engines, indexing, ranking models, and evaluation of information retrieval systems',
+    icon: '🔎',
+    papers: 0,
+    latest: 2024,
+    color: '#fdcb6e'
 },
 {
     id: 'expository-writing',
@@ -467,9 +485,11 @@ function navigateToSubject(subjectId, cardElement) {
             'ideology-constitution-pakistan': 'ideology-constitution-pakistan.html',
             'design-analysis-algorithms': 'design-analysis-algorithms.html',
             'database-system': 'database-system.html',
+            'deep-learning-with-perception': 'deep-learning-with-perception.html',
             'coal-theory': 'coal-theory.html',
             'computer-networks': 'computer-networks.html',
             'multivariable-calculus': 'multivariable-calculus.html',
+            'information-retrieval': 'information-retrieval.html',
             'expository-writing': 'expository-writing.html',
             'probability-statistics': 'probability-statistics.html',
             'artificial-intelligence': 'artificial-intelligence.html',
@@ -537,9 +557,11 @@ function setupSearch() {
             (subject.id === 'ideology-constitution-pakistan' && (query.includes('ideology') || query.includes('icp') || query.includes('pakistan') || query.includes('political'))) ||
             (subject.id === 'design-analysis-algorithms' && (query.includes('design') || query.includes('analysis') || query.includes('algorithm') || query.includes('daa'))) ||
             (subject.id === 'database-system' && (query.includes('database') || query.includes('system') || query.includes('sql') || query.includes('db'))) ||
+            (subject.id === 'deep-learning-with-perception' && (query.includes('deep') || query.includes('learning') || query.includes('dl') || query.includes('dlp'))) ||
             (subject.id === 'coal-theory' && (query.includes('coal') || query.includes('assembly') || query.includes('computer') || query.includes('organization') || query.includes('theory'))) ||
             (subject.id === 'computer-networks' && (query.includes('computer') || query.includes('networks') || query.includes('networking') || query.includes('tcp') || query.includes('ip') || query.includes('cn') || query.includes('protocols'))) ||
             (subject.id === 'multivariable-calculus' && (query.includes('multivariable') || query.includes('mvc') || query.includes('mv') || query.includes('calculus') || query.includes('partial'))) ||
+            (subject.id === 'information-retrieval' && (query.includes('information') || query.includes('retrieval') || query.includes('ir') || query.includes('i'))) ||
             (subject.id === 'expository-writing' && (query.includes('expository') || query.includes('writing') || query.includes('ew') || query.includes('academic'))) ||
             (subject.id === 'probability-statistics' && (query.includes('probability') || query.includes('statistics') || query.includes('stats') || query.includes('statistical') || query.includes('analysis'))) ||
             (subject.id === 'artificial-intelligence' && (query.includes('artificial') || query.includes('intelligence') || query.includes('ai'))) ||

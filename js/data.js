@@ -216,6 +216,15 @@ const subjectsData = [
     yearRange: '2020-2024',
     searchTerms: ['database', 'system', 'sql', 'mysql', 'dbms']
 },
+{
+    id: 'deep-learning-with-perception',
+    name: 'Deep Learning with Perception',
+    icon: '🧠',
+    description: 'Neural networks, deep learning architectures, and perception-based models for vision and language',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['deep', 'learning', 'perception', 'dlp', 'neural', 'cnn', 'rnn']
+},
 // NEW SUBJECT ADDED - Computer Networks
 {
     id: 'computer-networks',
@@ -234,6 +243,15 @@ const subjectsData = [
     paperCount: 0,
     yearRange: '2020-2024',
     searchTerms: ['multivariable', 'calculus', 'mvc', 'vector', 'calculus']
+},
+{
+    id: 'information-retrieval',
+    name: 'Information Retrieval',
+    icon: '🔎',
+    description: 'Search engines, indexing, ranking models, and evaluation of information retrieval systems',
+    paperCount: 0,
+    yearRange: '2020-2024',
+    searchTerms: ['information', 'retrieval', 'ir', 'search', 'indexing', 'ranking']
 },
 {
     id: 'expository-writing',

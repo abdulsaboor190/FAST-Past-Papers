@@ -59,6 +59,10 @@ const SUBJECT_GITHUB_CONFIG = {
         basePath: 'DB',
         shortCode: 'DB'
     },
+    'Deep Learning with Perception': {
+        basePath: 'DLP',
+        shortCode: 'DLP'
+    },
     'Software Design and Analysis': {
         basePath: 'SDA',
         shortCode: 'SDA'
@@ -114,6 +118,10 @@ const SUBJECT_GITHUB_CONFIG = {
     'Fundamentals of Software Project Management': {
         basePath: 'FSPM',
         shortCode: 'FSPM'
+    },
+    'Information Retrieval': {
+        basePath: 'IR',
+        shortCode: 'IR'
     }
 };
 

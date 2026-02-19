@@ -1,6 +1,6 @@
 /* Subject Page Specific Styles */
 .subject-header {
-    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.95) 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.97) 100%);
     margin: 2rem auto;
     padding: 3rem 2rem;
     border-radius: 20px;
@@ -94,7 +94,7 @@
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    background: linear-gradient(90deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.95) 100%);
+    background: linear-gradient(90deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.97) 100%);
     padding: 0.5rem;
     border-radius: 15px;
     box-shadow: var(--shadow-light);
@@ -118,7 +118,7 @@
 
 .tab-btn:hover {
     color: var(--secondary-color);
-    background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(52, 211, 153, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(67, 56, 202, 0.1) 0%, rgba(129, 140, 248, 0.1) 100%);
 }
 
 .tab-btn.active {
@@ -147,11 +147,11 @@
    ============================================ */
 
 .paper-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 253, 244, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.97) 0%, rgba(238, 242, 255, 0.9) 100%);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(6, 78, 59, 0.12);
-    border: 1px solid rgba(167, 243, 208, 0.3);
+    box-shadow: 0 8px 32px rgba(67, 56, 202, 0.12);
+    border: 1px solid rgba(199, 210, 254, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
@@ -172,8 +172,8 @@
 
 .paper-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(6, 78, 59, 0.2);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 253, 244, 1) 100%);
+    box-shadow: 0 20px 60px rgba(67, 56, 202, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(238, 242, 255, 1) 100%);
     border-color: var(--accent-color);
 }
 
@@ -183,8 +183,8 @@
 
 .paper-card.expanded {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 25px 80px rgba(6, 78, 59, 0.25);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 253, 244, 1) 100%);
+    box-shadow: 0 25px 80px rgba(67, 56, 202, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(238, 242, 255, 1) 100%);
     border-color: var(--secondary-color);
 }
 
@@ -200,7 +200,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(240, 253, 244, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(238, 242, 255, 0.6) 100%);
     gap: 1rem;
 }
 
@@ -247,7 +247,7 @@
     color: white;
     font-size: 1.1rem;
     font-weight: 700;
-    box-shadow: 0 6px 20px rgba(6, 78, 59, 0.3);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -281,7 +281,7 @@
     bottom: 1.25rem;
     width: 28px;
     height: 28px;
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(67, 56, 202, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -289,7 +289,7 @@
     color: var(--secondary-color);
     font-size: 0.9rem;
     transition: all 0.3s ease;
-    border: 2px solid rgba(16, 185, 129, 0.2);
+    border: 2px solid rgba(67, 56, 202, 0.2);
 }
 
 .paper-card:hover .expand-indicator {
@@ -312,7 +312,7 @@
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
-    background: linear-gradient(135deg, rgba(240, 253, 244, 0.5) 0%, rgba(255, 255, 255, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(238, 242, 255, 0.5) 0%, rgba(255, 255, 255, 0.8) 100%);
 }
 
 .paper-card.expanded .paper-download {
@@ -323,11 +323,11 @@
 
 /* COMPACT FILE INFORMATION */
 .download-info {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 253, 244, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(238, 242, 255, 0.7) 100%);
     padding: 1rem;
     border-radius: 14px;
     margin-bottom: 1rem;
-    border: 1px solid rgba(167, 243, 208, 0.4);
+    border: 1px solid rgba(199, 210, 254, 0.4);
     backdrop-filter: blur(10px);
     position: relative;
 }
@@ -346,7 +346,7 @@
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3);
 }
 
 .download-info h4 {
@@ -371,7 +371,7 @@
     padding: 0.5rem 0.25rem;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
-    border: 1px solid rgba(167, 243, 208, 0.3);
+    border: 1px solid rgba(199, 210, 254, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -409,7 +409,7 @@
     align-items: center;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid rgba(16, 185, 129, 0.3);
+    border-bottom: 2px solid rgba(67, 56, 202, 0.3);
 }
 
 .questions-header h4 {
@@ -426,7 +426,7 @@
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 2px 8px rgba(67, 56, 202, 0.3);
 }
 
 /* Questions List Wrapper */
@@ -439,17 +439,17 @@
 
 /* Individual Question Item */
 .question-item {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 253, 244, 0.8));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(238, 242, 255, 0.8));
     border-radius: 16px;
     padding: 1.5rem;
     border-left: 5px solid var(--secondary-color);
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 4px 15px rgba(67, 56, 202, 0.1);
     transition: all 0.3s ease;
 }
 
 .question-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.2);
     border-left-width: 7px;
 }
 
@@ -491,7 +491,7 @@
 /* Section Headers (Input, Output, etc.) */
 .question-content .section-header {
     display: block;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(52, 211, 153, 0.1));
+    background: linear-gradient(135deg, rgba(67, 56, 202, 0.15), rgba(129, 140, 248, 0.1));
     color: var(--primary-color);
     font-weight: 700;
     font-size: 1rem;
@@ -518,7 +518,7 @@
     border-radius: 12px;
     overflow-x: auto;
     margin: 1rem 0;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    border: 1px solid rgba(67, 56, 202, 0.3);
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -551,7 +551,7 @@
 
 /* Numeric/Bulleted Lists */
 .question-content .numeric-list {
-    background: rgba(240, 253, 244, 0.5);
+    background: rgba(238, 242, 255, 0.5);
     padding: 1rem 1rem 1rem 2.5rem;
     border-radius: 10px;
     margin: 1rem 0;
@@ -576,7 +576,7 @@
     gap: 1rem;
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 2px solid rgba(16, 185, 129, 0.2);
+    border-top: 2px solid rgba(67, 56, 202, 0.2);
     justify-content: center;
 }
 
@@ -594,12 +594,12 @@
 .ai-action.primary {
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
     color: white;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 15px rgba(67, 56, 202, 0.3);
 }
 
 .ai-action.primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.4);
 }
 
 .ai-action.primary:active {
@@ -612,9 +612,9 @@
     padding: 3rem 2rem;
     color: var(--text-light);
     font-size: 1.1rem;
-    background: linear-gradient(135deg, rgba(240, 253, 244, 0.5), rgba(255, 255, 255, 0.5));
+    background: linear-gradient(135deg, rgba(238, 242, 255, 0.5), rgba(255, 255, 255, 0.5));
     border-radius: 12px;
-    border: 2px dashed rgba(16, 185, 129, 0.3);
+    border: 2px dashed rgba(67, 56, 202, 0.3);
 }
 
 /* Loading State */
@@ -759,9 +759,9 @@
     max-height: 90vh;
     overflow: hidden;
     border-radius: 24px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(240, 253, 244, 0.98));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(238, 242, 255, 0.98));
     box-shadow: 0 35px 90px rgba(15, 118, 110, 0.35);
-    border: 1px solid rgba(16, 185, 129, 0.25);
+    border: 1px solid rgba(67, 56, 202, 0.25);
 }
 
 .ai-modal__container {
@@ -853,11 +853,11 @@
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.25);
+    box-shadow: 0 15px 30px rgba(67, 56, 202, 0.25);
 }
 
 .questions-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     border-radius: 18px;
     border: 1px solid rgba(15, 118, 110, 0.15);
     padding: 1.5rem;
@@ -883,7 +883,7 @@
 
 .questions-list li pre {
     background: rgba(15, 23, 42, 0.9);
-    color: #ecfccb;
+    color: #e0e7ff;
     padding: 1rem;
     border-radius: 12px;
     font-size: 0.9rem;
@@ -932,7 +932,7 @@
 }
 
 .questions-loading {
-    background: linear-gradient(135deg, #065f46, #059669);
+    background: linear-gradient(135deg, #1e1b4b, #3730a3);
     color: #ecfdf5;
     border-radius: 18px;
     padding: 2rem 1.5rem;
@@ -980,7 +980,7 @@
 .ai-action.primary {
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
     color: #fff;
-    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35);
+    box-shadow: 0 10px 25px rgba(67, 56, 202, 0.35);
 }
 
 .ai-action.primary:hover {
@@ -988,13 +988,13 @@
 }
 
 .ai-action.secondary {
-    background: rgba(16, 185, 129, 0.12);
+    background: rgba(67, 56, 202, 0.12);
     color: var(--secondary-color);
-    box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.3);
+    box-shadow: inset 0 0 0 1px rgba(67, 56, 202, 0.3);
 }
 
 .ai-action.secondary:hover {
-    background: rgba(16, 185, 129, 0.2);
+    background: rgba(67, 56, 202, 0.2);
 }
 
 .ai-action.ghost {
@@ -1039,7 +1039,7 @@
     gap: 0.6rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.3);
 }
 
 .download-btn::before {
@@ -1059,7 +1059,7 @@
 
 .download-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 10px 30px rgba(67, 56, 202, 0.4);
     background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
 }
 
@@ -1113,7 +1113,7 @@
 
 /* Difficulty Levels */
 .difficulty-badge.easy {
-    background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+    background: linear-gradient(135deg, #3730a3 0%, #4338ca 50%, #818cf8 100%);
     box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
 }
 
@@ -1147,7 +1147,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+    box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
 }
 
 .paper-badge.featured {
@@ -1166,7 +1166,7 @@
 }
 
 .filter-container {
-    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.95) 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, rgba(255, 255, 255, 0.97) 100%);
     border-radius: 20px;
     padding: 1.5rem;
     box-shadow: var(--shadow-medium);
@@ -1230,7 +1230,7 @@
 
 .filter-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(6, 78, 59, 0.15);
+    box-shadow: 0 8px 20px rgba(67, 56, 202, 0.15);
 }
 
 /* Filter Button States */
@@ -1242,7 +1242,7 @@
 
 .filter-btn.all.active {
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 25px rgba(67, 56, 202, 0.4);
     transform: translateY(-3px);
 }
 
@@ -1251,14 +1251,14 @@
 }
 
 .filter-btn.easy:hover {
-    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-    border-color: #10b981;
+    background: linear-gradient(135deg, #ecfdf5, #e0e7ff);
+    border-color: #4338ca;
 }
 
 .filter-btn.easy.active {
-    background: linear-gradient(135deg, #059669, #10b981);
+    background: linear-gradient(135deg, #3730a3, #4338ca);
     color: white;
-    border-color: #059669;
+    border-color: #3730a3;
     box-shadow: 0 6px 25px rgba(5, 150, 105, 0.4);
     transform: translateY(-3px);
 }
@@ -1337,7 +1337,7 @@
     left: 50%;
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(16, 185, 129, 0.3);
+    border: 3px solid rgba(67, 56, 202, 0.3);
     border-top: 3px solid var(--secondary-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -1634,7 +1634,7 @@
 }
 
 .ai-modal-content {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 253, 244, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(238, 242, 255, 0.95) 100%);
     border-radius: 20px;
     max-width: 700px;
     width: 100%;
@@ -1730,7 +1730,7 @@
     color: white;
     border-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.3);
 }
 
 .api-key-section {
@@ -1758,7 +1758,7 @@
 .api-key-input:focus {
     outline: none;
     border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
 }
 
 /* Loading State */
@@ -1770,7 +1770,7 @@
 .ai-spinner {
     width: 50px;
     height: 50px;
-    border: 4px solid rgba(16, 185, 129, 0.2);
+    border: 4px solid rgba(67, 56, 202, 0.2);
     border-top: 4px solid var(--secondary-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -1821,7 +1821,7 @@
 
 .ai-retry-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.3);
 }
 
 /* Results Display */
@@ -1876,7 +1876,7 @@
     gap: 1rem;
     padding: 1.25rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 253, 244, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(238, 242, 255, 0.7) 100%);
     border-radius: 12px;
     border: 1px solid var(--border-light);
     transition: all 0.3s ease;
@@ -1884,7 +1884,7 @@
 
 .ai-question-item:hover {
     transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
+    box-shadow: 0 4px 15px rgba(67, 56, 202, 0.15);
     border-color: var(--secondary-color);
 }
 
@@ -1935,7 +1935,7 @@
 
 .ai-copy-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.3);
 }
 
 .ai-close-btn {
@@ -1952,7 +1952,7 @@
 .ai-info-box {
     margin-top: 1.5rem;
     padding: 1rem;
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
     border-radius: 12px;
     border-left: 4px solid var(--secondary-color);
 }
@@ -1960,7 +1960,7 @@
 .ai-info-box p {
     margin: 0;
     font-size: 0.9rem;
-    color: #1976d2;
+    color: #3730a3;
 }
 
 /* Responsive Design for AI Modal */
@@ -2077,7 +2077,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(67, 56, 202, 0.1), transparent);
     transition: left 0.6s ease;
 }
 
@@ -2087,7 +2087,7 @@
 
 .campus-toggle:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 12px 32px rgba(6, 78, 59, 0.2);
+    box-shadow: 0 12px 32px rgba(67, 56, 202, 0.2);
     transform: translateY(-2px);
 }
 
@@ -2107,7 +2107,7 @@
 .campus-toggle .toggle-label::before {
     content: "🏛️";
     font-size: 1.3rem;
-    filter: drop-shadow(0 2px 4px rgba(6, 78, 59, 0.2));
+    filter: drop-shadow(0 2px 4px rgba(67, 56, 202, 0.2));
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -2123,17 +2123,17 @@
 .campus-toggle .toggle-buttons {
     display: flex;
     gap: 6px;
-    background: linear-gradient(135deg, rgba(240, 253, 244, 0.6) 0%, rgba(255, 255, 255, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(238, 242, 255, 0.6) 0%, rgba(255, 255, 255, 0.8) 100%);
     padding: 6px;
     border-radius: 14px;
     position: relative;
-    box-shadow: inset 0 2px 8px rgba(6, 78, 59, 0.1);
-    border: 1px solid rgba(167, 243, 208, 0.4);
+    box-shadow: inset 0 2px 8px rgba(67, 56, 202, 0.1);
+    border: 1px solid rgba(199, 210, 254, 0.4);
 }
 
 .campus-btn {
     border: 2px solid transparent;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 253, 244, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(238, 242, 255, 0.7) 100%);
     color: var(--text-light);
     padding: 12px 24px;
     border-radius: 10px;
@@ -2148,7 +2148,7 @@
     text-align: center;
     letter-spacing: 0.02em;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(6, 78, 59, 0.08);
+    box-shadow: 0 2px 8px rgba(67, 56, 202, 0.08);
 }
 
 .campus-btn::before {
@@ -2168,18 +2168,18 @@
 
 .campus-btn:hover:not(.active) {
     color: var(--secondary-color);
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(52, 211, 153, 0.08) 100%);
-    border-color: rgba(16, 185, 129, 0.3);
+    background: linear-gradient(135deg, rgba(67, 56, 202, 0.12) 0%, rgba(129, 140, 248, 0.08) 100%);
+    border-color: rgba(67, 56, 202, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 6px 20px rgba(67, 56, 202, 0.2);
 }
 
 .campus-btn.active {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     color: #fff;
     border-color: var(--secondary-color);
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4), 
-                0 0 0 3px rgba(16, 185, 129, 0.1),
+    box-shadow: 0 8px 24px rgba(67, 56, 202, 0.4), 
+                0 0 0 3px rgba(67, 56, 202, 0.1),
                 inset 0 2px 4px rgba(255, 255, 255, 0.2);
     transform: translateY(-3px) scale(1.02);
     font-weight: 700;
@@ -2201,8 +2201,8 @@
 
 .campus-btn.active:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 12px 32px rgba(16, 185, 129, 0.5),
-                0 0 0 4px rgba(16, 185, 129, 0.15),
+    box-shadow: 0 12px 32px rgba(67, 56, 202, 0.5),
+                0 0 0 4px rgba(67, 56, 202, 0.15),
                 inset 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 

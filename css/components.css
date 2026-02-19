@@ -1,6 +1,6 @@
 /* Subject Card Component */
 .subject-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     border-radius: 20px;
     padding: 2rem;
     text-align: center;
@@ -203,7 +203,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #4338ca, #818cf8);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -212,15 +212,15 @@
     font-weight: 600;
     font-family: var(--font-heading);
     cursor: pointer;
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 24px rgba(67, 56, 202, 0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
 }
 
 .pwa-install-btn:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 36px rgba(16, 185, 129, 0.4);
-    background: linear-gradient(135deg, #34d399, #10b981);
+    box-shadow: 0 12px 36px rgba(67, 56, 202, 0.4);
+    background: linear-gradient(135deg, #818cf8, #4338ca);
 }
 
 .pwa-install-btn:active {
@@ -237,11 +237,11 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #4338ca, #818cf8);
     color: white;
     padding: 1rem 1.5rem;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 10px 30px rgba(67, 56, 202, 0.3);
     z-index: 10000;
     transform: translateX(400px);
     transition: transform 0.3s ease;
@@ -275,7 +275,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(6, 78, 59, 0.8);
+    background: rgba(67, 56, 202, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -290,14 +290,14 @@
 }
 
 .instruction-content {
-    background: linear-gradient(135deg, white, #f0fdf4);
+    background: linear-gradient(135deg, white, #eef2ff);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(6, 78, 59, 0.2);
+    box-shadow: 0 20px 40px rgba(67, 56, 202, 0.2);
     text-align: center;
     max-width: 400px;
     margin: 1rem;
-    border: 1px solid #a7f3d0;
+    border: 1px solid #c7d2fe;
 }
 
 .instruction-content h3 {
@@ -316,7 +316,7 @@
 }
 
 .instruction-content button {
-    background: linear-gradient(135deg, #10b981, #34d399);
+    background: linear-gradient(135deg, #4338ca, #818cf8);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -328,7 +328,7 @@
 
 .instruction-content button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 20px rgba(67, 56, 202, 0.3);
 }
 
 /* Animations */

@@ -1013,6 +1013,14 @@ final: [
   semester: 'Spring',
   fileSize: '1.4 MB',
   downloadUrl: 'https://drive.usercontent.google.com/download?id=1uNw4msLwqmyD1gO7pT5r9Riphdi_pL8S'
+},
+ {
+  id: 'cc-mid1-2025-fall',
+  title: 'CC Mid 1 2025',
+  year: '2025',
+  semester: 'Fall',
+  fileSize: '1.6 MB',
+  downloadUrl: 'https://drive.usercontent.google.com/download?id=1V_04ZIxf-emItKakRd7rhXafdGaKw9T7&export=download&authuser=0&confirm=t&uuid=174c9416-3ae0-4473-8807-7c9fc2759593&at=APcXIO0MasGqfdG7Kx0LSPDtA3xN:1771478134859'
 }
         ],
         mid2: [

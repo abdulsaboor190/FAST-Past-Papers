@@ -15,6 +15,10 @@ const SUBJECT_GITHUB_CONFIG = {
         basePath: 'PF',
         shortCode: 'PF'
     },
+    'Programming Fundamentals Lab': {
+        basePath: 'PF Lab',
+        shortCode: 'PF Lab'
+    },
     'Data Structures & Algorithms': {
         basePath: 'DSA',
         shortCode: 'DSA'
@@ -122,6 +126,18 @@ const SUBJECT_GITHUB_CONFIG = {
     'Information Retrieval': {
         basePath: 'IR',
         shortCode: 'IR'
+    },
+    'Discrete Structures': {
+        basePath: 'DS',
+        shortCode: 'DS'
+    },
+    'Linear Algebra': {
+        basePath: 'LA',
+        shortCode: 'LA'
+    },
+    'Computer Architecture': {
+        basePath: 'CA',
+        shortCode: 'CA'
     }
 };
 
@@ -784,9 +800,9 @@ function togglePaperCard(card) {
             'final': 'Final'
         };
 
-        // Special-case: OOP LAB repo currently uses 'Mid' instead of 'Mid 1'
+        // Special-case: OOP LAB and PF Lab repos currently use 'Mid' instead of 'Mid 1'
         const { basePath } = getCurrentGitHubConfig();
-        if (basePath === 'OOP LAB' && category === 'mid1') {
+        if ((basePath === 'OOP LAB' || basePath === 'PF Lab') && category === 'mid1') {
             return 'Mid';
         }
 
@@ -890,8 +906,9 @@ function togglePaperCard(card) {
             cleanFilename = filename.replace(/\s+\d+\.?\d*\s*$/, '').trim();
         }
         
-        if (cleanFilename.length > 5 && !cleanFilename.match(/^pf[-_\s]/i)) {
+        if (cleanFilename.length > 5 && (!cleanFilename.match(/^pf[-_\s]/i) || basePath === 'PF Lab')) {
             title = cleanFilename.replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim();
+            title = title.replace(/^PF lab\b/i, 'PF Lab');
             if (!title.includes('LHR') && !title.includes('Lahore')) {
                 title += ' LHR';
             }

@@ -2490,6 +2490,24 @@ final: [
                 fileSize: '1.6 MB',
               difficulty: 3.2,
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=18lP9m6uA7JpK_rvkm9Wjqe-zA6kqhHUF&export=download&authuser=0&confirm=t&uuid=4aeb0b93-c4f9-4cf3-8801-196749f75524&at=AN8xHopLlYukfyMGy6ZCdSJ5qdBy:1758175283319'
+            },
+           {
+                id: 'ict-2023-mid1',
+                title: 'ICT Mid 2023',
+                year: '2023',
+                semester: 'Fall',
+                fileSize: '1.6 MB',
+              difficulty: 3.2,
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1KD3D_yMLvNY00jnD7i7EmeT-ZR4MrjEH&export=download&authuser=0&confirm=t&uuid=35a5c7a2-71d6-42ad-b685-bd6403fc242f&at=AMrWOn38ru1ZClj7crOyKtLTrOeK:1791059439351'
+            },
+           {
+                id: 'ict-2024-mid1',
+                title: 'ICT Mid 2024',
+                year: '2024',
+                semester: 'Fall',
+                fileSize: '1.6 MB',
+              difficulty: 3.2,
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1zKrDi8VLVLXeiQ_MoU4-vSTusbYWMtgk&export=download&authuser=0&confirm=t&uuid=b8700d74-4d6d-4d8c-ae3f-23b63bd5c726&at=AMrWOn1iDsJOhDKJ_0AYqgI4E_c3:1791059437485'
             }
         ],
         mid2: [],

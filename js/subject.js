@@ -145,7 +145,8 @@ const SUBJECT_GITHUB_CONFIG = {
 let githubPapersCache = {
     mid1: null,
     mid2: null,
-    final: null
+    final: null,
+    project: null
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -240,6 +241,7 @@ if (currentSubject && (currentSubject.title === 'Theory of Automata' ||
             }
         }
 
+        updateCategoryChrome(currentCategory);
         loadPapers(currentCategory);
     }
     
@@ -376,12 +378,8 @@ if (currentSubject && (currentSubject.title === 'Theory of Automata' ||
         if (existingModal) {
             existingModal.remove();
         }
-        
-        // Show difficulty filter for other categories
-        const difficultyFilter = document.querySelector('.difficulty-filter');
-        if (difficultyFilter) {
-            difficultyFilter.style.display = '';
-        }
+
+        updateCategoryChrome(category);
         
         // Load papers for the new category (async)
         loadPapers(category).catch(error => {
@@ -429,10 +427,62 @@ if (currentSubject && (currentSubject.title === 'Theory of Automata' ||
             existingEmptyState.remove();
         }
     }
+    function isGitHubProjectCategory(category) {
+        return category === 'project';
+    }
+
+    function updateCategoryChrome(category) {
+        const difficultyFilter = document.querySelector('.difficulty-filter');
+        const campusToggle = document.getElementById('campusToggle');
+        const isProject = isGitHubProjectCategory(category);
+
+        if (difficultyFilter) {
+            difficultyFilter.style.display = isProject ? 'none' : '';
+        }
+
+        if (campusToggle) {
+            campusToggle.style.display = (isProject || !supportsCampusFilter()) ? 'none' : '';
+        }
+    }
+
     async function loadPapers(category) {
         const papersGrid = document.getElementById('papersGrid');
         
         let allPapers = [];
+
+        // Project files always come from GitHub (PF/project), not campus Drive links
+        if (isGitHubProjectCategory(category)) {
+            papersGrid.innerHTML = `
+                <div class="empty-state">
+                    <h3>Loading projects from GitHub...</h3>
+                    <p>Please wait while we fetch files from the project folder.</p>
+                </div>
+            `;
+
+            try {
+                const githubPapers = await fetchGitHubPapers(category);
+                if (githubPapers && githubPapers.length > 0) {
+                    papersGrid.innerHTML = githubPapers.map(paper => createPaperCard(paper)).join('');
+                    setupPaperCardListeners();
+                } else {
+                    papersGrid.innerHTML = `
+                        <div class="empty-state">
+                            <h3>No projects available</h3>
+                            <p>Add files to the <code>PF/project</code> folder in the GitHub repository.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error fetching GitHub projects:', error);
+                papersGrid.innerHTML = `
+                    <div class="empty-state">
+                        <h3>Error loading projects</h3>
+                        <p>Unable to fetch projects from GitHub. Please try again later.</p>
+                    </div>
+                `;
+            }
+            return;
+        }
         
         // If Lahore campus is selected and this is PF, fetch from GitHub
         if (currentCampus === 'lahore' && supportsCampusFilter()) {
@@ -530,22 +580,33 @@ function updateFilterCounts(papers) {
     document.getElementById('countHard').textContent = counts.hard;
 }
     function createPaperCard(paper) {
-        const difficultyClass = getDifficultyClass(paper.difficulty);
+        const isProject = paper.source === 'github-project' || currentCategory === 'project';
+        const difficultyClass = isProject ? 'medium' : getDifficultyClass(paper.difficulty);
         const difficultyLabel = getDifficultyLabel(paper.difficulty);
         const difficultyIcon = getDifficultyIcon(difficultyClass);
+        const fileFormat = paper.fileFormat || 'PDF';
+        const subtitle = isProject
+            ? (paper.year && paper.year !== 'N/A' ? paper.year : 'GitHub')
+            : `${paper.semester} ${paper.year}`;
+        const downloadLabel = paper.isFolder ? 'Open on GitHub' : (isProject ? 'Download Project' : 'Download Paper');
+        const downloadFileName = paper.fileName || `${paper.title}.pdf`;
+        const escapedUrl = (paper.downloadUrl || '').replace(/'/g, "\\'");
+        const escapedTitle = (paper.title || '').replace(/'/g, "\\'");
+        const escapedFileName = downloadFileName.replace(/'/g, "\\'");
         
         return `
             <div class="paper-card" data-paper-id="${paper.id}" data-difficulty="${difficultyClass}">
+                ${isProject ? '' : `
                 <div class="difficulty-badge ${difficultyClass}">
                     <span class="difficulty-icon">${difficultyIcon}</span>
                     <span class="difficulty-value">${paper.difficulty || 'N/A'}</span>
-                </div>
+                </div>`}
                 <div class="paper-header">
                     <div class="paper-info">
                         <h3>${paper.title}</h3>
-                        <div class="paper-year">${paper.semester} ${paper.year}</div>
+                        <div class="paper-year">${subtitle}</div>
                     </div>
-                    <div class="paper-icon">${currentSubject.icon}</div>
+                    <div class="paper-icon">${isProject ? (paper.isFolder ? '📁' : '📦') : currentSubject.icon}</div>
                     <div class="expand-indicator">▼</div>
                 </div>
                 <div class="paper-download">
@@ -555,23 +616,24 @@ function updateFilterCounts(papers) {
                             <div class="file-detail-item">
                                 <span class="file-detail-icon">📄</span>
                                 <span class="file-detail-label">Format</span>
-                                <span class="file-detail-value">PDF</span>
+                                <span class="file-detail-value">${fileFormat}</span>
                             </div>
                             <div class="file-detail-item">
                                 <span class="file-detail-icon">💾</span>
                                 <span class="file-detail-label">Size</span>
                                 <span class="file-detail-value file-size">${paper.fileSize}</span>
                             </div>
+                            ${isProject ? '' : `
                             <div class="file-detail-item">
                                 <span class="file-detail-icon">📊</span>
                                 <span class="file-detail-label">Difficulty</span>
                                 <span class="file-detail-value">${difficultyLabel}</span>
-                            </div>
+                            </div>`}
                         </div>
                     </div>
-                    <button class="download-btn" onclick="downloadPaper('${paper.downloadUrl}', '${paper.title}')">
-                        <span class="download-icon">⬇</span>
-                        Download Paper
+                    <button class="download-btn" onclick="downloadPaper('${escapedUrl}', '${escapedTitle}', '${escapedFileName}', ${paper.isFolder ? 'true' : 'false'})">
+                        <span class="download-icon">${paper.isFolder ? '↗' : '⬇'}</span>
+                        ${downloadLabel}
                     </button>
                 </div>
             </div>
@@ -656,31 +718,88 @@ function togglePaperCard(card) {
     }
 }
     
+    function isGitHubAssetUrl(url) {
+        return /(?:raw\.githubusercontent\.com|media\.githubusercontent\.com|github\.com)\//.test(url || '');
+    }
+
+    function getGitHubDownloadCandidates(url) {
+        const urls = [url];
+        const rawMatch = (url || '').match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
+        if (rawMatch) {
+            const [, owner, repo, branch, path] = rawMatch;
+            urls.push(`https://cdn.jsdelivr.net/gh/${owner}/${repo}@${branch}/${path}`);
+            urls.push(`https://media.githubusercontent.com/media/${owner}/${repo}/${branch}/${path}`);
+        }
+        return urls;
+    }
+
+    function triggerLocalFileDownload(blobOrUrl, fileName) {
+        const href = blobOrUrl instanceof Blob ? URL.createObjectURL(blobOrUrl) : blobOrUrl;
+        const link = document.createElement('a');
+        link.href = href;
+        link.download = fileName;
+        link.rel = 'noopener';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        if (blobOrUrl instanceof Blob) {
+            setTimeout(() => URL.revokeObjectURL(href), 1500);
+        }
+    }
+
+    async function downloadGitHubFile(url, fileName) {
+        let lastError = null;
+        for (const candidate of getGitHubDownloadCandidates(url)) {
+            try {
+                const response = await fetch(candidate, { mode: 'cors' });
+                if (!response.ok) {
+                    lastError = new Error(`Download failed: ${response.status}`);
+                    continue;
+                }
+                const blob = await response.blob();
+                triggerLocalFileDownload(blob, fileName);
+                return;
+            } catch (error) {
+                lastError = error;
+            }
+        }
+        throw lastError || new Error('Unable to download file');
+    }
+
     // Global function for downloading papers
-    window.downloadPaper = function(downloadUrl, paperTitle) {
-        const downloadBtns = document.querySelectorAll('.download-btn');
-        const clickedBtn = event.target.closest('.download-btn');
+    window.downloadPaper = async function(downloadUrl, paperTitle, fileName, openInNewTab) {
+        const clickedBtn = event && event.target ? event.target.closest('.download-btn') : null;
+        const savedFileName = fileName || `${paperTitle}.pdf`;
         
+        if (openInNewTab) {
+            window.open(downloadUrl, '_blank', 'noopener');
+            return;
+        }
+
+        const originalText = clickedBtn ? clickedBtn.innerHTML : '';
         if (clickedBtn) {
-            const originalText = clickedBtn.innerHTML;
             clickedBtn.innerHTML = '<span class="download-icon">⏳</span> Downloading...';
             clickedBtn.disabled = true;
-            
-            const link = document.createElement('a');
-            link.href = downloadUrl;
-            link.download = `${paperTitle}.pdf`;
-            link.style.display = 'none';
-            
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            setTimeout(() => {
-                clickedBtn.innerHTML = originalText;
-                clickedBtn.disabled = false;
-            }, 2000);
-            
+        }
+
+        try {
+            if (isGitHubAssetUrl(downloadUrl)) {
+                await downloadGitHubFile(downloadUrl, savedFileName);
+            } else {
+                triggerLocalFileDownload(downloadUrl, savedFileName);
+            }
             console.log(`Downloaded: ${paperTitle}`);
+        } catch (error) {
+            console.error('Download failed:', error);
+            triggerLocalFileDownload(downloadUrl, savedFileName);
+        } finally {
+            if (clickedBtn) {
+                setTimeout(() => {
+                    clickedBtn.innerHTML = originalText;
+                    clickedBtn.disabled = false;
+                }, 1200);
+            }
         }
     };
     
@@ -745,7 +864,7 @@ function togglePaperCard(card) {
         
         // Clear GitHub cache when switching campuses to ensure fresh data
         if (campus === 'lahore') {
-            githubPapersCache = { mid1: null, mid2: null, final: null };
+            githubPapersCache = { mid1: null, mid2: null, final: null, project: null };
         }
         
         updateStats();
@@ -797,7 +916,8 @@ function togglePaperCard(card) {
         const folderMap = {
             'mid1': 'Mid 1',
             'mid2': 'Mid 2',
-            'final': 'Final'
+            'final': 'Final',
+            'project': 'project'
         };
 
         // Special-case: OOP LAB and PF Lab repos currently use 'Mid' instead of 'Mid 1'
@@ -809,31 +929,59 @@ function togglePaperCard(card) {
         return folderMap[category] || category;
     }
 
+    function getGitHubFolderCandidates(category) {
+        if (category === 'project') {
+            return ['project', 'Project', 'PROJECT'];
+        }
+        return [getGitHubFolderName(category)];
+    }
+
+    function isProjectFile(fileName) {
+        return /\.(pdf|zip|rar|7z|doc|docx|ppt|pptx|txt|md|cpp|h|c)$/i.test(fileName);
+    }
+
     async function fetchGitHubPapers(category) {
         // Check cache first
-        if (githubPapersCache[category] !== null) {
+        if (githubPapersCache[category] !== null && githubPapersCache[category] !== undefined) {
             return githubPapersCache[category];
         }
 
-        const folderName = getGitHubFolderName(category);
         const { basePath } = getCurrentGitHubConfig();
         const encodedBasePath = encodeURIComponent(basePath);
-        const apiUrl = `https://api.github.com/repos/${GITHUB_REPO.owner}/${GITHUB_REPO.repo}/contents/${encodedBasePath}/${folderName}`;
+        const folderCandidates = getGitHubFolderCandidates(category);
+        const contentPaths = folderCandidates.map(folderName => `${encodedBasePath}/${encodeURIComponent(folderName)}`);
+
+        if (category === 'project') {
+            contentPaths.push('project', 'Project');
+        }
 
         try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`GitHub API error: ${response.status}`);
+            let files = null;
+
+            for (const contentPath of contentPaths) {
+                const apiUrl = `https://api.github.com/repos/${GITHUB_REPO.owner}/${GITHUB_REPO.repo}/contents/${contentPath}`;
+                const response = await fetch(apiUrl);
+                if (response.ok) {
+                    files = await response.json();
+                    break;
+                }
             }
 
-            const files = await response.json();
+            if (!files) {
+                throw new Error('GitHub API error: folder not found');
+            }
             
-            // Filter only PDF files and convert to paper objects
             const papers = files
-                .filter(file => file.type === 'file' && file.name.toLowerCase().endsWith('.pdf'))
+                .filter(file => {
+                    if (category === 'project') {
+                        if (file.name.startsWith('.')) return false;
+                        if (file.type === 'dir') return true;
+                        return isProjectFile(file.name);
+                    }
+                    return file.type === 'file' && file.name.toLowerCase().endsWith('.pdf');
+                })
                 .map(file => parseGitHubFileToPaper(file, category));
 
-            // Cache the results
             githubPapersCache[category] = papers;
             return papers;
         } catch (error) {
@@ -895,7 +1043,7 @@ function togglePaperCard(card) {
         }
 
         // Generate title - use filename if it's descriptive, otherwise generate one
-        const categoryLabel = category === 'mid1' ? 'Mid 1' : category === 'mid2' ? 'Mid 2' : 'Final';
+        const categoryLabel = category === 'mid1' ? 'Mid 1' : category === 'mid2' ? 'Mid 2' : category === 'project' ? 'Project' : 'Final';
         let title = `${shortCode} ${categoryLabel} ${year} LHR`;
         
         // If filename is descriptive, use it (clean it up)
@@ -922,7 +1070,29 @@ function togglePaperCard(card) {
         const encodedFolder = encodeURIComponent(getGitHubFolderName(category));
         const encodedFilename = encodeURIComponent(file.name);
         const encodedBasePath = encodeURIComponent(basePath);
-        const downloadUrl = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.repo}/${GITHUB_REPO.branch}/${encodedBasePath}/${encodedFolder}/${encodedFilename}`;
+        const downloadUrl = file.download_url
+            || `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.repo}/${GITHUB_REPO.branch}/${encodedBasePath}/${encodedFolder}/${encodedFilename}`;
+        const extension = file.type === 'dir'
+            ? 'Folder'
+            : ((file.name.split('.').pop() || 'FILE').toUpperCase());
+
+        if (category === 'project') {
+            const nameWithoutExt = file.type === 'dir' ? file.name : file.name.replace(/\.[^.]+$/, '');
+            const projectTitle = nameWithoutExt.replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim() || file.name;
+            return {
+                id: id,
+                title: projectTitle,
+                year: yearMatch ? year : 'N/A',
+                semester: semester,
+                fileSize: file.type === 'dir' ? 'Folder' : formatFileSize(file.size),
+                downloadUrl: file.type === 'dir' ? file.html_url : downloadUrl,
+                campus: 'github',
+                source: 'github-project',
+                fileFormat: extension,
+                fileName: file.name,
+                isFolder: file.type === 'dir'
+            };
+        }
 
         return {
             id: id,

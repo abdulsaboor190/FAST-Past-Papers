@@ -267,7 +267,8 @@ const subjectPapers = {
                 difficulty: 5,
                 downloadUrl: '#' // Placeholder - add real URL when available
             }
-        ]
+        ],
+        project: []
     }
 },
 'coal-theory': {

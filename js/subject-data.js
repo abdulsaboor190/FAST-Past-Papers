@@ -278,6 +278,15 @@ const subjectPapers = {
     icon: '🔧',
     papers: {
         mid1: [
+           {
+                id: 'coal-theory-mid1-2024',
+                title: 'COAL Mid 1 2026',
+                semester: 'Spring',
+                year: '2024',
+                difficulty: '4.0',
+                fileSize: '2.1 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1PgonzwYG61jxuog_rySI9z-__nMb3WuB&export=download&authuser=0&confirm=t&uuid=50ef3e28-da0a-48d5-b698-f8dbf58d5260&at=AMrWOn09ZP8fLwQiS6VQeVGLIage:1791620031711'
+            },
             {
                 id: 'coal-theory-mid1-2024',
                 title: 'COAL Theory Mid 1',
@@ -1638,6 +1647,14 @@ final: [
     icon: 'DIS',
     papers: {
         mid1: [
+           {
+                id: 'ds-2026-spring-mid1',
+                title: 'DS Mid 1 2026',
+                year: '2026',
+                semester: 'Spring',
+                fileSize: '2.3 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1EkhB_wTcYOeHE5_pZa45sbJISbe7p--f&export=download&authuser=0&confirm=t&uuid=e4d56abd-7b7d-45a8-8f32-d8924a041702&at=AMrWOn3YAQxHivb8qDoreegT2tNO:1791620075917'
+            },
             {
                 id: 'ds-2024-spring-mid1',
                 title: 'DS Mid 1 2024 Spring',
@@ -2669,6 +2686,15 @@ final: [
     icon: 'COL',
     papers: {
         mid1: [
+           {
+                id: 'coal-lab-2026-mid1a',
+                title: 'COAL Lab Mid 2026',
+                year: '2026',
+                semester: 'Spring',
+              difficulty: 4.3,
+                fileSize: '1.4 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1OynpHrfrxWo6dGghsxfd-ExarUAstnMD&export=download&authuser=0&confirm=t&uuid=9b4b2656-5d22-4556-9ba0-7502bb76a0ec&at=AMrWOn0Jzcnf07NlLXL_5LlIjsyP:1791619997775'
+            },
             {
                 id: 'coal-lab-2024-mid1a',
                 title: 'COAL Lab Mid 2024 Paper A',

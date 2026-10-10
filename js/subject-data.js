@@ -1368,6 +1368,14 @@ final: [
                 semester: 'Fall',
                 fileSize: '1.8 MB',
                 downloadUrl: 'https://drive.usercontent.google.com/download?id=1Z__ZGAnUjxRDEwNbtU3yFFwdrceC1Mmh&export=download&authuser=0&confirm=t&uuid=399b7a23-5664-441b-8a14-f36b2648f8ae&at=AN8xHoqJPzniJvjcmgmdmcXmGRrk:1758036098524'
+            },
+          {
+                id: 'dsa-2025-mid1',
+                title: 'DSA Mid 1 2025',
+                year: '2025',
+                semester: 'Fall',
+                fileSize: '1.8 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=1CN2uROLGWzKmy8B9TybRDVtUBZ4lrtbD&export=download&authuser=0&confirm=t&uuid=975a7d68-f8a6-4ecc-b64b-98312ff293ee&at=AMrWOn3xLG6U5seJWzzacDYAMUX7:1791615491195'
             }
         ],
         mid2: [

@@ -6,6 +6,14 @@ const subjectPapers = {
     icon: 'PF',
     papers: {
         mid1: [
+          {
+                id: 'pf-2026-mid1',
+                title: 'PF Mid 1 2026',
+                year: '2026',
+                semester: 'Spring',
+                fileSize: '2.5 MB',
+                downloadUrl: 'https://drive.usercontent.google.com/download?id=12iMxBuLU51au_-503tQNiEujO6G5dSZI&export=download&authuser=0&confirm=t&uuid=ad0ad463-cc36-44ab-82cf-e602a9dd899d&at=AMrWOn1cuZ-MHK_gf6Sg62P-x8R6:1791833478402'
+            },
             {
                 id: 'pf-2024-mid1',
                 title: 'PF Mid 1 2024',
